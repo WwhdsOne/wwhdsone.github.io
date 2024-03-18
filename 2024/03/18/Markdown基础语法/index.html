@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/Markdown%E4%BD%BF%E7%94%A8/w.jpg">
 <meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/Markdown%E4%BD%BF%E7%94%A8/small095125P47QH1707616285.jpg">
 <meta property="article:published_time" content="2024-03-18T09:00:51.000Z">
-<meta property="article:modified_time" content="2024-03-18T09:58:09.802Z">
+<meta property="article:modified_time" content="2024-03-18T10:40:48.010Z">
 <meta property="article:author" content="Wwhds">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/Markdown%E4%BD%BF%E7%94%A8/w.jpg">
@@ -79,11 +79,119 @@
   </style>
 </noscript>
 
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --></head>
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -182,7 +290,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-03-18 17:00:51 / 修改时间：17:58:09" itemprop="dateCreated datePublished" datetime="2024-03-18T17:00:51+08:00">2024-03-18</time>
+              <time title="创建时间：2024-03-18 17:00:51 / 修改时间：18:40:48" itemprop="dateCreated datePublished" datetime="2024-03-18T17:00:51+08:00">2024-03-18</time>
             </span>
 
           
@@ -315,7 +423,7 @@
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">无序列表四种符号均可使用</span><br><span class="line">但是不能混用,例如:</span><br><span class="line"><span class="bullet">-</span> 第一件物品</span><br><span class="line"><span class="bullet">+</span> 第二件物品</span><br><span class="line"><span class="bullet">-</span> 第三件没了</span><br><span class="line"><span class="bullet">*</span> 再看一下上一行</span><br></pre></td></tr></table></figure>
 <h3 id="63-在列表中嵌套其他元素"><a class="markdownIt-Anchor" href="#63-在列表中嵌套其他元素"></a> 6.3 在列表中嵌套其他元素</h3>
 <p>要在保留列表连续性的同时在列表中添加另一种元素，请将该元素缩进四个空格或一个制表符，如下例所示</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">*</span>   This is the first list item.</span><br><span class="line"><span class="bullet">*</span>   Here&#x27;s the second list item.</span><br><span class="line"></span><br><span class="line"><span class="code">    &gt; I need to add another paragraph below the second list item.</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="bullet">*</span>   And here&#x27;s the third list item.</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">*</span>   This is the first list item.</span><br><span class="line"><span class="bullet">*</span>   Here's the second list item.</span><br><span class="line"></span><br><span class="line"><span class="code">    &gt; I need to add another paragraph below the second list item.</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="bullet">*</span>   And here's the third list item.</span><br></pre></td></tr></table></figure>
 <ul>
 <li>
 <p>This is the first list item.</p>
@@ -330,7 +438,7 @@
 <p>And here’s the third list item.</p>
 </li>
 </ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span>   This is the first list item.</span><br><span class="line"><span class="bullet">2.</span>   Here&#x27;s the second list item.</span><br><span class="line"><span class="code">	</span></span><br><span class="line"><span class="code">	- 拦腰截断！</span></span><br><span class="line"><span class="code">	- 再接回去！</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="bullet">3.</span>   And here&#x27;s the third list item.</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span>   This is the first list item.</span><br><span class="line"><span class="bullet">2.</span>   Here's the second list item.</span><br><span class="line"><span class="code">	</span></span><br><span class="line"><span class="code">	- 拦腰截断！</span></span><br><span class="line"><span class="code">	- 再接回去！</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="bullet">3.</span>   And here's the third list item.</span><br></pre></td></tr></table></figure>
 <ol>
 <li>
 <p>This is the first list item.</p>
@@ -356,14 +464,14 @@
 <p><code>Use `code` in your Markdown file.</code></p>
 <p>Typora快捷键: Crtl + Shift + Q</p>
 <h3 id="72-围栏式代码块"><a class="markdownIt-Anchor" href="#72-围栏式代码块"></a> 7.2 围栏式代码块</h3>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">```json</span></span><br><span class="line"><span class="code">&#123;</span></span><br><span class="line"><span class="code">  &quot;firstName&quot;: &quot;John&quot;,</span></span><br><span class="line"><span class="code">  &quot;lastName&quot;: &quot;Smith&quot;,</span></span><br><span class="line"><span class="code">  &quot;age&quot;: 25</span></span><br><span class="line"><span class="code">&#125;</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;firstName&quot;</span><span class="punctuation">:</span> <span class="string">&quot;John&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;lastName&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Smith&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;age&quot;</span><span class="punctuation">:</span> <span class="number">25</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">```json</span></span><br><span class="line"><span class="code">{</span></span><br><span class="line"><span class="code">  "firstName": "John",</span></span><br><span class="line"><span class="code">  "lastName": "Smith",</span></span><br><span class="line"><span class="code">  "age": 25</span></span><br><span class="line"><span class="code">}</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">{</span></span><br><span class="line">  <span class="attr">"firstName"</span><span class="punctuation">:</span> <span class="string">"John"</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"lastName"</span><span class="punctuation">:</span> <span class="string">"Smith"</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"age"</span><span class="punctuation">:</span> <span class="number">25</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></table></figure>
 <h1 id="8-markdown-分隔线语法"><a class="markdownIt-Anchor" href="#8-markdown-分隔线语法"></a> 8 Markdown 分隔线语法</h1>
 <p>要创建分隔线，请在单独一行上使用三个或多个星号 (<code>***</code>)、破折号 (<code>---</code>) 或下划线 (<code>___</code>) ，并且不能包含其他内容。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"><span class="strong">***</span></span></span><br><span class="line"><span class="strong"><span class="section">---</span></span></span><br><span class="line"><span class="strong"><span class="section">________<span class="emphasis">_</span></span></span></span><br></pre></td></tr></table></figure>
-<hr />
-<hr />
-<hr />
+<hr>
+<hr>
+<hr>
 <p>为了兼容性，请在分隔线的前后均添加空白行。</p>
 <table>
 <thead>
@@ -375,18 +483,18 @@
 <tbody>
 <tr>
 <td style="text-align:center">Try to put a blank line before…<br><br>—<br><br>…and after a horizontal rule.</td>
-<td style="text-align:center">Without blank lines, this would be a heading.<br/>-–<br/>Don’t do this!</td>
+<td style="text-align:center">Without blank lines, this would be a heading.<br>-–<br>Don’t do this!</td>
 </tr>
 </tbody>
 </table>
 <h1 id="9-markdown-链接语法"><a class="markdownIt-Anchor" href="#9-markdown-链接语法"></a> 9 Markdown 链接语法</h1>
 <h3 id="91-标准链接语法"><a class="markdownIt-Anchor" href="#91-标准链接语法"></a> 9.1 标准链接语法</h3>
 <p>链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。</p>
-<p>超链接Markdown语法代码：<code>[超链接显示名](超链接地址 &quot;超链接title&quot;)</code></p>
+<p>超链接Markdown语法代码：<code>[超链接显示名](超链接地址 "超链接title")</code></p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">不懂就去问百度</span>](<span class="link">http://www.baidu.com</span>)</span><br></pre></td></tr></table></figure>
 <p><a target="_blank" rel="noopener" href="http://www.baidu.com">不懂就去问百度</a></p>
 <h3 id="92-带title的链接语法"><a class="markdownIt-Anchor" href="#92-带title的链接语法"></a> 9.2 带title的链接语法</h3>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">不懂就去问百度</span>](<span class="link">http://www.baidu.com &quot;这是百度哦😙&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">不懂就去问百度</span>](<span class="link">http://www.baidu.com "这是百度哦😙"</span>)</span><br></pre></td></tr></table></figure>
 <p><a target="_blank" rel="noopener" href="http://www.baidu.com" title="这是百度哦😙">不懂就去问百度</a></p>
 <h3 id="93-网址和email地址"><a class="markdownIt-Anchor" href="#93-网址和email地址"></a> 9.3 网址和Email地址</h3>
 <p>使用尖括号可以很方便地把URL或者email地址变成可点击的链接。</p>
@@ -395,10 +503,10 @@
 <p><a href="mailto:892920290@qq.com">892920290@qq.com</a></p>
 <h3 id="94-带格式化的链接"><a class="markdownIt-Anchor" href="#94-带格式化的链接"></a> 9.4 带格式化的链接</h3>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">I love supporting the <span class="strong">**[<span class="string">EFF</span>](<span class="link">https://eff.org</span>)**</span>.</span><br><span class="line">This is the <span class="emphasis">*[<span class="string">Markdown Guide</span>](<span class="link">https://www.markdownguide.org</span>)*</span>.</span><br><span class="line">See the section on [<span class="string">`code`</span>](<span class="link">#code</span>).</span><br></pre></td></tr></table></figure>
-<p>I love supporting the <strong><a target="_blank" rel="noopener" href="https://eff.org">EFF</a></strong>.<br />
-This is the <em><a target="_blank" rel="noopener" href="https://www.markdownguide.org">Markdown Guide</a></em>.<br />
+<p>I love supporting the <strong><a target="_blank" rel="noopener" href="https://eff.org">EFF</a></strong>.<br>
+This is the <em><a target="_blank" rel="noopener" href="https://www.markdownguide.org">Markdown Guide</a></em>.<br>
 See the section on <a href="#code"><code>code</code></a>.</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="symbol">百度</span>]: <span class="link">http://www.baidu.com &quot;芝士百度&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="symbol">百度</span>]: <span class="link">http://www.baidu.com "芝士百度"</span></span><br></pre></td></tr></table></figure>
 <p>不懂就问[芝士百度][百度]</p>
 <p>不同的 Markdown 应用程序处理URL中间的空格方式不一样。为了兼容性，请尽量使用%20代替空格。</p>
 <table>
@@ -422,12 +530,12 @@ See the section on <a href="#code"><code>code</code></a>.</p>
 <h3 id="101-基础语法"><a class="markdownIt-Anchor" href="#101-基础语法"></a> 10.1 基础语法</h3>
 <p>要添加图像，请使用感叹号 (<code>!</code>), 然后在方括号增加替代文本，图片链接放在圆括号里，括号里的链接后可以增加一个可选的图片标题文本。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">W!</span>](<span class="link">https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/Markdown%E4%BD%BF%E7%94%A8/w.jpg</span>)</span><br></pre></td></tr></table></figure>
-<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/Markdown%E4%BD%BF%E7%94%A8/w.jpg" alt="W!" /></p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/Markdown%E4%BD%BF%E7%94%A8/w.jpg" alt="W!"></p>
 <p>Typora快捷键: Crtl + Shift + I</p>
 <h3 id="102-带链接的图像"><a class="markdownIt-Anchor" href="#102-带链接的图像"></a> 10.2 带链接的图像</h3>
 <p>给图片增加链接，请将图像的Markdown 括在方括号中，然后将链接添加在圆括号中。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">![风景图</span>](<span class="link">https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/Markdown%E4%BD%BF%E7%94%A8/small095125P47QH1707616285.jpg</span>)](<span class="link">http://www.baidu.com</span>)</span><br></pre></td></tr></table></figure>
-<p><a target="_blank" rel="noopener" href="http://www.baidu.com"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/Markdown%E4%BD%BF%E7%94%A8/small095125P47QH1707616285.jpg" alt="图片描述" /></a></p>
+<p><a target="_blank" rel="noopener" href="http://www.baidu.com"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/Markdown%E4%BD%BF%E7%94%A8/small095125P47QH1707616285.jpg" alt="图片描述"></a></p>
 <h1 id="11-markdown-转义字符语法"><a class="markdownIt-Anchor" href="#11-markdown-转义字符语法"></a> 11 Markdown 转义字符语法</h1>
 <h3 id="111-特殊字符用法"><a class="markdownIt-Anchor" href="#111-特殊字符用法"></a> 11.1 特殊字符用法</h3>
 <p>要显示原本用于格式化 Markdown 文档的字符，请在字符前面添加反斜杠字符 \ 。</p>
@@ -490,12 +598,10 @@ See the section on <a href="#code"><code>code</code></a>.</p>
 <h3 id="132-latex"><a class="markdownIt-Anchor" href="#132-latex"></a> 13.2 LaTex</h3>
 <p>LaTeX 是一个让你的文档看起来更专业的排版系统，而不是文字处理器。它尤其适合处理篇幅较长、结构严谨的文档，并且十分擅长处理公式表达。它是免费的软件，对大多数操作系统都适用。</p>
 <p>LaTex <a target="_blank" rel="noopener" href="https://oi-wiki.org/tools/latex/">LaTeX 入门 - OI Wiki (oi-wiki.org)</a></p>
-<p class='katex-block katex-error' title='ParseError: KaTeX parse error: No such environment: equation at position 7: \begin{̲e̲q̲u̲a̲t̲i̲o̲n̲}̲
-CPI = \frac{m}…'>\begin{equation}
-CPI = \frac{m}{IC}\tag{1}
-\end{equation}
+<p class="katex-block katex-error" title="ParseError: KaTeX parse error: No such environment: equation at position 7: \begin{̲e̲q̲u̲a̲t̲i̲o̲n̲}̲
+CPI = \frac{m}…"><mjx-container class="MathJax" jax="SVG" display="true" width="full" style="min-width: 20.834ex;"><svg style="vertical-align: -1.5ex; min-width: 20.834ex;" xmlns="http://www.w3.org/2000/svg" width="100%" height="4.131ex" role="img" focusable="false"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(0.0181,-0.0181) translate(0, -1163)"><g data-mml-node="math"><g data-mml-node="mtable" transform="translate(2078,0) translate(-2078,0)"><g transform="translate(0 1163) matrix(1 0 0 -1 0 0) scale(55.25)"><svg data-table="true" preserveAspectRatio="xMidYMid" viewBox="2526.3 -1163 1 1826"><g transform="matrix(1 0 0 -1 0 0)"><g data-mml-node="mlabeledtr" transform="translate(0,45)"><g data-mml-node="mtd"><g data-mml-node="mi"><path data-c="1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></g><g data-mml-node="mi" transform="translate(760,0)"><path data-c="1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path></g><g data-mml-node="mi" transform="translate(1511,0)"><path data-c="1D43C" d="M43 1Q26 1 26 10Q26 12 29 24Q34 43 39 45Q42 46 54 46H60Q120 46 136 53Q137 53 138 54Q143 56 149 77T198 273Q210 318 216 344Q286 624 286 626Q284 630 284 631Q274 637 213 637H193Q184 643 189 662Q193 677 195 680T209 683H213Q285 681 359 681Q481 681 487 683H497Q504 676 504 672T501 655T494 639Q491 637 471 637Q440 637 407 634Q393 631 388 623Q381 609 337 432Q326 385 315 341Q245 65 245 59Q245 52 255 50T307 46H339Q345 38 345 37T342 19Q338 6 332 0H316Q279 2 179 2Q143 2 113 2T65 2T43 1Z"></path></g><g data-mml-node="mo" transform="translate(2292.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mfrac" transform="translate(3348.6,0)"><g data-mml-node="mi" transform="translate(413,676)"><path data-c="1D45A" d="M21 287Q22 293 24 303T36 341T56 388T88 425T132 442T175 435T205 417T221 395T229 376L231 369Q231 367 232 367L243 378Q303 442 384 442Q401 442 415 440T441 433T460 423T475 411T485 398T493 385T497 373T500 364T502 357L510 367Q573 442 659 442Q713 442 746 415T780 336Q780 285 742 178T704 50Q705 36 709 31T724 26Q752 26 776 56T815 138Q818 149 821 151T837 153Q857 153 857 145Q857 144 853 130Q845 101 831 73T785 17T716 -10Q669 -10 648 17T627 73Q627 92 663 193T700 345Q700 404 656 404H651Q565 404 506 303L499 291L466 157Q433 26 428 16Q415 -11 385 -11Q372 -11 364 -4T353 8T350 18Q350 29 384 161L420 307Q423 322 423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 181Q151 335 151 342Q154 357 154 369Q154 405 129 405Q107 405 92 377T69 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mrow" transform="translate(220,-686)"><g data-mml-node="mi"><path data-c="1D43C" d="M43 1Q26 1 26 10Q26 12 29 24Q34 43 39 45Q42 46 54 46H60Q120 46 136 53Q137 53 138 54Q143 56 149 77T198 273Q210 318 216 344Q286 624 286 626Q284 630 284 631Q274 637 213 637H193Q184 643 189 662Q193 677 195 680T209 683H213Q285 681 359 681Q481 681 487 683H497Q504 676 504 672T501 655T494 639Q491 637 471 637Q440 637 407 634Q393 631 388 623Q381 609 337 432Q326 385 315 341Q245 65 245 59Q245 52 255 50T307 46H339Q345 38 345 37T342 19Q338 6 332 0H316Q279 2 179 2Q143 2 113 2T65 2T43 1Z"></path></g><g data-mml-node="mi" transform="translate(504,0)"><path data-c="1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></g></g><rect width="1464" height="60" x="120" y="220"></rect></g></g></g></g></svg><svg data-labels="true" preserveAspectRatio="xMaxYMid" viewBox="1278 -1163 1 1826"><g data-labels="true" transform="matrix(1 0 0 -1 0 0)"><g data-mml-node="mtd" id="mjx-eqn:1" transform="translate(0,795)"><text data-id-align="true"></text><g data-idbox="true" transform="translate(0,-750)"><g data-mml-node="mtext"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" transform="translate(389,0)"></path><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z" transform="translate(889,0)"></path></g></g></g></g></svg></g></g></g></g></svg></mjx-container>
 </p>
-<hr class="footnotes-sep" />
+<hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>这是个脚注 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
@@ -669,6 +775,8 @@ CPI = \frac{m}{IC}\tag{1}
 
 
 
+
+  
 
   
 
