@@ -1240,7 +1240,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff6b4d;
+  background: #0d2f36;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2753,9 +2753,9 @@ ul.breadcrumb li + li:last-child {
   background-image: url("/images/bilibili.svg");
   background-size: 1em 1em;
   opacity: 0.55;
-  background-position: center;
+  background-position: center 95%;
   background-repeat: no-repeat;
-  height: 0.5rem;
+  height: 0.7rem;
   width: 1.25rem;
   border-radius: 0rem;
 }
