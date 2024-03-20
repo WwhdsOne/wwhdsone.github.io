@@ -286,7 +286,12 @@
 <li>还有一些其他分支，在此不再详述，例如test分支（用于代码测试）、pre分支（预上线分支）等等。</li>
 </ul>
 ]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
       <tags>
+        <tag>Git</tag>
+        <tag>基础</tag>
         <tag>教程</tag>
       </tags>
   </entry>
@@ -337,8 +342,14 @@
 </tbody>
 </table>
 ]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
       <tags>
+        <tag>Java</tag>
         <tag>计划</tag>
+        <tag>目标</tag>
+        <tag>学习</tag>
       </tags>
   </entry>
   <entry>
@@ -672,8 +683,13 @@ CPI = \frac{m}…"><mjx-container class="MathJax" jax="SVG" display="true" width
 </ol>
 </section>
 ]]></content>
+      <categories>
+        <category>Markdown</category>
+      </categories>
       <tags>
+        <tag>基础</tag>
         <tag>教程</tag>
+        <tag>Markdown</tag>
       </tags>
   </entry>
 </search>
