@@ -1,6 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>JAVA后端学习计划</title>
+    <url>/2024/03/19/JAVA%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</url>
+    <content><![CDATA[<h1 id="java后端内容学习"><a class="markdownIt-Anchor" href="#java后端内容学习"></a> JAVA后端内容学习</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Java基础<br>（已完成）</strong></th>
+<th><a href="https://www.bilibili.com/video/BV17F411T7Ao/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207173142846.png" alt="image-20240207173142846"></a><a href="https://www.bilibili.com/video/BV1yW4y1Y7Ms/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207173232867.png" alt="image-20240207173232867"></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>JavaWeb<br>（已完成）</strong></td>
+<td><a href="https://www.bilibili.com/video/BV1m84y1w7Tb/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207131825110.png" alt="image-20240207131825110"></a></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>单体项目苍穹外卖<br>（已完成）</strong></td>
+<td><a href="https://www.bilibili.com/video/BV1TP411v7v6/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207131900926.png" alt="image-20240207131900926"></a></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Git<br>（已完成）</strong></td>
+<td><a href="https://www.bilibili.com/video/BV1MU4y1Y7h5/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207173404539.png" alt="image-20240207173404539"></a></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>SpringCloud<br>(进度：第七章)</strong></td>
+<td><a href="https://www.bilibili.com/video/BV1LQ4y127n4/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207173523057.png" alt="image-20240207173523057"></a></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>学成在线<br>(已完成)</strong></td>
+<td><a href="https://www.bilibili.com/video/BV1j8411N7Bm/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207173746548.png" alt="image-20240207173746548"></a></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Mysql<br>(未学习)</strong></td>
+<td><a href="https://www.bilibili.com/video/BV1Kr4y1i7ru/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207180731511.png" alt="image-20240207180731511"></a></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Redis<br>(未学习)</strong></td>
+<td><a href="https://www.bilibili.com/video/BV1cr4y1671t/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207180911403.png" alt="image-20240207180911403"></a></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Java设计模式<br>(未学习)</strong></td>
+<td><a href="https://www.bilibili.com/video/BV1Np4y1z7BU/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207181106619.png" alt="image-20240207181106619"></a></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>计划</tag>
+        <tag>目标</tag>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git基础教程</title>
     <url>/2024/03/18/Git%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="git"><a class="markdownIt-Anchor" href="#git"></a> Git</h1>
@@ -293,63 +350,6 @@
         <tag>Git</tag>
         <tag>基础</tag>
         <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA后端学习计划</title>
-    <url>/2024/03/19/JAVA%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</url>
-    <content><![CDATA[<h1 id="java后端内容学习"><a class="markdownIt-Anchor" href="#java后端内容学习"></a> JAVA后端内容学习</h1>
-<table>
-<thead>
-<tr>
-<th style="text-align:center"><strong>Java基础<br>（已完成）</strong></th>
-<th><a href="https://www.bilibili.com/video/BV17F411T7Ao/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207173142846.png" alt="image-20240207173142846"></a><a href="https://www.bilibili.com/video/BV1yW4y1Y7Ms/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207173232867.png" alt="image-20240207173232867"></a></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><strong>JavaWeb<br>（已完成）</strong></td>
-<td><a href="https://www.bilibili.com/video/BV1m84y1w7Tb/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207131825110.png" alt="image-20240207131825110"></a></td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>单体项目苍穹外卖<br>（已完成）</strong></td>
-<td><a href="https://www.bilibili.com/video/BV1TP411v7v6/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207131900926.png" alt="image-20240207131900926"></a></td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>Git<br>（已完成）</strong></td>
-<td><a href="https://www.bilibili.com/video/BV1MU4y1Y7h5/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207173404539.png" alt="image-20240207173404539"></a></td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>SpringCloud<br>(进度：第七章)</strong></td>
-<td><a href="https://www.bilibili.com/video/BV1LQ4y127n4/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207173523057.png" alt="image-20240207173523057"></a></td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>学成在线<br>(已完成)</strong></td>
-<td><a href="https://www.bilibili.com/video/BV1j8411N7Bm/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207173746548.png" alt="image-20240207173746548"></a></td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>Mysql<br>(未学习)</strong></td>
-<td><a href="https://www.bilibili.com/video/BV1Kr4y1i7ru/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207180731511.png" alt="image-20240207180731511"></a></td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>Redis<br>(未学习)</strong></td>
-<td><a href="https://www.bilibili.com/video/BV1cr4y1671t/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207180911403.png" alt="image-20240207180911403"></a></td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>Java设计模式<br>(未学习)</strong></td>
-<td><a href="https://www.bilibili.com/video/BV1Np4y1z7BU/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207181106619.png" alt="image-20240207181106619"></a></td>
-</tr>
-</tbody>
-</table>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>计划</tag>
-        <tag>目标</tag>
-        <tag>学习</tag>
       </tags>
   </entry>
   <entry>
