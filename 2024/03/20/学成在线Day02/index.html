@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Sarasa Fixed SC:300,300italic,400,400italic,700,700italic|Fira code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/red/pace-center-circle.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"wwhdsone.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="学成在线Day02内容">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学成在线Day02">
+<meta property="og:url" content="https://wwhdsone.github.io/2024/03/20/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFDay02/index.html">
+<meta property="og:site_name" content="WBlog">
+<meta property="og:description" content="学成在线Day02内容">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240211163239135.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240211163338945.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240211163614502.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240211163817932.png">
+<meta property="og:image" content="c:%5CUsers%5CWwhds%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240211164035140.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318123843870.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318124740478.png">
+<meta property="og:image" content="c:%5CUsers%5CWwhds%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240211185359606.png">
+<meta property="og:image" content="c:%5CUsers%5CWwhds%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240211193838531.png">
+<meta property="article:published_time" content="2024-03-20T12:17:05.000Z">
+<meta property="article:modified_time" content="2024-03-20T12:20:24.477Z">
+<meta property="article:author" content="Wwhds">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="后端">
+<meta property="article:tag" content="黑马程序员">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240211163239135.png">
+
+<link rel="canonical" href="https://wwhdsone.github.io/2024/03/20/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFDay02/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>学成在线Day02 | WBlog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">WBlog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">哀吾生之须臾，羡长江之无穷</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/WwhdsOne" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wwhdsone.github.io/2024/03/20/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFDay02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/Markdown%E4%BD%BF%E7%94%A8/w.jpg">
+      <meta itemprop="name" content="Wwhds">
+      <meta itemprop="description" content="个人博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WBlog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          学成在线Day02
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-03-20 20:17:05 / 修改时间：20:20:24" itemprop="dateCreated datePublished" datetime="2024-03-20T20:17:05+08:00">2024-03-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>8.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>16 分钟</span>
+            </span>
+            <div class="post-description">学成在线Day02内容</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="学成在线day02"><a class="markdownIt-Anchor" href="#学成在线day02"></a> 学成在线Day02</h1>
+<h1 id="开发持久层"><a class="markdownIt-Anchor" href="#开发持久层"></a> 开发持久层</h1>
+<p>在真实开发中，切记从底层向上层开发。例如项目应该先写持久层(mapper)再写业务层(service)</p>
+<h1 id="分页查询测试代码"><a class="markdownIt-Anchor" href="#分页查询测试代码"></a> 分页查询测试代码</h1>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">testCourseBaseMapper</span><span class="params">()</span>{</span><br><span class="line">    <span class="type">CourseBase</span> <span class="variable">courseBase</span> <span class="operator">=</span> courseBaseMapper.selectById(<span class="number">18</span>);</span><br><span class="line">    System.out.println(courseBase);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//拼装分页查询条件</span></span><br><span class="line">    <span class="type">QueryCourseParamsDto</span> <span class="variable">queryCourseParamsDto</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">QueryCourseParamsDto</span>();</span><br><span class="line">    queryCourseParamsDto.setCourseName(<span class="string">"java"</span>);<span class="comment">//课程名称为查询条件</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//封装查询条件</span></span><br><span class="line">    LambdaQueryWrapper&lt;CourseBase&gt; courseBaseLambdaQueryWrapper = <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;&gt;();</span><br><span class="line">    <span class="comment">//根据课程名称模糊查询,sql为course_base.name like '%?%'</span></span><br><span class="line">    courseBaseLambdaQueryWrapper.like(StringUtils.isNotEmpty(queryCourseParamsDto.getCourseName()),</span><br><span class="line">                                      CourseBase::getName,</span><br><span class="line">                                      queryCourseParamsDto.getCourseName());</span><br><span class="line">    <span class="comment">//根据课程状态查询,sql为course_base.audit_status = ?</span></span><br><span class="line">    courseBaseLambdaQueryWrapper.like(StringUtils.isNotEmpty(queryCourseParamsDto.getAuditStatus()),</span><br><span class="line">                                      CourseBase::getAuditStatus,</span><br><span class="line">                                      queryCourseParamsDto.getAuditStatus());</span><br><span class="line"></span><br><span class="line">    <span class="comment">//创建分页查询类</span></span><br><span class="line">    <span class="type">PageParams</span> <span class="variable">pageParams</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">PageParams</span>(<span class="number">1L</span>,<span class="number">2L</span>);</span><br><span class="line">    <span class="comment">//创建分页对象,参数为当前页码,每页记录数</span></span><br><span class="line">    Page&lt;CourseBase&gt; page = <span class="keyword">new</span> <span class="title class_">Page</span>&lt;&gt;(pageParams.getPageNo(), pageParams.getPageSize());</span><br><span class="line">    <span class="comment">//获取分页查询结果</span></span><br><span class="line">    Page&lt;CourseBase&gt; courseBasePage = courseBaseMapper.selectPage(page, courseBaseLambdaQueryWrapper);</span><br><span class="line">    <span class="comment">//获取数据列表</span></span><br><span class="line">    List&lt;CourseBase&gt; records = courseBasePage.getRecords();</span><br><span class="line">    <span class="comment">//获取记录总数</span></span><br><span class="line">    <span class="type">Long</span> <span class="variable">total</span> <span class="operator">=</span> courseBasePage.getTotal();</span><br><span class="line"></span><br><span class="line">    PageResult&lt;CourseBase&gt; result = <span class="keyword">new</span> <span class="title class_">PageResult</span>&lt;&gt;(records,total,pageParams.getPageNo(), pageParams.getPageSize());</span><br><span class="line"></span><br><span class="line">    System.out.println(result);</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>本篇用到大量mybatis-plus内容,先去学习这块内容(2.11已学习完Mybatis-plus)</p>
+<h3 id="利用http-client插件生成http请求"><a class="markdownIt-Anchor" href="#利用http-client插件生成http请求"></a> 利用Http Client插件生成http请求</h3>
+<p>插件:</p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240211163239135.png" alt="image-20240211163239135"></p>
+<p>点击此处可以生成Http请求</p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240211163338945.png" alt="image-20240211163338945"></p>
+<p>例如分页查询的请求可以这么写</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">### 查询课程信息</span><br><span class="line">POST http://localhost:8080/course/list?pageNo=1&amp;pageSize=2</span><br><span class="line"><span class="attribute">Content-Type</span><span class="punctuation">: </span>application/json</span><br><span class="line"></span><br><span class="line">{</span><br><span class="line">  "auditStatus": "202004",</span><br><span class="line">  "courseName": "java",</span><br><span class="line">  "publishStatus": ""</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>在项目根目录下建立文件夹统一存放请求测试</p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240211163614502.png" alt="image-20240211163614502"></p>
+<p>为了方便将来和网关集成测试，这里我们把测试主机地址在配置文件http-client.env.json 中配置<img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240211163817932.png" alt="image-20240211163817932"></p>
+<p>注意要调用http-client.env.json文件内容需要将使用以下环境运行调整至dev<img src="C:%5CUsers%5CWwhds%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240211164035140.png" alt="image-20240211164035140"></p>
+<h1 id="跨域三种解决方案"><a class="markdownIt-Anchor" href="#跨域三种解决方案"></a> 跨域三种解决方案</h1>
+<p>在浏览器通过<a target="_blank" rel="noopener" href="http://localhost:8601/%E5%9C%B0%E5%9D%80%E8%AE%BF%E9%97%AE%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E3%80%82">http://localhost:8601/地址访问前端工程。</a></p>
+<p>chrome浏览器报错如下：</p>
+<blockquote>
+<p>Access to XMLHttpRequest at  ‘<a target="_blank" rel="noopener" href="http://localhost:63110/system/dictionary/all">http://localhost:63110/system/dictionary/all</a>’ from origin  ‘<a target="_blank" rel="noopener" href="http://localhost:8601">http://localhost:8601</a>’ has been blocked by CORS policy: No  ‘Access-Control-Allow-Origin’ header is present on the requested resource.</p>
+</blockquote>
+<p>Firefox浏览器报错如下：</p>
+<blockquote>
+<p>已拦截跨源请求：同源策略禁止读取位于 <a target="_blank" rel="noopener" href="http://localhost:63110/system/dictionary/all">http://localhost:63110/system/dictionary/all</a> 的远程资源。（原因：CORS  头缺少 ‘Access-Control-Allow-Origin’）。状态码：200。</p>
+</blockquote>
+<p>提示：从http://localhost:8601访问<a target="_blank" rel="noopener" href="http://localhost:63110/system/dictionary/all%E8%A2%ABCORS">http://localhost:63110/system/dictionary/all被CORS</a> policy阻止，因为没有Access-Control-Allow-Origin 头信息。CORS全称是 cross origin resource share 表示跨域资源共享。</p>
+<p>出这个提示的原因是基于浏览器的同源策略，去判断是否跨域请求，同源策略是浏览器的一种安全机制，从一个地址请求另一个地址，如果协议、主机、端口三者全部一致则不属于跨域，否则有一个不一致就是跨域请求。</p>
+<p>比如：</p>
+<ul>
+<li>
+<p>从<a target="_blank" rel="noopener" href="http://localhost:8601">http://localhost:8601</a> 到  <a target="_blank" rel="noopener" href="http://localhost:8602">http://localhost:8602</a> 由于端口不同，是跨域。</p>
+</li>
+<li>
+<p>从<a target="_blank" rel="noopener" href="http://192.168.101.10:8601">http://192.168.101.10:8601</a> 到  <a target="_blank" rel="noopener" href="http://192.168.101.11:8601">http://192.168.101.11:8601</a> 由于主机不同，是跨域。</p>
+</li>
+<li>
+<p>从<a target="_blank" rel="noopener" href="http://192.168.101.10:8601">http://192.168.101.10:8601</a> 到  <a target="_blank" rel="noopener" href="https://192.168.101.11:8601">https://192.168.101.10:8601</a> 由于协议不同，是跨域。</p>
+</li>
+</ul>
+<p>注意：服务器之间不存在跨域请求。</p>
+<p>浏览器判断是跨域请求会在请求头上添加origin，表示这个请求来源哪里。</p>
+<p>比如：</p>
+<blockquote>
+<p>GET / HTTP/1.1</p>
+<p>Origin: <a target="_blank" rel="noopener" href="http://localhost:8601">http://localhost:8601</a></p>
+</blockquote>
+<p>服务器收到请求判断这个Origin是否允许跨域，如果允许则在响应头中说明允许该来源的跨域请求，如下：</p>
+<blockquote>
+<p>Access-Control-Allow-Origin：<a target="_blank" rel="noopener" href="http://localhost:8601">http://localhost:8601</a></p>
+</blockquote>
+<p>如果允许任何域名来源的跨域请求，则响应如下：</p>
+<blockquote>
+<p>Access-Control-Allow-Origin：*</p>
+</blockquote>
+<h3 id="第一种-json"><a class="markdownIt-Anchor" href="#第一种-json"></a> 第一种 JSON</h3>
+<p>通过script标签的src属性进行跨域请求，如果服务端要响应内容则首先读取请求参数callback的值，callback是一个回调函数的名称，服务端读取callback的值后将响应内容通过调用callback函数的方式告诉请求方。如下图：</p>
+<img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318123843870.png" alt="image-20240318123843870" style="zoom:50%;">
+<h3 id="第二种-添加响应头"><a class="markdownIt-Anchor" href="#第二种-添加响应头"></a> 第二种 添加响应头</h3>
+<p>服务端在响应头添加 <code>Access-Control-Allow-Origin：*</code></p>
+<h3 id="第三种-通过nginx代理跨域"><a class="markdownIt-Anchor" href="#第三种-通过nginx代理跨域"></a> 第三种 通过nginx代理跨域</h3>
+<p>由于服务端之间没有跨域，浏览器通过nginx去访问跨域地址。</p>
+<img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318124740478.png" alt="image-20240318124740478" style="zoom:50%;">
+<ol>
+<li>
+<p>浏览器先访问<a target="_blank" rel="noopener" href="http://192.168.101.10:8601">http://192.168.101.10:8601</a> nginx提供的地址，进入页面</p>
+</li>
+<li>
+<p>此页面要跨域访问<a target="_blank" rel="noopener" href="http://192.168.101.11:8601">http://192.168.101.11:8601</a> ，不能直接跨域访问<a target="_blank" rel="noopener" href="http://www.baidu.com:8601">http://www.baidu.com:8601</a> ，而是访问nginx的一个同源地址，比如：<a target="_blank" rel="noopener" href="http://192.168.101.11:8601/api">http://192.168.101.11:8601/api</a> ，通过<a target="_blank" rel="noopener" href="http://192.168.101.11:8601/api">http://192.168.101.11:8601/api</a> 的代理去访问<a target="_blank" rel="noopener" href="http://www.baidu.com:8601">http://www.baidu.com:8601</a>。</p>
+</li>
+</ol>
+<p>这样就实现了跨域访问。</p>
+<p>浏览器到<a target="_blank" rel="noopener" href="http://192.168.101.11:8601/api">http://192.168.101.11:8601/api</a> 没有跨域</p>
+<p>nginx到http://www.baidu.com:8601通过服务端通信，没有跨域。</p>
+<p><em><strong>本项目采用第二种方法解决跨域问题</strong></em></p>
+<h1 id="前后端联调"><a class="markdownIt-Anchor" href="#前后端联调"></a> 前后端联调</h1>
+<p>这里进行前后联调的目的是体会前后端联调的流程，测试的功能为课程查询功能。</p>
+<p>1、启动前端工程，再启内容管理服务端。</p>
+<p>2、修改服务端地址</p>
+<p>前端默认连接的是项目的网关地址，由于现在网关工程还没有创建，这里需要更改前端工程的参数配置文件 ，修改网关地址为内容管理服务的地址。</p>
+<p>启动前端工程，用前端访问后端接口，观察前端界面的数据是否正确。</p>
+<h1 id="课程分类查询"><a class="markdownIt-Anchor" href="#课程分类查询"></a> 课程分类查询</h1>
+<p>分类表中的数据为树形结构：</p>
+<p><img src="C:%5CUsers%5CWwhds%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240211185359606.png" alt="image-20240211185359606"></p>
+<h3 id="树形数据库查询"><a class="markdownIt-Anchor" href="#树形数据库查询"></a> 树形数据库查询</h3>
+<h4 id="树层级确定"><a class="markdownIt-Anchor" href="#树层级确定"></a> 树层级确定</h4>
+<p>课程分类表是一个树型结构，其中parentid字段为父结点ID，它是树型结构的标志字段。</p>
+<p>如果树的层级固定可以使用表的自链接去查询，比如：我们只查询两级课程分类，可以用下边的SQL</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select *</span><br><span class="line">from course_category one</span><br><span class="line">         inner join course_category two on one.id = two.parentid</span><br><span class="line">where one.parentid = 1</span><br><span class="line">  and one.is_show = 1</span><br><span class="line">  and two.is_show = 1</span><br><span class="line">order by one.orderby, two.orderby;</span><br></pre></td></tr></table></figure>
+<p>注意此时的order by 根据两个条件，其效果是先根据one.orderby排序,其内部排序结果再由two.orderby排序。</p>
+<h4 id="树层级不确定"><a class="markdownIt-Anchor" href="#树层级不确定"></a> 树层级不确定</h4>
+<p>此时可以使用MySQL递归实现，使用with语法，如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">WITH RECURSIVE cte_name (column_list) AS (</span><br><span class="line">    SELECT initial_query_result</span><br><span class="line">    UNION [ALL]</span><br><span class="line">    SELECT recursive_query</span><br><span class="line">    FROM cte_name</span><br><span class="line">    WHERE condition</span><br><span class="line">)</span><br><span class="line">SELECT * FROM cte_name;</span><br></pre></td></tr></table></figure>
+<p>MySQL with Recursive语法详解</p>
+<ol>
+<li>
+<p>WITH RECURSIVE：表示要使用递归查询的方式处理数据。</p>
+</li>
+<li>
+<p>cte_name：给这个临时的递归表取个名字，可以在初始查询和递归查询中引用。</p>
+</li>
+<li>
+<p>column_list：表示cte_name查询表中包含的列名，列名之间用逗号分隔。</p>
+</li>
+<li>
+<p>initial_query_result：表示初始的查询结果，应该与column_list中的列名对应。</p>
+</li>
+<li>
+<p>UNION：表示将两个查询结果集进行联合，使用UNION ALL则表示保留重复数据。</p>
+</li>
+<li>
+<p>recursive_query：表示递归查询语句，应当与column_list中的列名对应。</p>
+</li>
+<li>
+<p>condition：表示递归查询的终止条件，需要使用cte_name中的列进行判</p>
+</li>
+<li>
+<p>SELECT * FROM cte_name：表示最终返回的查询结果集，可以通过cte_name查询表中的列名进行指定。</p>
+</li>
+</ol>
+<p>下边是一个递归的简单例子：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">with RECURSIVE t1 AS   (    </span><br><span class="line">	SELECT 1 as n    </span><br><span class="line">	UNION ALL    </span><br><span class="line">	SELECT n + 1 FROM t1 WHERE n &lt; 5   </span><br><span class="line">)   </span><br><span class="line">SELECT * FROM t1;</span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<p><img src="C:%5CUsers%5CWwhds%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240211193838531.png" alt="image-20240211193838531"></p>
+<p>课程分类表层级固定查询sql:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select *</span><br><span class="line">from course_category one</span><br><span class="line">         inner join course_category two on one.id = two.parentid</span><br><span class="line">where one.parentid = 1</span><br><span class="line">  and one.is_show = 1</span><br><span class="line">  and two.is_show = 1</span><br><span class="line">order by one.orderby, two.orderby;</span><br></pre></td></tr></table></figure>
+<p>课程分类表层级不固定查询sql:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">with recursive t1 as (</span><br><span class="line">    select * from course_category where id = '1'</span><br><span class="line">    union all</span><br><span class="line">    select t2.* from course_category t2 inner join t1 on t2.parentid = t1.id</span><br><span class="line">)</span><br><span class="line">select * from t1 order by t1.id;</span><br></pre></td></tr></table></figure>
+<p>以上是我们研究了树型表的查询方法，通过递归的方式查询课程分类比较灵活，因为它可以不限制层级。</p>
+<p>mysql为了避免无限递归默认递归次数为1000，可以通过设置cte_max_recursion_depth参数增加递归深度，还可以通过max_execution_time限制执行时间，超过此时间也会终止递归操作。</p>
+<p>mysql递归相当于在存储过程中执行若干次sql语句，java程序仅与数据库建立一次链接执行递归操作，所以只要控制好递归深度，控制好数据量性能就没有问题。</p>
+<p>思考：如果java程序在递归操作中连接数据库去查询数据组装数据，这个性能高吗？</p>
+<p>答：若在mysql中执行递归查询，java与数据库只用连接一次。若在java中使用递归查询则会连接多次，浪费性能。</p>
+<h3 id="service层处理"><a class="markdownIt-Anchor" href="#service层处理"></a> service层处理</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> List&lt;CourseCategoryDTO&gt; <span class="title function_">queryTreeNodes</span><span class="params">(String id)</span> {</span><br><span class="line">    <span class="comment">//调用mapper查询分类信息</span></span><br><span class="line">    List&lt;CourseCategoryDTO&gt; courseCategoryDTOS = courseCategoryMapper.selectTreeNodes(id);</span><br><span class="line">    <span class="comment">//封装成list类型返回</span></span><br><span class="line">    <span class="comment">//将list转换成map,key为id,value为CourseCategoryDTO</span></span><br><span class="line">    Map&lt;String, CourseCategoryDTO&gt; map = courseCategoryDTOS.stream()</span><br><span class="line">        .collect(Collectors.toMap(CourseCategory::getId, value -&gt; value, (key1, key2) -&gt; key2));</span><br><span class="line">    <span class="comment">//遍历list,查找collect子节点</span></span><br><span class="line">    List&lt;CourseCategoryDTO&gt; result = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">    courseCategoryDTOS.stream().filter(item -&gt; !id.equals(item.getId())) <span class="comment">//去除根节点</span></span><br><span class="line">        .forEach(item -&gt; {</span><br><span class="line">            <span class="keyword">if</span> ( item.getParentid().equals(id) ) {</span><br><span class="line">                result.add(item);</span><br><span class="line">            }</span><br><span class="line">            <span class="type">CourseCategoryDTO</span> <span class="variable">courseCategoryDTO</span> <span class="operator">=</span> map.get(item.getParentid());</span><br><span class="line">            <span class="comment">//父节点属于要要找的节点则此时会在map中,若不是要找的节点则会被filter过滤</span></span><br><span class="line">            <span class="keyword">if</span> ( courseCategoryDTO != <span class="literal">null</span> ) {</span><br><span class="line">                <span class="comment">//如果该父节点的子节点集合为空,设置一个新的集合</span></span><br><span class="line">                <span class="keyword">if</span> ( courseCategoryDTO.getChildrenTreeNodes() == <span class="literal">null</span> ) {</span><br><span class="line">                    courseCategoryDTO.setChildrenTreeNodes(<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;());</span><br><span class="line">                }</span><br><span class="line">                courseCategoryDTO.getChildrenTreeNodes().add(item);</span><br><span class="line">            }</span><br><span class="line">        });</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h1 id="新增课程"><a class="markdownIt-Anchor" href="#新增课程"></a> 新增课程</h1>
+<p>注意涉及到增删改查记得要添加**@Transactional**注解</p>
+<p>注意当事务回滚时ID仍然自增，因为innodb的auto_increament的计数器记录的当前值是保存在存内 存中的，并不是存在于磁盘上，当mysql server处于运行的时候，这个计数值只会随着 insert 改增长，不会随着delete而减少。</p>
+<p>所以最后要在courseMarket设置ID，而不是直接插入</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Transactional</span></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> CourseBaseInfoDTO <span class="title function_">createCourseBaseInfo</span><span class="params">(Long companyId, AddCourseDTO addcourseDTO)</span> {</span><br><span class="line">    <span class="comment">//合法性校验</span></span><br><span class="line">    <span class="keyword">if</span> (StringUtils.isBlank(addcourseDTO.getName())) {</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(<span class="string">"课程名称为空"</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (StringUtils.isBlank(addcourseDTO.getMt())) {</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(<span class="string">"课程分类为空"</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (StringUtils.isBlank(addcourseDTO.getSt())) {</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(<span class="string">"课程分类为空"</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (StringUtils.isBlank(addcourseDTO.getGrade())) {</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(<span class="string">"课程等级为空"</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (StringUtils.isBlank(addcourseDTO.getTeachmode())) {</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(<span class="string">"教育模式为空"</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (StringUtils.isBlank(addcourseDTO.getUsers())) {</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(<span class="string">"适应人群为空"</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (StringUtils.isBlank(addcourseDTO.getCharge())) {</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(<span class="string">"收费规则为空"</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">//1.向课程信息表(course_Base)写入信息</span></span><br><span class="line">    <span class="type">CourseBase</span> <span class="variable">courseBase</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">CourseBase</span>();</span><br><span class="line">    BeanUtils.copyProperties(addcourseDTO,courseBase);</span><br><span class="line">    courseBase.setCompanyId(companyId);</span><br><span class="line">    courseBase.setCreateDate(LocalDateTime.now());</span><br><span class="line">    <span class="comment">//审核状态默认未提交</span></span><br><span class="line">    courseBase.setAuditStatus(<span class="string">"202002"</span>);</span><br><span class="line">    <span class="comment">//发布状态为未发布</span></span><br><span class="line">    courseBase.setStatus(<span class="string">"203001"</span>);</span><br><span class="line">    <span class="type">int</span> <span class="variable">insert</span> <span class="operator">=</span> courseBaseMapper.insert(courseBase);</span><br><span class="line">    <span class="keyword">if</span>(insert &lt;= <span class="number">0</span>){</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(<span class="string">"添加课程失败"</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="comment">//2.向课程营销表(course_market)写入信息</span></span><br><span class="line">    <span class="comment">//课程营销信息</span></span><br><span class="line">    <span class="type">CourseMarket</span> <span class="variable">courseMarket</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">CourseMarket</span>();</span><br><span class="line">    <span class="type">Long</span> <span class="variable">courseId</span> <span class="operator">=</span> courseBase.getId();</span><br><span class="line">    BeanUtils.copyProperties(addcourseDTO,courseMarket);</span><br><span class="line">    courseMarket.setId(courseId);</span><br><span class="line">    <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> saveCourseMarket(courseMarket);</span><br><span class="line">    <span class="keyword">if</span>(i&lt;=<span class="number">0</span>){</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(<span class="string">"保存课程营销信息失败"</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="comment">//查询课程基本信息及营销信息并返回</span></span><br><span class="line">    <span class="keyword">return</span> getCourseBaseInfo(courseId);</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h1 id="异常处理"><a class="markdownIt-Anchor" href="#异常处理"></a> 异常处理</h1>
+<p>异常处理方法用的三个注解:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ResponseBody</span>									  <span class="comment">//将java对象转换成json格式</span></span><br><span class="line"><span class="meta">@ExceptionHandler(XueChengPlusException.class)</span>    <span class="comment">//利用字节码文件捕获对应异常</span></span><br><span class="line"><span class="meta">@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)</span> <span class="comment">//设置响应码</span></span><br></pre></td></tr></table></figure>
+<p>注意到类上用了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ControllerAdvice</span></span><br></pre></td></tr></table></figure>
+<p>我们可以使用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestControllerAdvice</span></span><br></pre></td></tr></table></figure>
+<p>@RestControllerAdvice注解包含了@ControllerAdvice注解和@ResponseBody注解</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Wwhds
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wwhdsone.github.io/2024/03/20/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFDay02/" title="学成在线Day02">https://wwhdsone.github.io/2024/03/20/学成在线Day02/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+              <a href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"># 学习</a>
+              <a href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag"># 后端</a>
+              <a href="/tags/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/" rel="tag"># 黑马程序员</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/03/20/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFDay03/" rel="prev" title="学成在线Day03">
+      <i class="fa fa-chevron-left"></i> 学成在线Day03
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2024/03/20/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFDay01/" rel="next" title="学成在线Day01">
+      学成在线Day01 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFday02"><span class="nav-text"> 学成在线Day02</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E6%8C%81%E4%B9%85%E5%B1%82"><span class="nav-text"> 开发持久层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81"><span class="nav-text"> 分页查询测试代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8http-client%E6%8F%92%E4%BB%B6%E7%94%9F%E6%88%90http%E8%AF%B7%E6%B1%82"><span class="nav-text"> 利用Http Client插件生成http请求</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B7%A8%E5%9F%9F%E4%B8%89%E7%A7%8D%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-text"> 跨域三种解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%A7%8D-json"><span class="nav-text"> 第一种 JSON</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D-%E6%B7%BB%E5%8A%A0%E5%93%8D%E5%BA%94%E5%A4%B4"><span class="nav-text"> 第二种 添加响应头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%A7%8D-%E9%80%9A%E8%BF%87nginx%E4%BB%A3%E7%90%86%E8%B7%A8%E5%9F%9F"><span class="nav-text"> 第三种 通过nginx代理跨域</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E5%90%8E%E7%AB%AF%E8%81%94%E8%B0%83"><span class="nav-text"> 前后端联调</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%BE%E7%A8%8B%E5%88%86%E7%B1%BB%E6%9F%A5%E8%AF%A2"><span class="nav-text"> 课程分类查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%91%E5%BD%A2%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2"><span class="nav-text"> 树形数据库查询</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%91%E5%B1%82%E7%BA%A7%E7%A1%AE%E5%AE%9A"><span class="nav-text"> 树层级确定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%91%E5%B1%82%E7%BA%A7%E4%B8%8D%E7%A1%AE%E5%AE%9A"><span class="nav-text"> 树层级不确定</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#service%E5%B1%82%E5%A4%84%E7%90%86"><span class="nav-text"> service层处理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B0%E5%A2%9E%E8%AF%BE%E7%A8%8B"><span class="nav-text"> 新增课程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86"><span class="nav-text"> 异常处理</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Wwhds"
+      src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/Markdown%E4%BD%BF%E7%94%A8/w.jpg">
+  <p class="site-author-name" itemprop="name">Wwhds</p>
+  <div class="site-description" itemprop="description">个人博客</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/WwhdsOne" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WwhdsOne" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:a1605691832@163.com" title="E-Mail → mailto:a1605691832@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://qm.qq.com/q/A18mWRc5YQ" title="QQ → https:&#x2F;&#x2F;qm.qq.com&#x2F;q&#x2F;A18mWRc5YQ" rel="noopener" target="_blank"><i class="fab fa-qq fa-lg fa-fw"></i>QQ</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/85778548?spm_id_from=333.1007.0.0" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;85778548?spm_id_from&#x3D;333.1007.0.0" rel="noopener" target="_blank"><i class="fa custom bilibili fa-fw"></i>Bilibili</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wwhds</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">40k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:12</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+  <script src='https://unpkg.com/mermaid@/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+<div>
+  <span id="timeDate">载入天数...</span>
+  <script>
+      var now = new Date(); 
+      function createtime() { 
+          var grt = new Date("03/18/2024 00:00:00");//在此处修改你的建站时间
+          now.setTime(now.getTime()+250); 
+          days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+          document.getElementById("timeDate").innerHTML = "已运行 "+dnum+" 天 "; 
+      } 
+  setInterval("createtime()",250);
+  </script>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '402f0a321164611a3faa',
+      clientSecret: '0857efbac20d76b6f97010056772c1069e03fabe',
+      repo        : 'Wblog_Comments',
+      owner       : 'WwhdsOne',
+      admin       : ['WwhdsOne'],
+      id          : '09e8c3fd5e1620de76a1a2a73bfe580a',
+        language: 'zh-CN',
+      distractionFreeMode: false
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>
