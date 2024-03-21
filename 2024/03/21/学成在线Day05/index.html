@@ -388,10 +388,10 @@ mjx-container[display="true"] + br {
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="学成在线day05"><a class="markdownIt-Anchor" href="#学成在线day05"></a> 学成在线Day05</h1>
-<h1 id="媒资管理开发流程"><a class="markdownIt-Anchor" href="#媒资管理开发流程"></a> 媒资管理开发流程</h1>
+        <h1>学成在线Day05</h1>
+<h1>媒资管理开发流程</h1>
 <p>见word资料</p>
-<h1 id="微服务搭建"><a class="markdownIt-Anchor" href="#微服务搭建"></a> 微服务搭建</h1>
+<h1>微服务搭建</h1>
 <p>在xuecheng-plus-parent中添加依赖管理</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-alibaba-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>${spring-cloud-alibaba.version}<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>在内容管理模块的接口工程，因为api是启动Http服务，在其中添加如下依赖</p>
@@ -407,7 +407,7 @@ mjx-container[display="true"] + br {
 <p>group:用于区分项目，比如：xuecheng-plus项目、xuecheng2.0项目</p>
 </li>
 </ul>
-<h3 id="配置三要素"><a class="markdownIt-Anchor" href="#配置三要素"></a> <strong>配置三要素</strong></h3>
+<h3 id="配置三要素"><strong>配置三要素</strong></h3>
 <p>搭建完成Nacos服务发现中心，下边搭建Nacos为配置中心，其目的就是通过Nacos去管理项目的所有配置。</p>
 <p>先将项目中的配置文件分分类：</p>
 <p>1、每个项目特有的配置</p>
@@ -422,12 +422,12 @@ mjx-container[display="true"] + br {
 <p><em><strong>content-service：第一部分，它是在application.yaml中配置的应用名，即spring.application.name的值。</strong></em></p>
 <p><em><strong>dev：第二部分，它是环境名，通过spring.profiles.active指定，</strong></em></p>
 <p><em><strong>Yaml: 第三部分，它是配置文件 的后缀，目前nacos支持properties、yaml等格式类型，本项目选择yaml格式类型。</strong></em></p>
-<h3 id="配置content-service"><a class="markdownIt-Anchor" href="#配置content-service"></a> 配置content-service</h3>
+<h3 id="配置content-service">配置content-service</h3>
 <p>在content-service工程的test/resources 中添加bootstrap.yaml，内容如下：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">content-service</span></span><br><span class="line">  <span class="attr">cloud:</span></span><br><span class="line">    <span class="attr">nacos:</span></span><br><span class="line">      <span class="attr">server-addr:</span> <span class="number">192.168</span><span class="number">.101</span><span class="number">.65</span><span class="string">:8848</span></span><br><span class="line">      <span class="attr">discovery:</span></span><br><span class="line">        <span class="attr">namespace:</span> <span class="string">dev</span></span><br><span class="line">        <span class="attr">group:</span> <span class="string">xuecheng-plus-project</span></span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        <span class="attr">namespace:</span> <span class="string">dev</span></span><br><span class="line">        <span class="attr">group:</span> <span class="string">xuecheng-plus-project</span></span><br><span class="line">        <span class="attr">file-extension:</span> <span class="string">yaml</span></span><br><span class="line">        <span class="attr">refresh-enabled:</span> <span class="literal">true</span></span><br><span class="line"><span class="comment">#profiles默认为dev</span></span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span> <span class="string">dev</span></span><br></pre></td></tr></table></figure>
 <p>通过运行观察控制台打印出下边的信息，NacosRestTemplate.java通过Post方式与nacos服务端交互读取配置信息。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[NacosRestTemplate.java:<span class="number">476</span>] - HTTP method: POST, url: http:<span class="comment">//192.168.101.65:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=content-service.yaml?xuecheng-plus-project??dev?content-service-dev.yaml?xuecheng-plus-project?88459b1483b8381eccc2ef462bd59182?dev?content-service?xuecheng-plus-project??dev?, tenant=dev}</span></span><br></pre></td></tr></table></figure>
-<h3 id="配置content-api"><a class="markdownIt-Anchor" href="#配置content-api"></a> 配置content-api</h3>
+<h3 id="配置content-api">配置content-api</h3>
 <p>内容如下：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#微服务配置</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">content-api</span></span><br><span class="line">  <span class="attr">cloud:</span></span><br><span class="line">    <span class="attr">nacos:</span></span><br><span class="line">      <span class="attr">server-addr:</span> <span class="number">192.168</span><span class="number">.101</span><span class="number">.65</span><span class="string">:8848</span></span><br><span class="line">      <span class="attr">discovery:</span></span><br><span class="line">        <span class="attr">namespace:</span> <span class="string">dev</span></span><br><span class="line">        <span class="attr">group:</span> <span class="string">xuecheng-plus-project</span></span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        <span class="attr">namespace:</span> <span class="string">dev</span></span><br><span class="line">        <span class="attr">group:</span> <span class="string">xuecheng-plus-project</span></span><br><span class="line">        <span class="attr">file-extension:</span> <span class="string">yaml</span></span><br><span class="line">        <span class="attr">refresh-enabled:</span> <span class="literal">true</span></span><br><span class="line">        <span class="attr">extension-configs:</span></span><br><span class="line">          <span class="bullet">-</span> <span class="attr">data-id:</span> <span class="string">content-service-${spring.profiles.active}.yaml</span></span><br><span class="line">            <span class="attr">group:</span> <span class="string">xuecheng-plus-project</span></span><br><span class="line">            <span class="attr">refresh:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span> <span class="string">dev</span></span><br></pre></td></tr></table></figure>
 <p>通过这一部分，能让其引用service层的数据库连接配置：</p>
@@ -437,7 +437,7 @@ mjx-container[display="true"] + br {
 <p>nacos中并未对<code>extension-configs</code>和<code>shared-configs</code>的差别</p>
 <p>但是我们在使用时，若使用公共配置文件，则需要配置<code>shared-configs</code></p>
 <p>若使用私有配置，则需要配置<code>extension-configs</code></p>
-<h3 id="配置优先级"><a class="markdownIt-Anchor" href="#配置优先级"></a> 配置优先级</h3>
+<h3 id="配置优先级">配置优先级</h3>
 <p>到目前为止已将所有微服务的配置统一在nacos进行配置，用到的配置文件有本地的配置文件 bootstrap.yaml和nacos上的配置文件，SpringBoot读取配置文件 的顺序如下：</p>
 <p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240216202431287.png" alt="image-20240216202431287"></p>
 <p>引入配置文件的形式有：</p>
@@ -448,15 +448,15 @@ mjx-container[display="true"] + br {
 <p>各配置文件 的优先级：项目应用名配置文件 &gt; 扩展配置文件 &gt; 共享配置文件 &gt; 本地配置文件。</p>
 <p>想让本地最优先，可以在nacos配置文件 中配置如下即可实现：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line"> <span class="attr">cloud:</span></span><br><span class="line">  <span class="attr">config:</span></span><br><span class="line">    <span class="attr">override-none:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<h1 id="分布式文件系统"><a class="markdownIt-Anchor" href="#分布式文件系统"></a> 分布式文件系统</h1>
+<h1>分布式文件系统</h1>
 <p>简介请查看word中分布式文件系统这一章:[分布式简介](E:\学习资料\学成在线项目—资料\day05 媒资管理 Nacos Gateway MinIO\资料\第3章媒资管理模块v3.1.docx)</p>
 <p>我们使用Minio分布式文件存储系统</p>
-<h3 id="sdk"><a class="markdownIt-Anchor" href="#sdk"></a> SDK</h3>
+<h3 id="SDK">SDK</h3>
 <p>操作教程地址：<a target="_blank" rel="noopener" href="https://docs.min.io/docs/java-client-quickstart-guide.html">https://docs.min.io/docs/java-client-quickstart-guide.html</a></p>
 <p>最低需求Java 1.8或更高版本</p>
 <p>Maven依赖:</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.minio<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>minio<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>8.4.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.squareup.okhttp3<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>okhttp<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.8.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h1 id="上传图片"><a class="markdownIt-Anchor" href="#上传图片"></a> 上传图片</h1>
+<h1>上传图片</h1>
 <p>首先分析接口：</p>
 <p>请求地址：/media/upload/coursefile</p>
 <p>请求内容：<strong>Content-Type:</strong> multipart/form-data;</p>
@@ -472,7 +472,7 @@ mjx-container[display="true"] + br {
 <p><code>transferTo</code> 是 Java 中的一个方法，用于将文件的内容转移到另一个文件中。这个方法是 <code>java.nio.file.Files</code> 类的一部分，它使用了 Java 的 NIO（Non-blocking I/O）特性，可以更高效地处理文件操作。</p>
 <p>这个方法会在默认的临时文件目录中创建一个新的空文件，文件名是由给定的前缀和后缀生成的。这个临时文件的路径可以通过 <code>tempFile.getPath()</code> 获取。</p>
 <p>注意：创建的临时文件在 JVM 退出时不会自动删除，需要手动删除。如果你希望临时文件在 JVM 退出时自动删除，可以调用 <code>tempFile.deleteOnExit()</code> 方法。</p>
-<h1 id="service事务优化"><a class="markdownIt-Anchor" href="#service事务优化"></a> Service事务优化</h1>
+<h1>Service事务优化</h1>
 <p>上边的service方法优化后并测试通过，现在思考关于uploadFile方法的是否应该开启事务。</p>
 <p>目前是在uploadFile方法上添加@Transactional，当调用uploadFile方法前会开启数据库事务，如果上传文件过程时间较长那么数据库的事务持续时间就会变长，这样数据库链接释放就慢，最终导致数据库链接不够用。</p>
 <p>我们只将addMediaFilesToDb方法添加事务控制即可,uploadFile方法上的@Transactional注解去掉。</p>
@@ -596,7 +596,7 @@ mjx-container[display="true"] + br {
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFday05"><span class="nav-text"> 学成在线Day05</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AA%92%E8%B5%84%E7%AE%A1%E7%90%86%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B"><span class="nav-text"> 媒资管理开发流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA"><span class="nav-text"> 微服务搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%89%E8%A6%81%E7%B4%A0"><span class="nav-text"> 配置三要素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEcontent-service"><span class="nav-text"> 配置content-service</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEcontent-api"><span class="nav-text"> 配置content-api</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%BC%98%E5%85%88%E7%BA%A7"><span class="nav-text"> 配置优先级</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="nav-text"> 分布式文件系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sdk"><span class="nav-text"> SDK</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87"><span class="nav-text"> 上传图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#service%E4%BA%8B%E5%8A%A1%E4%BC%98%E5%8C%96"><span class="nav-text"> Service事务优化</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">学成在线Day05</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">媒资管理开发流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">微服务搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%89%E8%A6%81%E7%B4%A0"><span class="nav-text">配置三要素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEcontent-service"><span class="nav-text">配置content-service</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEcontent-api"><span class="nav-text">配置content-api</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%BC%98%E5%85%88%E7%BA%A7"><span class="nav-text">配置优先级</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">分布式文件系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SDK"><span class="nav-text">SDK</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">上传图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">Service事务优化</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -612,7 +612,7 @@ mjx-container[display="true"] + br {
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -678,12 +678,12 @@ mjx-container[display="true"] + br {
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">56k</span>
+    <span title="站点总字数">226k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:42</span>
+    <span title="站点阅读时长">6:52</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
