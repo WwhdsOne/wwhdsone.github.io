@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Sarasa Fixed SC:300,300italic,400,400italic,700,700italic|Fira code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/red/pace-center-circle.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"wwhdsone.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="学成在线Day05内容">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学成在线Day05">
+<meta property="og:url" content="https://wwhdsone.github.io/2024/03/21/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFDay05/index.html">
+<meta property="og:site_name" content="WBlog">
+<meta property="og:description" content="学成在线Day05内容">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240216202431287.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240217202502483.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240217202523999.png">
+<meta property="article:published_time" content="2024-03-21T01:10:45.000Z">
+<meta property="article:modified_time" content="2024-03-21T01:11:49.642Z">
+<meta property="article:author" content="Wwhds">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="后端">
+<meta property="article:tag" content="黑马程序员">
+<meta property="article:tag" content="学成在线">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240216202431287.png">
+
+<link rel="canonical" href="https://wwhdsone.github.io/2024/03/21/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFDay05/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>学成在线Day05 | WBlog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">WBlog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">哀吾生之须臾，羡长江之无穷</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/WwhdsOne" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wwhdsone.github.io/2024/03/21/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFDay05/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/Markdown%E4%BD%BF%E7%94%A8/w.jpg">
+      <meta itemprop="name" content="Wwhds">
+      <meta itemprop="description" content="个人博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WBlog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          学成在线Day05
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-03-21 09:10:45 / 修改时间：09:11:49" itemprop="dateCreated datePublished" datetime="2024-03-21T09:10:45+08:00">2024-03-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>6.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>12 分钟</span>
+            </span>
+            <div class="post-description">学成在线Day05内容</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="学成在线day05"><a class="markdownIt-Anchor" href="#学成在线day05"></a> 学成在线Day05</h1>
+<h1 id="媒资管理开发流程"><a class="markdownIt-Anchor" href="#媒资管理开发流程"></a> 媒资管理开发流程</h1>
+<p>见word资料</p>
+<h1 id="微服务搭建"><a class="markdownIt-Anchor" href="#微服务搭建"></a> 微服务搭建</h1>
+<p>在xuecheng-plus-parent中添加依赖管理</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-alibaba-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>${spring-cloud-alibaba.version}<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在内容管理模块的接口工程，因为api是启动Http服务，在其中添加如下依赖</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-alibaba-nacos-discovery<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-alibaba-nacos-config<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在bootstrap.yml文件加入如下配置:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#微服务配置</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">content-api</span> <span class="comment">#微服务名称</span></span><br><span class="line">  <span class="attr">cloud:</span></span><br><span class="line">    <span class="attr">nacos:</span></span><br><span class="line">      <span class="attr">server-addr:</span> <span class="number">192.168</span><span class="number">.101</span><span class="number">.65</span><span class="string">:8848</span></span><br><span class="line">      <span class="attr">discovery:</span> <span class="comment">#服务相关配置</span></span><br><span class="line">        <span class="attr">namespace:</span> <span class="string">dev-Wwh</span></span><br><span class="line">        <span class="attr">group:</span> <span class="string">xuecheng-plus-project</span></span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        <span class="attr">namespace:</span> <span class="string">dev-Wwh</span></span><br><span class="line">        <span class="attr">group:</span> <span class="string">xuecheng-plus-project</span></span><br><span class="line">        <span class="attr">file-extension:</span> <span class="string">yaml</span></span><br><span class="line">        <span class="attr">refresh-enabled:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span> <span class="string">dev</span></span><br></pre></td></tr></table></figure>
+<p>在搭建Nacos服务发现中心之前需要搞清楚两个概念：namespace和group</p>
+<ul>
+<li>
+<p>namespace:用于区分环境、比如：开发环境、测试环境、生产环境。</p>
+</li>
+<li>
+<p>group:用于区分项目，比如：xuecheng-plus项目、xuecheng2.0项目</p>
+</li>
+</ul>
+<h3 id="配置三要素"><a class="markdownIt-Anchor" href="#配置三要素"></a> <strong>配置三要素</strong></h3>
+<p>搭建完成Nacos服务发现中心，下边搭建Nacos为配置中心，其目的就是通过Nacos去管理项目的所有配置。</p>
+<p>先将项目中的配置文件分分类：</p>
+<p>1、每个项目特有的配置</p>
+<p>是指该配置只在有些项目中需要配置，或者该配置在每个项目中配置的值不同。</p>
+<p>比如：spring.application.name每个项目都需要配置但值不一样，以及有些项目需要连接数据库而有些项目不需要，有些项目需要配置消息队列而有些项目不需要。</p>
+<p>2、项目所公用的配置</p>
+<p>是指在若干项目中配置内容相同的配置。比如：redis的配置，很多项目用的同一套redis服务所以配置也一样。</p>
+<p>另外还需要知道nacos如何去定位一个具体的配置文件，即：namespace、group、dataid.</p>
+<p>1、通过namespace、group找到具体的环境和具体的项目。</p>
+<p>2、通过dataid找到具体的配置文件，dataid有三部分组成</p>
+<p><em><strong>比如：content-service-dev.yaml配置文件 由（content-service）-（dev）. (yaml)三部分组成</strong></em></p>
+<p><em><strong>content-service：第一部分，它是在application.yaml中配置的应用名，即spring.application.name的值。</strong></em></p>
+<p><em><strong>dev：第二部分，它是环境名，通过spring.profiles.active指定，</strong></em></p>
+<p><em><strong>Yaml: 第三部分，它是配置文件 的后缀，目前nacos支持properties、yaml等格式类型，本项目选择yaml格式类型。</strong></em></p>
+<h3 id="配置content-service"><a class="markdownIt-Anchor" href="#配置content-service"></a> 配置content-service</h3>
+<p>在content-service工程的test/resources 中添加bootstrap.yaml，内容如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">content-service</span></span><br><span class="line">  <span class="attr">cloud:</span></span><br><span class="line">    <span class="attr">nacos:</span></span><br><span class="line">      <span class="attr">server-addr:</span> <span class="number">192.168</span><span class="number">.101</span><span class="number">.65</span><span class="string">:8848</span></span><br><span class="line">      <span class="attr">discovery:</span></span><br><span class="line">        <span class="attr">namespace:</span> <span class="string">dev</span></span><br><span class="line">        <span class="attr">group:</span> <span class="string">xuecheng-plus-project</span></span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        <span class="attr">namespace:</span> <span class="string">dev</span></span><br><span class="line">        <span class="attr">group:</span> <span class="string">xuecheng-plus-project</span></span><br><span class="line">        <span class="attr">file-extension:</span> <span class="string">yaml</span></span><br><span class="line">        <span class="attr">refresh-enabled:</span> <span class="literal">true</span></span><br><span class="line"><span class="comment">#profiles默认为dev</span></span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span> <span class="string">dev</span></span><br></pre></td></tr></table></figure>
+<p>通过运行观察控制台打印出下边的信息，NacosRestTemplate.java通过Post方式与nacos服务端交互读取配置信息。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[NacosRestTemplate.java:<span class="number">476</span>] - HTTP method: POST, url: http:<span class="comment">//192.168.101.65:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=content-service.yaml?xuecheng-plus-project??dev?content-service-dev.yaml?xuecheng-plus-project?88459b1483b8381eccc2ef462bd59182?dev?content-service?xuecheng-plus-project??dev?, tenant=dev}</span></span><br></pre></td></tr></table></figure>
+<h3 id="配置content-api"><a class="markdownIt-Anchor" href="#配置content-api"></a> 配置content-api</h3>
+<p>内容如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#微服务配置</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">content-api</span></span><br><span class="line">  <span class="attr">cloud:</span></span><br><span class="line">    <span class="attr">nacos:</span></span><br><span class="line">      <span class="attr">server-addr:</span> <span class="number">192.168</span><span class="number">.101</span><span class="number">.65</span><span class="string">:8848</span></span><br><span class="line">      <span class="attr">discovery:</span></span><br><span class="line">        <span class="attr">namespace:</span> <span class="string">dev</span></span><br><span class="line">        <span class="attr">group:</span> <span class="string">xuecheng-plus-project</span></span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        <span class="attr">namespace:</span> <span class="string">dev</span></span><br><span class="line">        <span class="attr">group:</span> <span class="string">xuecheng-plus-project</span></span><br><span class="line">        <span class="attr">file-extension:</span> <span class="string">yaml</span></span><br><span class="line">        <span class="attr">refresh-enabled:</span> <span class="literal">true</span></span><br><span class="line">        <span class="attr">extension-configs:</span></span><br><span class="line">          <span class="bullet">-</span> <span class="attr">data-id:</span> <span class="string">content-service-${spring.profiles.active}.yaml</span></span><br><span class="line">            <span class="attr">group:</span> <span class="string">xuecheng-plus-project</span></span><br><span class="line">            <span class="attr">refresh:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span> <span class="string">dev</span></span><br></pre></td></tr></table></figure>
+<p>通过这一部分，能让其引用service层的数据库连接配置：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">extension-configs:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">data-id:</span> <span class="string">content-service-${spring.profiles.active}.yaml</span></span><br><span class="line">    <span class="attr">group:</span> <span class="string">xuecheng-plus-project</span></span><br><span class="line">    <span class="attr">refresh:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>将swagger配置和logging配置抽取到项目公共组，来让所有项目通用配置这部分内容</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">shared-configs:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">data-id:</span> <span class="string">swagger-${spring.profiles.active}.yaml</span>       <span class="comment">#swagger文件配置</span></span><br><span class="line">    <span class="attr">group:</span> <span class="string">xuecheng-plus-common</span></span><br><span class="line">    <span class="attr">refresh:</span> <span class="literal">true</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">data-id:</span> <span class="string">logging-${spring.profiles.active}.yaml</span>       <span class="comment">#日志文件配置</span></span><br><span class="line">    <span class="attr">group:</span> <span class="string">xuecheng-plus-common</span></span><br><span class="line">    <span class="attr">refresh:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>nacos中并未对<code>extension-configs</code>和<code>shared-configs</code>的差别</p>
+<p>但是我们在使用时，若使用公共配置文件，则需要配置<code>shared-configs</code></p>
+<p>若使用私有配置，则需要配置<code>extension-configs</code></p>
+<h3 id="配置优先级"><a class="markdownIt-Anchor" href="#配置优先级"></a> 配置优先级</h3>
+<p>到目前为止已将所有微服务的配置统一在nacos进行配置，用到的配置文件有本地的配置文件 bootstrap.yaml和nacos上的配置文件，SpringBoot读取配置文件 的顺序如下：</p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240216202431287.png" alt="image-20240216202431287"></p>
+<p>引入配置文件的形式有：</p>
+<p>1、以项目应用名方式引入</p>
+<p>2、以扩展配置文件方式引入</p>
+<p>3、以共享配置文件 方式引入</p>
+<p>4、本地配置文件</p>
+<p>各配置文件 的优先级：项目应用名配置文件 &gt; 扩展配置文件 &gt; 共享配置文件 &gt; 本地配置文件。</p>
+<p>想让本地最优先，可以在nacos配置文件 中配置如下即可实现：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line"> <span class="attr">cloud:</span></span><br><span class="line">  <span class="attr">config:</span></span><br><span class="line">    <span class="attr">override-none:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h1 id="分布式文件系统"><a class="markdownIt-Anchor" href="#分布式文件系统"></a> 分布式文件系统</h1>
+<p>简介请查看word中分布式文件系统这一章:[分布式简介](E:\学习资料\学成在线项目—资料\day05 媒资管理 Nacos Gateway MinIO\资料\第3章媒资管理模块v3.1.docx)</p>
+<p>我们使用Minio分布式文件存储系统</p>
+<h3 id="sdk"><a class="markdownIt-Anchor" href="#sdk"></a> SDK</h3>
+<p>操作教程地址：<a target="_blank" rel="noopener" href="https://docs.min.io/docs/java-client-quickstart-guide.html">https://docs.min.io/docs/java-client-quickstart-guide.html</a></p>
+<p>最低需求Java 1.8或更高版本</p>
+<p>Maven依赖:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.minio<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>minio<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>8.4.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.squareup.okhttp3<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>okhttp<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.8.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="上传图片"><a class="markdownIt-Anchor" href="#上传图片"></a> 上传图片</h1>
+<p>首先分析接口：</p>
+<p>请求地址：/media/upload/coursefile</p>
+<p>请求内容：<strong>Content-Type:</strong> multipart/form-data;</p>
+<p>form-data; name=“filedata”; filename=“具体的文件名称”</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiOperation("上传图片")</span></span><br><span class="line"><span class="meta">@PostMapping(value = "/upload/coursefile",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)</span></span><br><span class="line"><span class="keyword">public</span> UploadFileResultDTO <span class="title function_">upload</span><span class="params">(<span class="meta">@RequestPart("file")</span> MultipartFile file)</span> {</span><br><span class="line">    <span class="comment">//调用service上传文件</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p><code>consumes</code> 请求提交内容类型，<code>MediaType</code>方式，如 <code>application/json</code>、<code>application/x-www-urlencode</code>、<code>multipart/form-data</code>等</p>
+<p><code>@RequestPart</code>用于将<code>multipart/form-data</code>类型数据映射到控制器处理方法的参数中。除了<code>@RequestPart</code>注解外，<code>@RequestParam</code>同样可以用于此类操作。</p>
+<p>上传到Minio需要进行的操作</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.文件上传到Minio</span></span><br><span class="line"><span class="type">String</span> <span class="variable">fileName</span> <span class="operator">=</span> uploadFileParamsDto.getFilename();</span><br><span class="line"><span class="comment">//获取文件拓展名</span></span><br><span class="line"><span class="type">String</span> <span class="variable">extension</span> <span class="operator">=</span> StringUtils.substringAfterLast(fileName, <span class="string">"."</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//根据拓展名获取媒体类型</span></span><br><span class="line"><span class="type">String</span> <span class="variable">mimeType</span> <span class="operator">=</span> getMimeType(extension);</span><br><span class="line"></span><br><span class="line"><span class="type">String</span> <span class="variable">defaultFolderPath</span> <span class="operator">=</span> getDefaultFolderPath();</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取MD5值</span></span><br><span class="line"><span class="type">String</span> <span class="variable">fileMd5</span> <span class="operator">=</span> getFileMd5(<span class="keyword">new</span> <span class="title class_">File</span>(localFilePath));</span><br><span class="line"></span><br><span class="line"><span class="comment">//objectName以年月日作为名称存储</span></span><br><span class="line"><span class="type">String</span> <span class="variable">objectName</span> <span class="operator">=</span> defaultFolderPath + fileMd5 + extension;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="variable">result</span> <span class="operator">=</span> addMediaFilesToMinIO(localFilePath, mimeType, bucket_mediaFiles, objectName);</span><br><span class="line"><span class="keyword">if</span>(!result){</span><br><span class="line">    XueChengPlusException.cast(<span class="string">"文件上传失败"</span>);</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>在Controller层，接收到文件后要创建暂时文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建临时文件</span></span><br><span class="line"><span class="type">File</span> <span class="variable">tempFile</span> <span class="operator">=</span> File.createTempFile(<span class="string">"minio"</span>, <span class="string">"temp"</span>);</span><br><span class="line">file.transferTo(tempFile);</span><br></pre></td></tr></table></figure>
+<p><code>File.createTempFile</code> 是 Java 中的一个方法，用于创建一个临时文件。这个方法是 <code>java.io.File</code> 类的一部分。</p>
+<p><code>transferTo</code> 是 Java 中的一个方法，用于将文件的内容转移到另一个文件中。这个方法是 <code>java.nio.file.Files</code> 类的一部分，它使用了 Java 的 NIO（Non-blocking I/O）特性，可以更高效地处理文件操作。</p>
+<p>这个方法会在默认的临时文件目录中创建一个新的空文件，文件名是由给定的前缀和后缀生成的。这个临时文件的路径可以通过 <code>tempFile.getPath()</code> 获取。</p>
+<p>注意：创建的临时文件在 JVM 退出时不会自动删除，需要手动删除。如果你希望临时文件在 JVM 退出时自动删除，可以调用 <code>tempFile.deleteOnExit()</code> 方法。</p>
+<h1 id="service事务优化"><a class="markdownIt-Anchor" href="#service事务优化"></a> Service事务优化</h1>
+<p>上边的service方法优化后并测试通过，现在思考关于uploadFile方法的是否应该开启事务。</p>
+<p>目前是在uploadFile方法上添加@Transactional，当调用uploadFile方法前会开启数据库事务，如果上传文件过程时间较长那么数据库的事务持续时间就会变长，这样数据库链接释放就慢，最终导致数据库链接不够用。</p>
+<p>我们只将addMediaFilesToDb方法添加事务控制即可,uploadFile方法上的@Transactional注解去掉。</p>
+<p>我们人为在int insert = mediaFilesMapper.insert(mediaFiles);下边添加一个异常代码int a=1/0;</p>
+<p>测试是否事务控制。很遗憾，事务控制失败。</p>
+<p>方法上已经添加了@Transactional注解为什么该方法不能被事务控制呢？</p>
+<p>如果是在uploadFile方法上添加@Transactional注解就可以控制事务，去掉则不行。</p>
+<p><strong>现在的问题其实是一个非事务方法调同类一个事务方法，事务无法控制，这是为什么？</strong></p>
+<p>下边分析原因：</p>
+<p>如果在uploadFile方法上添加@Transactional注解，代理对象执行此方法前会开启事务，如下图：</p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240217202502483.png" alt="image-20240217202502483"></p>
+<p>如果在uploadFile方法上没有@Transactional注解，代理对象执行此方法前不进行事务控制，如下图：</p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240217202523999.png" alt="image-20240217202523999"></p>
+<p>所以判断该方法是否可以事务控制必须保证是通过代理对象调用此方法，且此方法上添加了@Transactional注解。</p>
+<p>现在在addMediaFilesToDb方法上添加@Transactional注解，也不会进行事务控制是因为并不是通过代理对象执行的addMediaFilesToDb方法。为了判断在uploadFile方法中去调用addMediaFilesToDb方法是否是通过代理对象去调用，我们可以打断点跟踪。</p>
+<p>我们发现在uploadFile方法中去调用addMediaFilesToDb方法不是通过代理对象去调用，<strong>而是直接调用本类的方法</strong>。</p>
+<p>简而言之：只有通过调用代理类来执行事务操作才可以控制事务</p>
+<p>那么解决方案就明了了，首先我们将这个方法在接口中创建，然后我们将service类代理对象注入其中，并利用代理对象调用数据库函数即可</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Wwhds
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wwhdsone.github.io/2024/03/21/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFDay05/" title="学成在线Day05">https://wwhdsone.github.io/2024/03/21/学成在线Day05/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+              <a href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"># 学习</a>
+              <a href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag"># 后端</a>
+              <a href="/tags/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/" rel="tag"># 黑马程序员</a>
+              <a href="/tags/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BF/" rel="tag"># 学成在线</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/03/21/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFDay04/" rel="prev" title="学成在线Day04">
+      <i class="fa fa-chevron-left"></i> 学成在线Day04
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2024/03/21/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFDay06/" rel="next" title="学成在线Day06">
+      学成在线Day06 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFday05"><span class="nav-text"> 学成在线Day05</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AA%92%E8%B5%84%E7%AE%A1%E7%90%86%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B"><span class="nav-text"> 媒资管理开发流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA"><span class="nav-text"> 微服务搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%89%E8%A6%81%E7%B4%A0"><span class="nav-text"> 配置三要素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEcontent-service"><span class="nav-text"> 配置content-service</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEcontent-api"><span class="nav-text"> 配置content-api</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%BC%98%E5%85%88%E7%BA%A7"><span class="nav-text"> 配置优先级</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="nav-text"> 分布式文件系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sdk"><span class="nav-text"> SDK</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87"><span class="nav-text"> 上传图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#service%E4%BA%8B%E5%8A%A1%E4%BC%98%E5%8C%96"><span class="nav-text"> Service事务优化</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Wwhds"
+      src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/Markdown%E4%BD%BF%E7%94%A8/w.jpg">
+  <p class="site-author-name" itemprop="name">Wwhds</p>
+  <div class="site-description" itemprop="description">个人博客</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/WwhdsOne" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WwhdsOne" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:a1605691832@163.com" title="E-Mail → mailto:a1605691832@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://qm.qq.com/q/A18mWRc5YQ" title="QQ → https:&#x2F;&#x2F;qm.qq.com&#x2F;q&#x2F;A18mWRc5YQ" rel="noopener" target="_blank"><i class="fab fa-qq fa-lg fa-fw"></i>QQ</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/85778548?spm_id_from=333.1007.0.0" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;85778548?spm_id_from&#x3D;333.1007.0.0" rel="noopener" target="_blank"><i class="fa custom bilibili fa-fw"></i>Bilibili</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wwhds</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">56k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:42</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+  <script src='https://unpkg.com/mermaid@/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+<div>
+  <span id="timeDate">载入天数...</span>
+  <script>
+      var now = new Date(); 
+      function createtime() { 
+          var grt = new Date("03/18/2024 00:00:00");//在此处修改你的建站时间
+          now.setTime(now.getTime()+250); 
+          days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+          document.getElementById("timeDate").innerHTML = "已运行 "+dnum+" 天 "; 
+      } 
+  setInterval("createtime()",250);
+  </script>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '402f0a321164611a3faa',
+      clientSecret: '0857efbac20d76b6f97010056772c1069e03fabe',
+      repo        : 'Wblog_Comments',
+      owner       : 'WwhdsOne',
+      admin       : ['WwhdsOne'],
+      id          : '710fd268fe23741f98ffef05e1d7061f',
+        language: 'zh-CN',
+      distractionFreeMode: false
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>

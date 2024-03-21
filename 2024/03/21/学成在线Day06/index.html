@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Sarasa Fixed SC:300,300italic,400,400italic,700,700italic|Fira code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/red/pace-center-circle.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"wwhdsone.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="学成在线Day06内容">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学成在线Day06">
+<meta property="og:url" content="https://wwhdsone.github.io/2024/03/21/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFDay06/index.html">
+<meta property="og:site_name" content="WBlog">
+<meta property="og:description" content="学成在线Day06内容">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240217205319182.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240218151425388.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318125528197.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240218203347215.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318130501625.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318130551255.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318130608832.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318130655394.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318130708805.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318130722290.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318130800270.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318131022846.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318131421838.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318131506343.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318131735660.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318131753744.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318131828536.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318131840898.png">
+<meta property="article:published_time" content="2024-03-21T01:12:11.000Z">
+<meta property="article:modified_time" content="2024-03-21T01:12:58.628Z">
+<meta property="article:author" content="Wwhds">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="后端">
+<meta property="article:tag" content="黑马程序员">
+<meta property="article:tag" content="学成在线">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240217205319182.png">
+
+<link rel="canonical" href="https://wwhdsone.github.io/2024/03/21/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFDay06/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>学成在线Day06 | WBlog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">WBlog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">哀吾生之须臾，羡长江之无穷</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/WwhdsOne" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wwhdsone.github.io/2024/03/21/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFDay06/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/Markdown%E4%BD%BF%E7%94%A8/w.jpg">
+      <meta itemprop="name" content="Wwhds">
+      <meta itemprop="description" content="个人博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WBlog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          学成在线Day06
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-03-21 09:12:11 / 修改时间：09:12:58" itemprop="dateCreated datePublished" datetime="2024-03-21T09:12:11+08:00">2024-03-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>7.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>14 分钟</span>
+            </span>
+            <div class="post-description">学成在线Day06内容</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="学成在线day06"><a class="markdownIt-Anchor" href="#学成在线day06"></a> 学成在线Day06</h1>
+<h1 id="上传视频"><a class="markdownIt-Anchor" href="#上传视频"></a> 上传视频</h1>
+<h2 id="断点续传技术"><a class="markdownIt-Anchor" href="#断点续传技术"></a> 断点续传技术</h2>
+<h3 id="1什么是断点续传"><a class="markdownIt-Anchor" href="#1什么是断点续传"></a> 1.什么是断点续传</h3>
+<p>通常视频文件都比较大，所以对于媒资系统上传文件的需求要满足大文件的上传要求。http协议本身对上传文件大小没有限制，但是客户的网络环境质量、电脑硬件环境等参差不齐，如果一个大文件快上传完了网断了没有上传完成，需要客户重新上传，用户体验非常差，所以对于大文件上传的要求最基本的是断点续传。</p>
+<p>什么是断点续传：</p>
+<p>​    引用百度百科：断点续传指的是在下载或上传时，将下载或上传任务（一个文件或一个压缩包）人为的划分为几个部分，每一个部分采用一个线程进行上传或下载，如果碰到网络故障，可以从已经上传或下载的部分开始继续上传下载未完成的部分，而没有必要从头开始上传下载，断点续传可以提高节省操作时间，提高用户体验性。</p>
+<p>断点续传流程如下图：</p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240217205319182.png" alt="image-20240217205319182"></p>
+<p>流程如下：</p>
+<p>1、前端上传前先把文件分成块</p>
+<p>2、一块一块的上传，上传中断后重新上传，已上传的分块则不用再上传</p>
+<p>3、各分块上传完成最后在服务端合并文件</p>
+<h3 id="2文件分块测试"><a class="markdownIt-Anchor" href="#2文件分块测试"></a> 2.文件分块测试</h3>
+<p>文件分块测试代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//分块测试</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">testChunk</span><span class="params">()</span> <span class="keyword">throws</span> IOException {</span><br><span class="line">    <span class="type">File</span> <span class="variable">sourceFile</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">"C:\\Users\\Administrator\\Desktop\\分块测试\\test.mp4"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">String</span> <span class="variable">fileChunkPath</span> <span class="operator">=</span> <span class="string">"C:\\Users\\Administrator\\Desktop\\分块测试"</span>;</span><br><span class="line">    <span class="comment">//分块大小</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">chunkSize</span> <span class="operator">=</span> <span class="number">1024</span> * <span class="number">1024</span> * <span class="number">1</span>;</span><br><span class="line">    <span class="comment">//分块数量</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">chunkNum</span> <span class="operator">=</span> (<span class="type">int</span>) Math.ceil(sourceFile.length() * <span class="number">1.0</span> / chunkSize);</span><br><span class="line">    <span class="type">RandomAccessFile</span> <span class="variable">ref_r</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">RandomAccessFile</span>(sourceFile, <span class="string">"r"</span>);</span><br><span class="line">    <span class="comment">//缓冲区</span></span><br><span class="line">    <span class="type">byte</span>[] b = <span class="keyword">new</span> <span class="title class_">byte</span>[<span class="number">1024</span>];</span><br><span class="line">    <span class="keyword">for</span> ( <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; chunkNum; i++ ) {</span><br><span class="line">        <span class="comment">//创建分块文件</span></span><br><span class="line">        <span class="type">File</span> <span class="variable">chunkFile</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(fileChunkPath + i);</span><br><span class="line">        <span class="comment">//分块文件写入流</span></span><br><span class="line">        <span class="type">RandomAccessFile</span> <span class="variable">ref_w</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">RandomAccessFile</span>(chunkFile, <span class="string">"rw"</span>);</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="comment">//读取文件</span></span><br><span class="line">        <span class="keyword">while</span> ( (len = ref_r.read(b)) != -<span class="number">1</span> ) {</span><br><span class="line">            ref_w.write(b, <span class="number">0</span>, len);</span><br><span class="line">            <span class="keyword">if</span> ( chunkFile.length() &gt;= chunkSize ) {</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>其中用到了<code>RandomAccessFile</code></p>
+<p>RandomAccessFile从字面意思翻译：随机通行文件</p>
+<p>下面开始介绍一下RandomAccessFile，该类是直接继承Object的类，既可以读取文件内容，也可以向文件输出数据。</p>
+<p>RandomAccessFile支持“随机访问”的方式，程序快可以直接跳转到文件的<strong>任意地方</strong>来读写数据。</p>
+<p>RandomAccessFile的一个重要使用场景就是网络请求中的多线程下载及断点续传。</p>
+<p>文件分块合并测试代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">testMerge</span><span class="params">()</span> <span class="keyword">throws</span> Exception {</span><br><span class="line">    <span class="comment">//找到分块文件路径</span></span><br><span class="line">    <span class="type">File</span> <span class="variable">chunkFolder</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">"C:\\Users\\Wwhds\\Desktop\\分块测试\\chunk"</span>);</span><br><span class="line">    <span class="comment">//源文件</span></span><br><span class="line">    <span class="type">File</span> <span class="variable">sourceFile</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">"C:\\Users\\Wwhds\\Desktop\\分块测试\\test.mp4"</span>);</span><br><span class="line">    <span class="comment">//合并文件</span></span><br><span class="line">    <span class="type">File</span> <span class="variable">mergeFile</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">"C:\\Users\\Wwhds\\Desktop\\分块测试\\test_merge.mp4"</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//取出所有分块文件</span></span><br><span class="line">    File[] chunkFiles = chunkFolder.listFiles();</span><br><span class="line"></span><br><span class="line">    List&lt;File&gt; list = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">if</span> ( chunkFiles != <span class="literal">null</span> ) {</span><br><span class="line">        list = Arrays.asList(chunkFiles);</span><br><span class="line">    }</span><br><span class="line">    <span class="comment">//根据文件名称排序list</span></span><br><span class="line">    <span class="keyword">if</span> ( list != <span class="literal">null</span> ) {</span><br><span class="line">        list.sort(Comparator.comparingInt(o -&gt; Integer.parseInt(o.getName())));</span><br><span class="line">    }</span><br><span class="line">    <span class="type">RandomAccessFile</span> <span class="variable">raf_rw</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">RandomAccessFile</span>(mergeFile, <span class="string">"rw"</span>);</span><br><span class="line">    <span class="type">byte</span> b[] = <span class="keyword">new</span> <span class="title class_">byte</span>[<span class="number">1024</span>];</span><br><span class="line">    <span class="keyword">for</span> ( File file : list ) {</span><br><span class="line">        <span class="type">RandomAccessFile</span> <span class="variable">raf_r</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">RandomAccessFile</span>(file, <span class="string">"r"</span>);</span><br><span class="line">        <span class="type">int</span> len;</span><br><span class="line">        <span class="keyword">while</span> ( (len = raf_r.read(b)) != -<span class="number">1</span> ) {</span><br><span class="line">            raf_rw.write(b, <span class="number">0</span>, len);</span><br><span class="line">        }</span><br><span class="line">        raf_r.close();</span><br><span class="line">    }</span><br><span class="line">    raf_rw.close();</span><br><span class="line">    System.out.println(<span class="string">"合并完成"</span>);				<span class="comment">//MD5验证</span></span><br><span class="line">    <span class="keyword">if</span> ( DigestUtils.md5Hex(<span class="keyword">new</span> <span class="title class_">FileInputStream</span>(sourceFile)).equals(DigestUtils.md5Hex(<span class="keyword">new</span> <span class="title class_">FileInputStream</span>(mergeFile))) ) {</span><br><span class="line">        System.out.println(<span class="string">"文件一致"</span>);</span><br><span class="line">    }<span class="keyword">else</span> {</span><br><span class="line">        System.out.println(<span class="string">"文件不一致"</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h3 id="3视频上传流程"><a class="markdownIt-Anchor" href="#3视频上传流程"></a> 3.视频上传流程</h3>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240218151425388.png" alt="image-20240218151425388"></p>
+<p>1、前端对文件进行分块。</p>
+<p>2、前端上传分块文件前请求媒资服务检查文件是否存在，如果已经存在则不再上传。</p>
+<p>3、如果分块文件不存在则前端开始上传</p>
+<p>4、前端请求媒资服务上传分块。</p>
+<p>5、媒资服务将分块上传至MinIO。</p>
+<p>6、前端将分块上传完毕请求媒资服务合并分块。</p>
+<p>7、媒资服务判断分块上传完成则请求MinIO合并文件。</p>
+<p>8、合并完成校验合并后的文件是否完整，如果完整则上传完成，否则删除文件。</p>
+<h3 id="4minio文件上传测试"><a class="markdownIt-Anchor" href="#4minio文件上传测试"></a> 4.Minio文件上传测试</h3>
+<p>注意分块内容必须大于等于5M</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">List&lt;ComposeSource&gt; sources = Stream.iterate(<span class="number">0</span>, i -&gt; ++i)</span><br><span class="line">    .limit(<span class="number">42</span>)</span><br><span class="line">    .map(i -&gt; ComposeSource.builder()</span><br><span class="line">         .bucket(<span class="string">"testbucket"</span>)</span><br><span class="line">         .object(<span class="string">"chunk/"</span> + i)</span><br><span class="line">         .build())</span><br><span class="line">    .collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
+<p>stream流全新用法</p>
+<h1 id="上传分块"><a class="markdownIt-Anchor" href="#上传分块"></a> 上传分块</h1>
+<p>上传文件大小限制需要解除</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">servlet:</span></span><br><span class="line">    <span class="attr">multipart:</span></span><br><span class="line">      <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line">      <span class="attr">max-file-size:</span> <span class="string">50MB</span>			<span class="string">//上传文件最大限制</span></span><br><span class="line">      <span class="attr">max-request-size:</span> <span class="string">50MB</span>		<span class="string">//请求文件最大限制</span></span><br></pre></td></tr></table></figure>
+<p>在nacos配置即可</p>
+<p>内容过于庞大，请在代码文件中查看</p>
+<h1 id="视频处理"><a class="markdownIt-Anchor" href="#视频处理"></a> 视频处理</h1>
+<p>视频上传成功后需要对视频进行转码处理。</p>
+<p>什么是视频编码？查阅百度百科如下：</p>
+<p>详情参考 ：<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/839038">https://baike.baidu.com/item/%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/839038</a></p>
+<p>首先我们要分清文件格式和编码格式：</p>
+<p>文件格式：是指.mp4、.avi、.rmvb等 这些不同扩展名的视频文件的文件格式 ，视频文件的内容主要包括视频和音频，其文件格式是按照一 定的编码格式去编码，并且按照该文件所规定的封装格式将视频、音频、字幕等信息封装在一起，播放器会根据它们的封装格式去提取出编码，然后由播放器解码，最终播放音视频。</p>
+<p>音视频编码格式：通过音视频的压缩技术，将视频格式转换成另一种视频格式，通过视频编码实现流媒体的传输。比如：一个.avi的视频文件原来的编码是a，通过编码后编码格式变为b，音频原来为c，通过编码后变为d。</p>
+<p>音视频编码格式各类繁多，主要有几下几类：</p>
+<p>MPEG系列</p>
+<p>（由ISO[国际标准组织机构]下属的MPEG[运动图象专家组]开发 ）视频编码方面主要是Mpeg1（vcd用的就是它）、Mpeg2（DVD使用）、Mpeg4（的DVDRIP使用的都是它的变种，如：divx，xvid等）、Mpeg4 AVC（正热门）；音频编码方面主要是MPEG Audio Layer 1/2、MPEG Audio Layer 3（大名鼎鼎的mp3）、MPEG-2 AAC 、MPEG-4 AAC等等。注意：DVD音频没有采用Mpeg的。</p>
+<p>H.26X系列</p>
+<p>（由ITU[国际电传视讯联盟]主导，侧重网络传输，注意：只是视频编码）</p>
+<p>包括H.261、H.262、H.263、H.263+、H.263++、H.264（就是MPEG4 AVC-合作的结晶）</p>
+<p>目前最常用的编码标准是视频H.264，音频AAC。</p>
+<h1 id="分布式调度"><a class="markdownIt-Anchor" href="#分布式调度"></a> 分布式调度</h1>
+<p>对一个视频的转码可以理解为一个任务的执行，如果视频的数量比较多，如何去高效处理一批任务呢？</p>
+<p>1、多线程</p>
+<p>多线程是充分利用单机的资源。</p>
+<p>2、分布式加多线程</p>
+<p>充分利用多台计算机，每台计算机使用多线程处理。</p>
+<p>方案2可扩展性更强。</p>
+<p>方案2是一种分布式任务调度的处理方案。</p>
+<p>什么是分布式任务调度？</p>
+<p>我们可以先思考一下下面业务场景的解决方案：</p>
+<p>​    每隔24小时执行数据备份任务。</p>
+<p>​    12306网站会根据车次不同，设置几个时间点分批次放票。</p>
+<p>​    某财务系统需要在每天上午10点前结算前一天的账单数据，统计汇总。</p>
+<p>​    商品成功发货后，需要向客户发送短信提醒。</p>
+<p><strong>什么是分布式任务调度？</strong></p>
+<p>​    通常任务调度的程序是集成在应用中的，比如：优惠卷服务中包括了定时发放优惠卷的的调度程序，结算服务中包括了定期生成报表的任务调度程序，由于采用分布式架构，一个服务往往会部署多个冗余实例来运行我们的业务，在这种分布式系统环境下运行任务调度，我们称之为<strong>分布式任务调度</strong>，如下图：</p>
+<img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318125528197.png" alt="image-20240318125528197" style="zoom:50%;">
+<p><strong>分布式调度要实现的目标：</strong></p>
+<p>​    不管是任务调度程序集成在应用程序中，还是单独构建的任务调度系统，如果采用分布式调度任务的方式就相当于将任务调度程序分布式构建，这样就可以具有分布式系统的特点，并且提高任务的调度处理能力：</p>
+<ol>
+<li>并行任务调度</li>
+</ol>
+<p>​    并行任务调度实现靠多线程，如果有大量任务需要调度，此时光靠多线程就会有瓶颈了，因为一台计算机CPU的处理能力是有限的。</p>
+<p>​    如果将任务调度程序分布式部署，每个结点还可以部署为集群，这样就可以让多台计算机共同去完成任务调度，我们可以将任务分割为若干个分片，由不同的实例并行执行，来提高任务调度的处理效率。</p>
+<ol start="2">
+<li>高可用</li>
+</ol>
+<p>​    若某一个实例宕机，不影响其他实例来执行任务。</p>
+<ol start="3">
+<li>弹性扩容</li>
+</ol>
+<p>​    当集群中增加实例就可以提高并执行任务的处理效率。</p>
+<ol start="4">
+<li>任务管理与监测</li>
+</ol>
+<p>​    对系统中存在的所有定时任务进行统一的管理及监测。让开发人员及运维人员能够时刻了解任务执行情况，从而做出快速的应急处理响应。</p>
+<ol start="5">
+<li>避免任务重复执行</li>
+</ol>
+<p>​    当任务调度以集群方式部署，同一个任务调度可能会执行多次，比如在上面提到的电商系统中到点发优惠券的例子，就会发放多次优惠券，对公司造成很多损失，所以我们需要控制相同的任务在多个运行实例上只执行一次。</p>
+<p>我们使用xxl来执行任务调度</p>
+<p>XXL-JOB是一个轻量级分布式任务调度平台，其核心设计目标是开发迅速、学习简单、轻量级、易扩展。现已开放源代码并接入多家公司线上产品线，开箱即用。</p>
+<p>官网：<a target="_blank" rel="noopener" href="https://www.xuxueli.com/xxl-job/">https://www.xuxueli.com/xxl-job/</a></p>
+<p>文档：<a target="_blank" rel="noopener" href="https://www.xuxueli.com/xxl-job/#%E3%80%8A%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6%E5%B9%B3%E5%8F%B0XXL-JOB%E3%80%8B">https://www.xuxueli.com/xxl-job/#《分布式任务调度平台XXL-JOB》</a></p>
+<p>maven依赖：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.xuxueli<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>xxl-job-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>配置文件:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">xxl:</span></span><br><span class="line">  <span class="attr">job:</span></span><br><span class="line">    <span class="attr">admin:</span> </span><br><span class="line">      <span class="attr">addresses:</span> <span class="string">http://192.168.101.65:8088/xxl-job-admin</span></span><br><span class="line">    <span class="attr">executor:</span></span><br><span class="line">      <span class="attr">appname:</span> <span class="string">media-process-service</span></span><br><span class="line">      <span class="attr">address:</span> </span><br><span class="line">      <span class="attr">ip:</span> </span><br><span class="line">      <span class="attr">port:</span> <span class="number">9999</span></span><br><span class="line">      <span class="attr">logpath:</span> <span class="string">/data/applogs/xxl-job/jobhandler</span></span><br><span class="line">      <span class="attr">logretentiondays:</span> <span class="number">30</span></span><br><span class="line">    <span class="attr">accessToken:</span> <span class="string">default_token</span></span><br></pre></td></tr></table></figure>
+<p>添加调度</p>
+<p>在新增处新增测试任务，注意bean名称要与注册内容相同，可以用cron表达式调度</p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240218203347215.png" alt="image-20240218203347215"></p>
+<p>点击新增，填写任务信息</p>
+<img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318130501625.png" alt="image-20240318130501625" style="zoom:50%;">
+<p>高级配置的其它配置项稍后在分片广播章节详细解释。</p>
+<p>添加成功，启动任务</p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318130551255.png" alt="image-20240318130551255"></p>
+<p>通过日志查看任务运行情况</p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318130608832.png" alt="image-20240318130608832"></p>
+<p>下边启动媒资管理的service工程，启动执行器。</p>
+<p>观察执行器方法的执行。</p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318130655394.png" alt="image-20240318130655394"></p>
+<p>如果要停止任务需要在调度中心操作</p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318130708805.png" alt="image-20240318130708805"></p>
+<p>任务跑一段时间注意清理日志</p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318130722290.png" alt="image-20240318130722290"></p>
+<p>xxl路由策略配置详细内容：<a target="_blank" rel="noopener" href="https://blog.csdn.net/w_t_y_y/article/details/117119864">xxl-job（四）路由策略_xxl-job路由策略-CSDN博客</a></p>
+<h2 id="分片广播"><a class="markdownIt-Anchor" href="#分片广播"></a> 分片广播</h2>
+<p>掌握了xxl-job的基本使用，下边思考如何进行分布式任务处理呢？如下图，我们会启动多个执行器组成一个集群，去执行任务。</p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318130800270.png" alt="image-20240318130800270"></p>
+<p>执行器在集群部署下调度中心有哪些调度策略呢？</p>
+<p>查看xxl-job官方文档，阅读高级配置相关的内容：</p>
+<p>高级配置：<br>
+- 路由策略：当执行器集群部署时，提供丰富的路由策略，包括；<br>
+FIRST（第一个）：固定选择第一个机器；<br>
+LAST（最后一个）：固定选择最后一个机器；<br>
+ROUND（轮询）：；<br>
+RANDOM（随机）：随机选择在线的机器；<br>
+CONSISTENT_HASH（一致性HASH）：每个任务按照Hash算法固定选择某一台机器，且所有任务均匀散列在不同机器上。<br>
+LEAST_FREQUENTLY_USED（最不经常使用）：使用频率最低的机器优先被选举；<br>
+LEAST_RECENTLY_USED（最近最久未使用）：最久未使用的机器优先被选举；<br>
+FAILOVER（故障转移）：按照顺序依次进行心跳检测，第一个心跳检测成功的机器选定为目标执行器并发起调度；<br>
+BUSYOVER（忙碌转移）：按照顺序依次进行空闲检测，第一个空闲检测成功的机器选定为目标执行器并发起调度；<br>
+SHARDING_BROADCAST(分片广播)：广播触发对应集群中所有机器执行一次任务，同时系统自动传递分片参数；可根据分片参数开发分片任务；</p>
+<p>- 子任务：每个任务都拥有一个唯一的任务ID(任务ID可以从任务列表获取)，当本任务执行结束并且执行成功时，将会触发子任务ID所对应的任务的一次主动调度，通过子任务可以实现一个任务执行完成去执行另一个任务。<br>
+- 调度过期策略：<br>
+忽略：调度过期后，忽略过期的任务，从当前时间开始重新计算下次触发时间；<br>
+立即执行一次：调度过期后，立即执行一次，并从当前时间开始重新计算下次触发时间；<br>
+- 阻塞处理策略：调度过于密集执行器来不及处理时的处理策略；<br>
+单机串行（默认）：调度请求进入单机执行器后，调度请求进入FIFO队列并以串行方式运行；<br>
+丢弃后续调度：调度请求进入单机执行器后，发现执行器存在运行的调度任务，本次请求将会被丢弃并标记为失败；<br>
+覆盖之前调度：调度请求进入单机执行器后，发现执行器存在运行的调度任务，将会终止运行中的调度任务并清空队列，然后运行本地调度任务；<br>
+- 任务超时时间：支持自定义任务超时时间，任务运行超时将会主动中断任务；<br>
+- 失败重试次数；支持自定义任务失败重试次数，当任务失败时将会按照预设的失败重试次数主动进行重试；</p>
+<p>下边要重点说的是分片广播策略，分片是指是调度中心以执行器为维度进行分片，将集群中的执行器标上序号：0，1，2，3…，广播是指每次调度会向集群中的所有执行器发送任务调度，请求中携带分片参数。</p>
+<p>如下图：</p>
+<img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318131022846.png" alt="image-20240318131022846" style="zoom:50%;">
+<p>每个执行器收到调度请求同时接收分片参数。</p>
+<p>xxl-job支持动态扩容执行器集群从而动态增加分片数量，当有任务量增加可以部署更多的执行器到集群中，调度中心会动态修改分片的数量。</p>
+<p><strong>作业分片适用哪些场景呢？</strong></p>
+<ul>
+<li>
+<p>分片任务场景：10个执行器的集群来处理10w条数据，每台机器只需要处理1w条数据，耗时降低10倍；</p>
+</li>
+<li>
+<p>广播任务场景：广播执行器同时运行shell脚本、广播集群节点进行缓存更新等。</p>
+</li>
+</ul>
+<p>所以，广播分片方式不仅可以充分发挥每个执行器的能力，并且根据分片参数可以控制任务是否执行，最终灵活控制了执行器集群分布式处理任务。</p>
+<p><strong>使用说明：</strong></p>
+<p><strong>分片广播</strong> 和普通任务开发流程一致，不同之处在于可以获取分片参数进行分片业务处理。</p>
+<p>Java语言任务获取分片参数方式：</p>
+<p>BEAN、GLUE模式(Java)，可参考Sample示例执行器中的示例任务</p>
+<p>下边测试作业分片：</p>
+<ol>
+<li>定义作业分片的任务方法</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * 2、分片广播任务</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"><span class="meta">@XxlJob("shardingJobHandler")</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">shardingJobHandler</span><span class="params">()</span> <span class="keyword">throws</span> Exception {</span><br><span class="line">    <span class="comment">// 分片参数</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">shardIndex</span> <span class="operator">=</span> XxlJobHelper.getShardIndex();</span><br><span class="line">    <span class="type">int</span> <span class="variable">shardTotal</span> <span class="operator">=</span> XxlJobHelper.getShardTotal();</span><br><span class="line">    log.info(<span class="string">"分片参数：当前分片序号 = {}, 总分片数 = {}"</span>, shardIndex, shardTotal);</span><br><span class="line">    log.info(<span class="string">"开始执行第"</span>+shardIndex+<span class="string">"批任务"</span>);</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>在调度中心添加任务</li>
+</ol>
+<img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318131421838.png" alt="image-20240318131421838" style="zoom:50%;">
+<p>添加成功:</p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318131506343.png" alt="image-20240318131506343"></p>
+<p>启动任务，观察日志</p>
+<p>下边启动两个执行器实例，观察每个实例的执行情况</p>
+<p>首先在nacos中配置media-service的本地优先配置：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line"> <span class="attr">cloud:</span></span><br><span class="line">  <span class="attr">config:</span></span><br><span class="line">    <span class="attr">override-none:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>将media-service启动两个实例</p>
+<p>两个实例的在启动时注意端口不能冲突：</p>
+<p>实例1 在VM options处添加：-Dserver.port=63051 -Dxxl.job.executor.port=9998</p>
+<p>实例2 在VM options处添加：-Dserver.port=63050 -Dxxl.job.executor.port=9999</p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318131735660.png" alt="image-20240318131735660"></p>
+<p>启动两个实例</p>
+<p>观察任务调度中心，稍等片刻执行器有两个</p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318131753744.png" alt="image-20240318131753744"></p>
+<p>两示例日志如下:</p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318131828536.png" alt="image-20240318131828536"></p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318131840898.png" alt="image-20240318131840898"></p>
+<p>从日志可以看每个实例的分片序号不同。</p>
+<p>如果其中一个执行器挂掉，只剩下一个执行器在工作，稍等片刻调用中心发现少了一个执行器将动态调整总分片数为1。</p>
+<p>到此作业分片任务调试完成，此时我们可以思考：</p>
+<blockquote>
+<p>当一次分片广播到来，各执行器如何根据分片参数去分布式执行任务，保证执行器之间执行的任务不重复呢？</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Wwhds
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wwhdsone.github.io/2024/03/21/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFDay06/" title="学成在线Day06">https://wwhdsone.github.io/2024/03/21/学成在线Day06/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+              <a href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"># 学习</a>
+              <a href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag"># 后端</a>
+              <a href="/tags/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/" rel="tag"># 黑马程序员</a>
+              <a href="/tags/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BF/" rel="tag"># 学成在线</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/03/21/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFDay05/" rel="prev" title="学成在线Day05">
+      <i class="fa fa-chevron-left"></i> 学成在线Day05
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFday06"><span class="nav-text"> 学成在线Day06</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0%E8%A7%86%E9%A2%91"><span class="nav-text"> 上传视频</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0%E6%8A%80%E6%9C%AF"><span class="nav-text"> 断点续传技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E4%BB%80%E4%B9%88%E6%98%AF%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0"><span class="nav-text"> 1.什么是断点续传</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E6%96%87%E4%BB%B6%E5%88%86%E5%9D%97%E6%B5%8B%E8%AF%95"><span class="nav-text"> 2.文件分块测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E8%A7%86%E9%A2%91%E4%B8%8A%E4%BC%A0%E6%B5%81%E7%A8%8B"><span class="nav-text"> 3.视频上传流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4minio%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95"><span class="nav-text"> 4.Minio文件上传测试</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0%E5%88%86%E5%9D%97"><span class="nav-text"> 上传分块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86"><span class="nav-text"> 视频处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E8%B0%83%E5%BA%A6"><span class="nav-text"> 分布式调度</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E7%89%87%E5%B9%BF%E6%92%AD"><span class="nav-text"> 分片广播</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Wwhds"
+      src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/Markdown%E4%BD%BF%E7%94%A8/w.jpg">
+  <p class="site-author-name" itemprop="name">Wwhds</p>
+  <div class="site-description" itemprop="description">个人博客</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/WwhdsOne" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WwhdsOne" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:a1605691832@163.com" title="E-Mail → mailto:a1605691832@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://qm.qq.com/q/A18mWRc5YQ" title="QQ → https:&#x2F;&#x2F;qm.qq.com&#x2F;q&#x2F;A18mWRc5YQ" rel="noopener" target="_blank"><i class="fab fa-qq fa-lg fa-fw"></i>QQ</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/85778548?spm_id_from=333.1007.0.0" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;85778548?spm_id_from&#x3D;333.1007.0.0" rel="noopener" target="_blank"><i class="fa custom bilibili fa-fw"></i>Bilibili</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wwhds</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">56k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:42</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+  <script src='https://unpkg.com/mermaid@/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+<div>
+  <span id="timeDate">载入天数...</span>
+  <script>
+      var now = new Date(); 
+      function createtime() { 
+          var grt = new Date("03/18/2024 00:00:00");//在此处修改你的建站时间
+          now.setTime(now.getTime()+250); 
+          days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+          document.getElementById("timeDate").innerHTML = "已运行 "+dnum+" 天 "; 
+      } 
+  setInterval("createtime()",250);
+  </script>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '402f0a321164611a3faa',
+      clientSecret: '0857efbac20d76b6f97010056772c1069e03fabe',
+      repo        : 'Wblog_Comments',
+      owner       : 'WwhdsOne',
+      admin       : ['WwhdsOne'],
+      id          : '3d5359a4e9de34c44f9be1971f9984ff',
+        language: 'zh-CN',
+      distractionFreeMode: false
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>
