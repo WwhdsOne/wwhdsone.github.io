@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 7.1.1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/MdiAlphaWCircle.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/MdiAlphaWCircle.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/MdiAlphaWCircle.svg">
+  <link rel="mask-icon" href="/images/MdiAlphaWCircle.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -201,7 +201,7 @@ mjx-container[display="true"] {
 mjx-container[display="true"] + br {
   display: none;
 }
-</style></head>
+</style><style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -396,9 +396,9 @@ mjx-container[display="true"] + br {
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="git"><a class="markdownIt-Anchor" href="#git"></a> Git</h1>
+        <h1>Git</h1>
 <p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/gitlogo.png" alt=""></p>
-<h1 id="1-版本管理工具概念"><a class="markdownIt-Anchor" href="#1-版本管理工具概念"></a> 1 版本管理工具概念</h1>
+<h1>1 版本管理工具概念</h1>
 <p>在平时开发中,可能有时要用到上个版本的内容,例如:</p>
 <blockquote>
 <p>领导让写文档,写好了,领导让修改,改好了,领导觉得第一版不错,改回来吧,此时内心一脸懵,第一版长啥样没存档啊</p>
@@ -414,17 +414,17 @@ mjx-container[display="true"] + br {
 <p>能够记录历史版本,回退历史版本<br>
 团队开发,方便代码合并</p>
 </blockquote>
-<h1 id="2-主流版本管理工具介绍"><a class="markdownIt-Anchor" href="#2-主流版本管理工具介绍"></a> 2 主流版本管理工具介绍</h1>
-<h2 id="git-2"><a class="markdownIt-Anchor" href="#git-2"></a> Git</h2>
+<h1>2 主流版本管理工具介绍</h1>
+<h2 id="Git">Git</h2>
 <p>工作流程</p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Git是分布式版本控制系统（Distributed Version Control System，简称 DVCS），分为两种类型的仓库：</span><br><span class="line">本地仓库和远程仓库</span><br><span class="line">工作流程如下</span><br><span class="line">    1．从远程仓库中克隆或拉取代码到本地仓库(clone/pull)</span><br><span class="line">    2．从本地进行代码修改</span><br><span class="line">    3．在提交前先将代码提交到暂存区</span><br><span class="line">    4．提交到本地仓库。本地仓库中保存修改的各个历史版本</span><br><span class="line">    5．修改完成后，需要和团队成员共享代码时，将代码push到远程仓库</span><br></pre></td></tr></table></figure>
 <p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/git.png" alt=""></p>
 <p>Windows下载地址: <a target="_blank" rel="noopener" href="https://git-scm.com/download/win">Git - Downloading Package (git-scm.com)</a></p>
 <p>Linux/Unix下载方法: <a target="_blank" rel="noopener" href="https://git-scm.com/download/linux">Git (git-scm.com)</a></p>
-<h1 id="3-git工作流程"><a class="markdownIt-Anchor" href="#3-git工作流程"></a> 3 Git工作流程</h1>
+<h1>3 Git工作流程</h1>
 <p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/git%E6%B5%81%E7%A8%8B.png" alt=""></p>
-<h1 id="4-命令行-git基本操作"><a class="markdownIt-Anchor" href="#4-命令行-git基本操作"></a> 4 命令行-- git基本操作</h1>
-<h3 id="41-环境配置"><a class="markdownIt-Anchor" href="#41-环境配置"></a> 4.1 环境配置</h3>
+<h1>4 命令行-- git基本操作</h1>
+<h3 id="4-1-环境配置">4.1 环境配置</h3>
 <ol>
 <li>打开Git Bash</li>
 <li>设置用户信息</li>
@@ -435,9 +435,9 @@ mjx-container[display="true"] + br {
 <li>查看配置信息</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name</span><br><span class="line"></span><br><span class="line">git config --global user.email</span><br></pre></td></tr></table></figure>
-<h3 id="42-为常用指令配置别名"><a class="markdownIt-Anchor" href="#42-为常用指令配置别名"></a> 4.2 为常用指令配置别名</h3>
+<h3 id="4-2-为常用指令配置别名">4.2 为常用指令配置别名</h3>
 <p>有些常用的指令参数非常多，每次都要输入好多参数，我们可以使用别名。</p>
-<h4 id="421-如何定义和使用别名"><a class="markdownIt-Anchor" href="#421-如何定义和使用别名"></a> 4.2.1 如何定义和使用别名</h4>
+<h4 id="4-2-1-如何定义和使用别名">4.2.1 如何定义和使用别名</h4>
 <p>要定义 Git 的别名，请使用 <code>git config</code> 命令，加上别名和要替换的命令。例如，要为 <code>git push</code> 创建别名 <code>p</code>：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git config --global alias.p <span class="string">'push'</span></span></span><br></pre></td></tr></table></figure>
 <p>你可以通过将别名作为 <code>git</code> 的参数来使用别名，就像其他命令一样：</p>
@@ -445,7 +445,7 @@ mjx-container[display="true"] + br {
 <p>要查看所有的别名，用 <code>git config</code> 列出你的配置：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git config --global -l</span></span><br><span class="line">user.name=ricardo</span><br><span class="line">user.email=ricardo@example.com</span><br><span class="line">alias.p=push</span><br></pre></td></tr></table></figure>
 <p>无论使用哪种方法，定义别名都能改善你使用 Git 的整体体验。更多关于定义 Git 别名的信息，请看《<a href="https://link.zhihu.com/?target=https%3A//git-scm.com/book/en/v2/Git-Basics-Git-Aliases">Git Book</a>》。</p>
-<h4 id="422-有用的-git-别名"><a class="markdownIt-Anchor" href="#422-有用的-git-别名"></a> 4.2.2 有用的 Git 别名</h4>
+<h4 id="4-2-2-有用的-Git-别名">4.2.2 有用的 Git 别名</h4>
 <ol>
 <li>
 <p><strong>Git 单行日志</strong></p>
@@ -480,7 +480,7 @@ mjx-container[display="true"] + br {
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">user.name=Wwhds</span><br><span class="line">user.email=a1605691832@163.com</span><br><span class="line">core.quotepath=false</span><br><span class="line">alias.ll=log --pretty=oneline --all --graph --abbrev-commit</span><br><span class="line">alias.last=log -1 HEAD --stat</span><br><span class="line">alias.rv=remote -v</span><br><span class="line">alias.gl=config --global -l</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h3 id="43-解决gitbash乱码问题"><a class="markdownIt-Anchor" href="#43-解决gitbash乱码问题"></a> 4.3 解决GitBash乱码问题</h3>
+<h3 id="4-3-解决GitBash乱码问题">4.3 解决GitBash乱码问题</h3>
 <ol>
 <li>打开GitBash执行下面命令</li>
 </ol>
@@ -489,7 +489,7 @@ mjx-container[display="true"] + br {
 <li>${git_home}/etc/bash.bashrc 文件最后加入下面两行</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export LANG="zh_CN.UTF-8" </span><br><span class="line">export LC_ALL="zh_CN.UTF-8"</span><br></pre></td></tr></table></figure>
-<h3 id="44-获取本地仓库"><a class="markdownIt-Anchor" href="#44-获取本地仓库"></a> 4.4 获取本地仓库</h3>
+<h3 id="4-4-获取本地仓库">4.4 获取本地仓库</h3>
 <p>要使用Git对我们的代码进行版本控制，首先需要获得本地仓库</p>
 <ol>
 <li>
@@ -506,9 +506,9 @@ mjx-container[display="true"] + br {
 </li>
 </ol>
 <p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/git_init.png" alt=""></p>
-<h3 id="45-基础操作指令"><a class="markdownIt-Anchor" href="#45-基础操作指令"></a> 4.5 基础操作指令</h3>
+<h3 id="4-5-基础操作指令">4.5 基础操作指令</h3>
 <p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/git_work.png" alt=""></p>
-<h4 id="451-查看修改状态-status"><a class="markdownIt-Anchor" href="#451-查看修改状态-status"></a> 4.5.1 查看修改状态 (status)</h4>
+<h4 id="4-5-1-查看修改状态-status">4.5.1 查看修改状态 (status)</h4>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git status</span></span><br></pre></td></tr></table></figure>
 <p>不同文件状态不同</p>
 <ul>
@@ -518,7 +518,7 @@ mjx-container[display="true"] + br {
 <li>nothing to commit,working tree clean 提交后显示没有东西可以提交</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">On branch master</span><br><span class="line">Changes not staged for commit:                                </span><br><span class="line">  (use "git add &lt;file&gt;..." to update what will be committed)</span><br><span class="line">  (use "git restore &lt;file&gt;..." to discard changes in working directory)</span><br><span class="line">        modified:   file01.txt</span><br><span class="line">Untracked files:                                                             </span><br><span class="line">  (use "git add &lt;file&gt;..." to include in what will be committed)</span><br><span class="line">        file02.txt</span><br><span class="line"></span><br><span class="line">no changes added to commit (use "git add" and/or "git commit -a")</span><br></pre></td></tr></table></figure>
-<h4 id="451-添加工作区到暂存区add"><a class="markdownIt-Anchor" href="#451-添加工作区到暂存区add"></a> 4.5.1 添加工作区到暂存区(add)</h4>
+<h4 id="4-5-1-添加工作区到暂存区-add">4.5.1 添加工作区到暂存区(add)</h4>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git add .</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>作用：添加工作区一个或多个文件的修改到暂存区</li>
@@ -527,13 +527,13 @@ mjx-container[display="true"] + br {
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git reset <span class="string">"文件名"</span></span></span><br></pre></td></tr></table></figure>
 <p>将暂存区全部文件回退</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git reset</span></span><br></pre></td></tr></table></figure>
-<h4 id="452-提交暂存区到本地仓库commit"><a class="markdownIt-Anchor" href="#452-提交暂存区到本地仓库commit"></a> 4.5.2 提交暂存区到本地仓库(commit)</h4>
+<h4 id="4-5-2-提交暂存区到本地仓库-commit">4.5.2 提交暂存区到本地仓库(commit)</h4>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git commit -m <span class="string">'注释内容'</span></span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>作用：提交暂存区汇总所有内容到本地仓库的当前分支</li>
 <li>命令形式：git commit -m ‘注释内容’</li>
 </ul>
-<h4 id="453-查看提交日志log"><a class="markdownIt-Anchor" href="#453-查看提交日志log"></a> 4.5.3 查看提交日志(log)</h4>
+<h4 id="4-5-3-查看提交日志-log">4.5.3 查看提交日志(log)</h4>
 <p>在4.2.2中设置了git log的别名并添加设置。</p>
 <p>我们使用别名即可:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git ll</span></span><br></pre></td></tr></table></figure>
@@ -544,7 +544,7 @@ mjx-container[display="true"] + br {
 <p>效果如下:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">commit 34fa638efcb9fbe96b997a0cab2fe2dd73f8f15b (HEAD -&gt; master)</span><br><span class="line">Author: Wwhds &lt;a1605691832@163.com&gt;</span><br><span class="line">Date:   Wed Feb 7 15:26:15 2024 +0800</span><br><span class="line"></span><br><span class="line">    file01</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>提交时候添加的备注会被放到日志中</p>
-<h4 id="454-版本回退"><a class="markdownIt-Anchor" href="#454-版本回退"></a> 4.5.4 版本回退</h4>
+<h4 id="4-5-4-版本回退">4.5.4 版本回退</h4>
 <p>撤回到之前的某个操作，他回去删除我们撤回到位置之后的版本</p>
 <ul>
 <li>作用：版本切换</li>
@@ -563,7 +563,7 @@ mjx-container[display="true"] + br {
 <p>我们可以在reflog里面知道删除文件的id，我们可以直接使用命令git reset --hard commitID 还原</p>
 <p>所以</p>
 <p>git reset --hard commitID既可以做版本回退，也可以做版本还原</p>
-<h4 id="455-添加文件至忽略列表"><a class="markdownIt-Anchor" href="#455-添加文件至忽略列表"></a> 4.5.5 添加文件至忽略列表</h4>
+<h4 id="4-5-5-添加文件至忽略列表">4.5.5 添加文件至忽略列表</h4>
 <p>一般我们总会有些文件无需纳入Git 的管理，也不希望它们总出现在未跟踪文件列表。 通常都是些自动</p>
 <p>生成的文件，比如日志文件，或者编译过程中创建的临时文件等。 在这种情况下，我们可以在工作目录</p>
 <p>中<strong>创建一个名为 .gitignore 的文件（文件名称固定），列出要忽略的文件模式</strong>。</p>
@@ -575,7 +575,7 @@ mjx-container[display="true"] + br {
 <p>在其中插入*.txt</p>
 </blockquote>
 <p>那么之后的提交便会无视.txt后缀的文件</p>
-<h4 id="456-基础操作指令练习"><a class="markdownIt-Anchor" href="#456-基础操作指令练习"></a> 4.5.6 基础操作指令练习</h4>
+<h4 id="4-5-6-基础操作指令练习">4.5.6 基础操作指令练习</h4>
 <ol>
 <li>新建一个文件夹在其中初始化git仓库</li>
 </ol>
@@ -610,31 +610,31 @@ mjx-container[display="true"] + br {
 <li>回退到第一次提交的版本</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"> git reset a8c40cb --hard</span></span><br></pre></td></tr></table></figure>
-<h3 id="46-分支"><a class="markdownIt-Anchor" href="#46-分支"></a> 4.6 分支</h3>
+<h3 id="4-6-分支">4.6 分支</h3>
 <p>几乎所有的版本控制系统都以某种形式支持分支。 使用分支意味着你可以把你的工作从开发主线上分离</p>
 <p>开来进行重大的Bug修改、开发新的功能，以免影响开发主线。master是我们的主线</p>
 <p>每个人开发的那一部分就是一个分支，使得每个人的开发互不影响，在每个人都开发完后就将所有的代码汇总到一起，此时就要执行分支的合并操作</p>
 <p>工作区只能在一个分支工作，每个分支存放的文件或者资源是不一样的，就相当于不同的文件夹</p>
-<h4 id="461-查看本地分支"><a class="markdownIt-Anchor" href="#461-查看本地分支"></a> 4.6.1 查看本地分支</h4>
+<h4 id="4-6-1-查看本地分支">4.6.1 查看本地分支</h4>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git branch</span></span><br></pre></td></tr></table></figure>
 <p>带星号的表示当前分支</p>
-<h4 id="462-创建本地分支branch"><a class="markdownIt-Anchor" href="#462-创建本地分支branch"></a> 4.6.2 创建本地分支(branch)</h4>
+<h4 id="4-6-2-创建本地分支-branch">4.6.2 创建本地分支(branch)</h4>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git branch <span class="string">"分支名"</span></span></span><br></pre></td></tr></table></figure>
 <p>创建的新分支会建立在当前分支的版本之上，所以新建的分支会有当前分支的内容</p>
-<h4 id="463-切换分支checkout"><a class="markdownIt-Anchor" href="#463-切换分支checkout"></a> 4.6.3 切换分支(checkout)</h4>
+<h4 id="4-6-3-切换分支-checkout">4.6.3 切换分支(checkout)</h4>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git checkout</span></span><br></pre></td></tr></table></figure>
 <p>我们还可直接切换到一个不存在的分支（创建并切换)</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git checkout -b</span></span><br></pre></td></tr></table></figure>
-<h4 id="464-合并分支merge"><a class="markdownIt-Anchor" href="#464-合并分支merge"></a> 4.6.4 合并分支(merge)</h4>
+<h4 id="4-6-4-合并分支-merge">4.6.4 合并分支(merge)</h4>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git merge <span class="string">"分支名"</span></span></span><br></pre></td></tr></table></figure>
 <p>注意：分支上的内容必须先提交,才能切换分支</p>
 <p>一个分支上的提交可以合并到另一个分支</p>
 <p>在每个人都开发完后就将所有的代码汇总到一起，此时就要执行分支的合并操作</p>
 <p>当分支岔开时表示多个人在修改同一个文件</p>
-<h4 id="465-删除分支"><a class="markdownIt-Anchor" href="#465-删除分支"></a> 4.6.5 删除分支</h4>
+<h4 id="4-6-5-删除分支">4.6.5 删除分支</h4>
 <p><strong>不能删除当前分支，只能删除其他分支</strong></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch -d b1 删除分支时，需要做各种检查</span><br><span class="line">git branch -D b1 不做任何检查，强制删除</span><br></pre></td></tr></table></figure>
-<h4 id="466-解决冲突"><a class="markdownIt-Anchor" href="#466-解决冲突"></a> 4.6.6 解决冲突</h4>
+<h4 id="4-6-6-解决冲突">4.6.6 解决冲突</h4>
 <p>当我们合并分支后，两个或者多个分支对同一个文件的同一个地方进行修改的时候（不是同一个地方是不会出现冲突的 ），此时git就不知道要取哪个分支修改的值，是取a分支修改的值，还是取b分支修改的值呢，此时就产生了冲突</p>
 <p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/%E5%86%B2%E7%AA%81%E6%8A%A5%E9%94%99.png" alt=""></p>
 <p>冲突时文件具体内容如下:</p>
@@ -649,7 +649,7 @@ mjx-container[display="true"] + br {
 <li>将解决完冲突的文件加入暂存区(add)</li>
 <li>提交到仓库(commit)</li>
 </ol>
-<h4 id="467-开发中分支使用原则与流程"><a class="markdownIt-Anchor" href="#467-开发中分支使用原则与流程"></a> 4.6.7 开发中分支使用原则与流程</h4>
+<h4 id="4-6-7-开发中分支使用原则与流程">4.6.7 开发中分支使用原则与流程</h4>
 <p>几乎所有的版本控制系统都以某种形式支持分支。 使用分支意味着你可以把你的工作从开发主线上分离</p>
 <p>开来进行重大的Bug修改、开发新的功能，以免影响开发主线。</p>
 <p>在开发中，一般有如下分支使用原则与流程：</p>
@@ -704,9 +704,9 @@ mjx-container[display="true"] + br {
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Git/" rel="tag"># Git</a>
-              <a href="/tags/%E5%9F%BA%E7%A1%80/" rel="tag"># 基础</a>
-              <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"># 教程</a>
+              <a href="/tags/Git/" rel="tag"><i class="fa fa-tag"></i> Git</a>
+              <a href="/tags/%E5%9F%BA%E7%A1%80/" rel="tag"><i class="fa fa-tag"></i> 基础</a>
+              <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
           </div>
 
         
@@ -781,7 +781,7 @@ mjx-container[display="true"] + br {
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#git"><span class="nav-text"> Git</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E6%A6%82%E5%BF%B5"><span class="nav-text"> 1 版本管理工具概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E4%B8%BB%E6%B5%81%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D"><span class="nav-text"> 2 主流版本管理工具介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#git-2"><span class="nav-text"> Git</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-git%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="nav-text"> 3 Git工作流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E5%91%BD%E4%BB%A4%E8%A1%8C-git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-text"> 4 命令行-- git基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#41-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-text"> 4.1 环境配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#42-%E4%B8%BA%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E9%85%8D%E7%BD%AE%E5%88%AB%E5%90%8D"><span class="nav-text"> 4.2 为常用指令配置别名</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#421-%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E5%92%8C%E4%BD%BF%E7%94%A8%E5%88%AB%E5%90%8D"><span class="nav-text"> 4.2.1 如何定义和使用别名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#422-%E6%9C%89%E7%94%A8%E7%9A%84-git-%E5%88%AB%E5%90%8D"><span class="nav-text"> 4.2.2 有用的 Git 别名</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#43-%E8%A7%A3%E5%86%B3gitbash%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98"><span class="nav-text"> 4.3 解决GitBash乱码问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#44-%E8%8E%B7%E5%8F%96%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93"><span class="nav-text"> 4.4 获取本地仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#45-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A4"><span class="nav-text"> 4.5 基础操作指令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#451-%E6%9F%A5%E7%9C%8B%E4%BF%AE%E6%94%B9%E7%8A%B6%E6%80%81-status"><span class="nav-text"> 4.5.1 查看修改状态 (status)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#451-%E6%B7%BB%E5%8A%A0%E5%B7%A5%E4%BD%9C%E5%8C%BA%E5%88%B0%E6%9A%82%E5%AD%98%E5%8C%BAadd"><span class="nav-text"> 4.5.1 添加工作区到暂存区(add)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#452-%E6%8F%90%E4%BA%A4%E6%9A%82%E5%AD%98%E5%8C%BA%E5%88%B0%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93commit"><span class="nav-text"> 4.5.2 提交暂存区到本地仓库(commit)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#453-%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E6%97%A5%E5%BF%97log"><span class="nav-text"> 4.5.3 查看提交日志(log)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#454-%E7%89%88%E6%9C%AC%E5%9B%9E%E9%80%80"><span class="nav-text"> 4.5.4 版本回退</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#455-%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6%E8%87%B3%E5%BF%BD%E7%95%A5%E5%88%97%E8%A1%A8"><span class="nav-text"> 4.5.5 添加文件至忽略列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#456-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A4%E7%BB%83%E4%B9%A0"><span class="nav-text"> 4.5.6 基础操作指令练习</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#46-%E5%88%86%E6%94%AF"><span class="nav-text"> 4.6 分支</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#461-%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF"><span class="nav-text"> 4.6.1 查看本地分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#462-%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AFbranch"><span class="nav-text"> 4.6.2 创建本地分支(branch)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#463-%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AFcheckout"><span class="nav-text"> 4.6.3 切换分支(checkout)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#464-%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AFmerge"><span class="nav-text"> 4.6.4 合并分支(merge)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#465-%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF"><span class="nav-text"> 4.6.5 删除分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#466-%E8%A7%A3%E5%86%B3%E5%86%B2%E7%AA%81"><span class="nav-text"> 4.6.6 解决冲突</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#467-%E5%BC%80%E5%8F%91%E4%B8%AD%E5%88%86%E6%94%AF%E4%BD%BF%E7%94%A8%E5%8E%9F%E5%88%99%E4%B8%8E%E6%B5%81%E7%A8%8B"><span class="nav-text"> 4.6.7 开发中分支使用原则与流程</span></a></li></ol></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">Git</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">1 版本管理工具概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">2 主流版本管理工具介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git"><span class="nav-text">Git</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">3 Git工作流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">4 命令行-- git基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-text">4.1 环境配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E4%B8%BA%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E9%85%8D%E7%BD%AE%E5%88%AB%E5%90%8D"><span class="nav-text">4.2 为常用指令配置别名</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-1-%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E5%92%8C%E4%BD%BF%E7%94%A8%E5%88%AB%E5%90%8D"><span class="nav-text">4.2.1 如何定义和使用别名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-2-%E6%9C%89%E7%94%A8%E7%9A%84-Git-%E5%88%AB%E5%90%8D"><span class="nav-text">4.2.2 有用的 Git 别名</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-%E8%A7%A3%E5%86%B3GitBash%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98"><span class="nav-text">4.3 解决GitBash乱码问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-%E8%8E%B7%E5%8F%96%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93"><span class="nav-text">4.4 获取本地仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A4"><span class="nav-text">4.5 基础操作指令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-1-%E6%9F%A5%E7%9C%8B%E4%BF%AE%E6%94%B9%E7%8A%B6%E6%80%81-status"><span class="nav-text">4.5.1 查看修改状态 (status)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-1-%E6%B7%BB%E5%8A%A0%E5%B7%A5%E4%BD%9C%E5%8C%BA%E5%88%B0%E6%9A%82%E5%AD%98%E5%8C%BA-add"><span class="nav-text">4.5.1 添加工作区到暂存区(add)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-2-%E6%8F%90%E4%BA%A4%E6%9A%82%E5%AD%98%E5%8C%BA%E5%88%B0%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93-commit"><span class="nav-text">4.5.2 提交暂存区到本地仓库(commit)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-3-%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E6%97%A5%E5%BF%97-log"><span class="nav-text">4.5.3 查看提交日志(log)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-4-%E7%89%88%E6%9C%AC%E5%9B%9E%E9%80%80"><span class="nav-text">4.5.4 版本回退</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-5-%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6%E8%87%B3%E5%BF%BD%E7%95%A5%E5%88%97%E8%A1%A8"><span class="nav-text">4.5.5 添加文件至忽略列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-6-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A4%E7%BB%83%E4%B9%A0"><span class="nav-text">4.5.6 基础操作指令练习</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-%E5%88%86%E6%94%AF"><span class="nav-text">4.6 分支</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-1-%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF"><span class="nav-text">4.6.1 查看本地分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-2-%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF-branch"><span class="nav-text">4.6.2 创建本地分支(branch)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-3-%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF-checkout"><span class="nav-text">4.6.3 切换分支(checkout)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-4-%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF-merge"><span class="nav-text">4.6.4 合并分支(merge)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-5-%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF"><span class="nav-text">4.6.5 删除分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-6-%E8%A7%A3%E5%86%B3%E5%86%B2%E7%AA%81"><span class="nav-text">4.6.6 解决冲突</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-7-%E5%BC%80%E5%8F%91%E4%B8%AD%E5%88%86%E6%94%AF%E4%BD%BF%E7%94%A8%E5%8E%9F%E5%88%99%E4%B8%8E%E6%B5%81%E7%A8%8B"><span class="nav-text">4.6.7 开发中分支使用原则与流程</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

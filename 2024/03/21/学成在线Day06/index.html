@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 7.1.1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/MdiAlphaWCircle.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/MdiAlphaWCircle.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/MdiAlphaWCircle.svg">
+  <link rel="mask-icon" href="/images/MdiAlphaWCircle.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -214,7 +214,7 @@ mjx-container[display="true"] {
 mjx-container[display="true"] + br {
   display: none;
 }
-</style></head>
+</style><style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -403,10 +403,10 @@ mjx-container[display="true"] + br {
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="学成在线day06"><a class="markdownIt-Anchor" href="#学成在线day06"></a> 学成在线Day06</h1>
-<h1 id="上传视频"><a class="markdownIt-Anchor" href="#上传视频"></a> 上传视频</h1>
-<h2 id="断点续传技术"><a class="markdownIt-Anchor" href="#断点续传技术"></a> 断点续传技术</h2>
-<h3 id="1什么是断点续传"><a class="markdownIt-Anchor" href="#1什么是断点续传"></a> 1.什么是断点续传</h3>
+        <h1>学成在线Day06</h1>
+<h1>上传视频</h1>
+<h2 id="断点续传技术">断点续传技术</h2>
+<h3 id="1-什么是断点续传">1.什么是断点续传</h3>
 <p>通常视频文件都比较大，所以对于媒资系统上传文件的需求要满足大文件的上传要求。http协议本身对上传文件大小没有限制，但是客户的网络环境质量、电脑硬件环境等参差不齐，如果一个大文件快上传完了网断了没有上传完成，需要客户重新上传，用户体验非常差，所以对于大文件上传的要求最基本的是断点续传。</p>
 <p>什么是断点续传：</p>
 <p>​    引用百度百科：断点续传指的是在下载或上传时，将下载或上传任务（一个文件或一个压缩包）人为的划分为几个部分，每一个部分采用一个线程进行上传或下载，如果碰到网络故障，可以从已经上传或下载的部分开始继续上传下载未完成的部分，而没有必要从头开始上传下载，断点续传可以提高节省操作时间，提高用户体验性。</p>
@@ -416,7 +416,7 @@ mjx-container[display="true"] + br {
 <p>1、前端上传前先把文件分成块</p>
 <p>2、一块一块的上传，上传中断后重新上传，已上传的分块则不用再上传</p>
 <p>3、各分块上传完成最后在服务端合并文件</p>
-<h3 id="2文件分块测试"><a class="markdownIt-Anchor" href="#2文件分块测试"></a> 2.文件分块测试</h3>
+<h3 id="2-文件分块测试">2.文件分块测试</h3>
 <p>文件分块测试代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//分块测试</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">testChunk</span><span class="params">()</span> <span class="keyword">throws</span> IOException {</span><br><span class="line">    <span class="type">File</span> <span class="variable">sourceFile</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">"C:\\Users\\Administrator\\Desktop\\分块测试\\test.mp4"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">String</span> <span class="variable">fileChunkPath</span> <span class="operator">=</span> <span class="string">"C:\\Users\\Administrator\\Desktop\\分块测试"</span>;</span><br><span class="line">    <span class="comment">//分块大小</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">chunkSize</span> <span class="operator">=</span> <span class="number">1024</span> * <span class="number">1024</span> * <span class="number">1</span>;</span><br><span class="line">    <span class="comment">//分块数量</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">chunkNum</span> <span class="operator">=</span> (<span class="type">int</span>) Math.ceil(sourceFile.length() * <span class="number">1.0</span> / chunkSize);</span><br><span class="line">    <span class="type">RandomAccessFile</span> <span class="variable">ref_r</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">RandomAccessFile</span>(sourceFile, <span class="string">"r"</span>);</span><br><span class="line">    <span class="comment">//缓冲区</span></span><br><span class="line">    <span class="type">byte</span>[] b = <span class="keyword">new</span> <span class="title class_">byte</span>[<span class="number">1024</span>];</span><br><span class="line">    <span class="keyword">for</span> ( <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; chunkNum; i++ ) {</span><br><span class="line">        <span class="comment">//创建分块文件</span></span><br><span class="line">        <span class="type">File</span> <span class="variable">chunkFile</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(fileChunkPath + i);</span><br><span class="line">        <span class="comment">//分块文件写入流</span></span><br><span class="line">        <span class="type">RandomAccessFile</span> <span class="variable">ref_w</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">RandomAccessFile</span>(chunkFile, <span class="string">"rw"</span>);</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="comment">//读取文件</span></span><br><span class="line">        <span class="keyword">while</span> ( (len = ref_r.read(b)) != -<span class="number">1</span> ) {</span><br><span class="line">            ref_w.write(b, <span class="number">0</span>, len);</span><br><span class="line">            <span class="keyword">if</span> ( chunkFile.length() &gt;= chunkSize ) {</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 <p>其中用到了<code>RandomAccessFile</code></p>
@@ -426,7 +426,7 @@ mjx-container[display="true"] + br {
 <p>RandomAccessFile的一个重要使用场景就是网络请求中的多线程下载及断点续传。</p>
 <p>文件分块合并测试代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">testMerge</span><span class="params">()</span> <span class="keyword">throws</span> Exception {</span><br><span class="line">    <span class="comment">//找到分块文件路径</span></span><br><span class="line">    <span class="type">File</span> <span class="variable">chunkFolder</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">"C:\\Users\\Wwhds\\Desktop\\分块测试\\chunk"</span>);</span><br><span class="line">    <span class="comment">//源文件</span></span><br><span class="line">    <span class="type">File</span> <span class="variable">sourceFile</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">"C:\\Users\\Wwhds\\Desktop\\分块测试\\test.mp4"</span>);</span><br><span class="line">    <span class="comment">//合并文件</span></span><br><span class="line">    <span class="type">File</span> <span class="variable">mergeFile</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">"C:\\Users\\Wwhds\\Desktop\\分块测试\\test_merge.mp4"</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//取出所有分块文件</span></span><br><span class="line">    File[] chunkFiles = chunkFolder.listFiles();</span><br><span class="line"></span><br><span class="line">    List&lt;File&gt; list = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">if</span> ( chunkFiles != <span class="literal">null</span> ) {</span><br><span class="line">        list = Arrays.asList(chunkFiles);</span><br><span class="line">    }</span><br><span class="line">    <span class="comment">//根据文件名称排序list</span></span><br><span class="line">    <span class="keyword">if</span> ( list != <span class="literal">null</span> ) {</span><br><span class="line">        list.sort(Comparator.comparingInt(o -&gt; Integer.parseInt(o.getName())));</span><br><span class="line">    }</span><br><span class="line">    <span class="type">RandomAccessFile</span> <span class="variable">raf_rw</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">RandomAccessFile</span>(mergeFile, <span class="string">"rw"</span>);</span><br><span class="line">    <span class="type">byte</span> b[] = <span class="keyword">new</span> <span class="title class_">byte</span>[<span class="number">1024</span>];</span><br><span class="line">    <span class="keyword">for</span> ( File file : list ) {</span><br><span class="line">        <span class="type">RandomAccessFile</span> <span class="variable">raf_r</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">RandomAccessFile</span>(file, <span class="string">"r"</span>);</span><br><span class="line">        <span class="type">int</span> len;</span><br><span class="line">        <span class="keyword">while</span> ( (len = raf_r.read(b)) != -<span class="number">1</span> ) {</span><br><span class="line">            raf_rw.write(b, <span class="number">0</span>, len);</span><br><span class="line">        }</span><br><span class="line">        raf_r.close();</span><br><span class="line">    }</span><br><span class="line">    raf_rw.close();</span><br><span class="line">    System.out.println(<span class="string">"合并完成"</span>);				<span class="comment">//MD5验证</span></span><br><span class="line">    <span class="keyword">if</span> ( DigestUtils.md5Hex(<span class="keyword">new</span> <span class="title class_">FileInputStream</span>(sourceFile)).equals(DigestUtils.md5Hex(<span class="keyword">new</span> <span class="title class_">FileInputStream</span>(mergeFile))) ) {</span><br><span class="line">        System.out.println(<span class="string">"文件一致"</span>);</span><br><span class="line">    }<span class="keyword">else</span> {</span><br><span class="line">        System.out.println(<span class="string">"文件不一致"</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
-<h3 id="3视频上传流程"><a class="markdownIt-Anchor" href="#3视频上传流程"></a> 3.视频上传流程</h3>
+<h3 id="3-视频上传流程">3.视频上传流程</h3>
 <p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240218151425388.png" alt="image-20240218151425388"></p>
 <p>1、前端对文件进行分块。</p>
 <p>2、前端上传分块文件前请求媒资服务检查文件是否存在，如果已经存在则不再上传。</p>
@@ -436,16 +436,16 @@ mjx-container[display="true"] + br {
 <p>6、前端将分块上传完毕请求媒资服务合并分块。</p>
 <p>7、媒资服务判断分块上传完成则请求MinIO合并文件。</p>
 <p>8、合并完成校验合并后的文件是否完整，如果完整则上传完成，否则删除文件。</p>
-<h3 id="4minio文件上传测试"><a class="markdownIt-Anchor" href="#4minio文件上传测试"></a> 4.Minio文件上传测试</h3>
+<h3 id="4-Minio文件上传测试">4.Minio文件上传测试</h3>
 <p>注意分块内容必须大于等于5M</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">List&lt;ComposeSource&gt; sources = Stream.iterate(<span class="number">0</span>, i -&gt; ++i)</span><br><span class="line">    .limit(<span class="number">42</span>)</span><br><span class="line">    .map(i -&gt; ComposeSource.builder()</span><br><span class="line">         .bucket(<span class="string">"testbucket"</span>)</span><br><span class="line">         .object(<span class="string">"chunk/"</span> + i)</span><br><span class="line">         .build())</span><br><span class="line">    .collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
 <p>stream流全新用法</p>
-<h1 id="上传分块"><a class="markdownIt-Anchor" href="#上传分块"></a> 上传分块</h1>
+<h1>上传分块</h1>
 <p>上传文件大小限制需要解除</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">servlet:</span></span><br><span class="line">    <span class="attr">multipart:</span></span><br><span class="line">      <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line">      <span class="attr">max-file-size:</span> <span class="string">50MB</span>			<span class="string">//上传文件最大限制</span></span><br><span class="line">      <span class="attr">max-request-size:</span> <span class="string">50MB</span>		<span class="string">//请求文件最大限制</span></span><br></pre></td></tr></table></figure>
 <p>在nacos配置即可</p>
 <p>内容过于庞大，请在代码文件中查看</p>
-<h1 id="视频处理"><a class="markdownIt-Anchor" href="#视频处理"></a> 视频处理</h1>
+<h1>视频处理</h1>
 <p>视频上传成功后需要对视频进行转码处理。</p>
 <p>什么是视频编码？查阅百度百科如下：</p>
 <p>详情参考 ：<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/839038">https://baike.baidu.com/item/%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81/839038</a></p>
@@ -459,7 +459,7 @@ mjx-container[display="true"] + br {
 <p>（由ITU[国际电传视讯联盟]主导，侧重网络传输，注意：只是视频编码）</p>
 <p>包括H.261、H.262、H.263、H.263+、H.263++、H.264（就是MPEG4 AVC-合作的结晶）</p>
 <p>目前最常用的编码标准是视频H.264，音频AAC。</p>
-<h1 id="分布式调度"><a class="markdownIt-Anchor" href="#分布式调度"></a> 分布式调度</h1>
+<h1>分布式调度</h1>
 <p>对一个视频的转码可以理解为一个任务的执行，如果视频的数量比较多，如何去高效处理一批任务呢？</p>
 <p>1、多线程</p>
 <p>多线程是充分利用单机的资源。</p>
@@ -525,7 +525,7 @@ mjx-container[display="true"] + br {
 <p>任务跑一段时间注意清理日志</p>
 <p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318130722290.png" alt="image-20240318130722290"></p>
 <p>xxl路由策略配置详细内容：<a target="_blank" rel="noopener" href="https://blog.csdn.net/w_t_y_y/article/details/117119864">xxl-job（四）路由策略_xxl-job路由策略-CSDN博客</a></p>
-<h2 id="分片广播"><a class="markdownIt-Anchor" href="#分片广播"></a> 分片广播</h2>
+<h2 id="分片广播">分片广播</h2>
 <p>掌握了xxl-job的基本使用，下边思考如何进行分布式任务处理呢？如下图，我们会启动多个执行器组成一个集群，去执行任务。</p>
 <p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318130800270.png" alt="image-20240318130800270"></p>
 <p>执行器在集群部署下调度中心有哪些调度策略呢？</p>
@@ -629,11 +629,11 @@ SHARDING_BROADCAST(分片广播)：广播触发对应集群中所有机器执行
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Java/" rel="tag"># Java</a>
-              <a href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"># 学习</a>
-              <a href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag"># 后端</a>
-              <a href="/tags/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/" rel="tag"># 黑马程序员</a>
-              <a href="/tags/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BF/" rel="tag"># 学成在线</a>
+              <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+              <a href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"><i class="fa fa-tag"></i> 学习</a>
+              <a href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 后端</a>
+              <a href="/tags/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/" rel="tag"><i class="fa fa-tag"></i> 黑马程序员</a>
+              <a href="/tags/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BF/" rel="tag"><i class="fa fa-tag"></i> 学成在线</a>
           </div>
 
         
@@ -708,7 +708,7 @@ SHARDING_BROADCAST(分片广播)：广播触发对应集群中所有机器执行
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFday06"><span class="nav-text"> 学成在线Day06</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0%E8%A7%86%E9%A2%91"><span class="nav-text"> 上传视频</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0%E6%8A%80%E6%9C%AF"><span class="nav-text"> 断点续传技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E4%BB%80%E4%B9%88%E6%98%AF%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0"><span class="nav-text"> 1.什么是断点续传</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E6%96%87%E4%BB%B6%E5%88%86%E5%9D%97%E6%B5%8B%E8%AF%95"><span class="nav-text"> 2.文件分块测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E8%A7%86%E9%A2%91%E4%B8%8A%E4%BC%A0%E6%B5%81%E7%A8%8B"><span class="nav-text"> 3.视频上传流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4minio%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95"><span class="nav-text"> 4.Minio文件上传测试</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0%E5%88%86%E5%9D%97"><span class="nav-text"> 上传分块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86"><span class="nav-text"> 视频处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E8%B0%83%E5%BA%A6"><span class="nav-text"> 分布式调度</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E7%89%87%E5%B9%BF%E6%92%AD"><span class="nav-text"> 分片广播</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">学成在线Day06</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">上传视频</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0%E6%8A%80%E6%9C%AF"><span class="nav-text">断点续传技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AF%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0"><span class="nav-text">1.什么是断点续传</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%96%87%E4%BB%B6%E5%88%86%E5%9D%97%E6%B5%8B%E8%AF%95"><span class="nav-text">2.文件分块测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%A7%86%E9%A2%91%E4%B8%8A%E4%BC%A0%E6%B5%81%E7%A8%8B"><span class="nav-text">3.视频上传流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Minio%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95"><span class="nav-text">4.Minio文件上传测试</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">上传分块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">视频处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">分布式调度</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E7%89%87%E5%B9%BF%E6%92%AD"><span class="nav-text">分片广播</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

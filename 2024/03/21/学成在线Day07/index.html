@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 7.1.1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/MdiAlphaWCircle.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/MdiAlphaWCircle.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/MdiAlphaWCircle.svg">
+  <link rel="mask-icon" href="/images/MdiAlphaWCircle.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -203,7 +203,7 @@ mjx-container[display="true"] {
 mjx-container[display="true"] + br {
   display: none;
 }
-</style></head>
+</style><style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -392,9 +392,9 @@ mjx-container[display="true"] + br {
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="学成在线day07"><a class="markdownIt-Anchor" href="#学成在线day07"></a> 学成在线Day07</h1>
-<h1 id="技术方案"><a class="markdownIt-Anchor" href="#技术方案"></a> 技术方案</h1>
-<h2 id="作业分片方案"><a class="markdownIt-Anchor" href="#作业分片方案"></a> 作业分片方案</h2>
+        <h1>学成在线Day07</h1>
+<h1>技术方案</h1>
+<h2 id="作业分片方案">作业分片方案</h2>
 <p>任务添加成功后，对于要处理的任务会添加到待处理任务表中，现在启动多个执行器实例去查询这些待处理任务</p>
 <p><em><strong>此时如何保证多个执行器不会查询到重复的任务呢？</strong></em></p>
 <p>XXL-JOB并不直接提供数据处理的功能，它只会给执行器分配好分片序号，在向执行器任务调度的同时下发分片总数以及分片序号等参数，执行器收到这些参数根据自己的业务需求去利用这些参数。</p>
@@ -404,8 +404,8 @@ mjx-container[display="true"] + br {
 <p>2 % 2 = 0  执行器1执行</p>
 <p>3 % 2 = 1   执行器2执行</p>
 <p>以此类推</p>
-<h2 id="保证任务不重复执行"><a class="markdownIt-Anchor" href="#保证任务不重复执行"></a> 保证任务不重复执行</h2>
-<h3 id="1调度过期策略"><a class="markdownIt-Anchor" href="#1调度过期策略"></a> 1.调度过期策略</h3>
+<h2 id="保证任务不重复执行">保证任务不重复执行</h2>
+<h3 id="1-调度过期策略">1.调度过期策略</h3>
 <p><em><strong>通过作业分片方案保证了执行器之间查询到不重复的任务，如果一个执行器在处理一个视频还没有完成，此时调度中心又一次请求调度，为了不重复处理同一个视频该怎么办？</strong></em></p>
 <p>首先配置调度过期策略：</p>
 <p>查看文档如下：</p>
@@ -416,7 +416,7 @@ mjx-container[display="true"] + br {
 <li>阻塞处理策略：调度过于密集执行器来不及处理时的处理策略；</li>
 </ul>
 <p>这里我们选择忽略，如果立即执行一次就可能重复执行相同的任务。</p>
-<h3 id="2阻塞处理策略"><a class="markdownIt-Anchor" href="#2阻塞处理策略"></a> 2.阻塞处理策略</h3>
+<h3 id="2-阻塞处理策略">2.阻塞处理策略</h3>
 <p>其次，再看阻塞处理策略，阻塞处理策略就是当前执行器正在执行任务还没有结束时调度中心进行任务调度，此时该如何处理。</p>
 <p>查看文档如下：</p>
 <ul>
@@ -425,7 +425,7 @@ mjx-container[display="true"] + br {
 <li>覆盖之前调度：调度请求进入单机执行器后，发现执行器存在运行的调度任务，将会终止运行中的调度任务并清空队列，然后运行本地调度任务；</li>
 </ul>
 <p>这里如果选择覆盖之前调度则可能重复执行任务，这里选择 丢弃后续调度或单机串行方式来避免任务重复执行。</p>
-<h3 id="3只做这些配置可以保证任务不会重复执行吗"><a class="markdownIt-Anchor" href="#3只做这些配置可以保证任务不会重复执行吗"></a> 3.只做这些配置可以保证任务不会重复执行吗？</h3>
+<h3 id="3-只做这些配置可以保证任务不会重复执行吗？">3.只做这些配置可以保证任务不会重复执行吗？</h3>
 <p>做不到，还需要保证任务处理的<code>幂等性</code>，什么是任务的<code>幂等性</code>？任务的<code>幂等性</code>是指：对于数据的操作不论多少次，操作的结果始终是一致的。在本项目中要实现的是不论多少次任务调度同一个视频只执行一次成功的转码。</p>
 <p>什么是幂等性？</p>
 <p>它描述了一次和多次请求某一个资源对于资源本身应该具有同样的结果。</p>
@@ -443,7 +443,7 @@ mjx-container[display="true"] + br {
 </li>
 </ol>
 <p>基于以上分析，在执行器接收调度请求去执行视频处理任务时要实现视频处理的幂等性，要有办法去判断该视频是否处理完成，如果正在处理中或处理完则不再处理。这里我们在数据库视频处理表中添加处理状态字段，视频处理完成更新状态为完成，执行视频处理前判断状态是否完成，如果完成则不再处理。</p>
-<h2 id="视频处理方案"><a class="markdownIt-Anchor" href="#视频处理方案"></a> 视频处理方案</h2>
+<h2 id="视频处理方案">视频处理方案</h2>
 <p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240219161521796.png" alt="image-20240219161521796"></p>
 <p>视频处理的详细流程如下：</p>
 <pre class="mermaid">sequenceDiagram
@@ -474,25 +474,25 @@ mjx-container[display="true"] + br {
 <p>将更新任务处理结果，如果视频处理完成除了更新任务处理结果以外还要将文件的访问地址更新至任务处理表及文件表中，最后将任务完成记录写入历史表。</p>
 </li>
 </ol>
-<h1 id="查询待处理任务"><a class="markdownIt-Anchor" href="#查询待处理任务"></a> 查询待处理任务</h1>
-<h2 id="需求分析"><a class="markdownIt-Anchor" href="#需求分析"></a> 需求分析</h2>
+<h1>查询待处理任务</h1>
+<h2 id="需求分析">需求分析</h2>
 <p>查询待处理任务只处理未提交及处理失败的任务，任务处理失败后进行重试，最多重试3次。</p>
 <p>任务处理成功将待处理记录移动到历史任务表。</p>
 <p>下图是待处理任务表：</p>
 <p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240219164345252.png" alt="image-20240219164345252"></p>
 <p>历史任务表与待处理任务表的结构相同。</p>
-<h2 id="添加待处理任务"><a class="markdownIt-Anchor" href="#添加待处理任务"></a> 添加待处理任务</h2>
+<h2 id="添加待处理任务">添加待处理任务</h2>
 <p>上传视频成功向视频处理待处理表添加记录，暂时只添加对avi视频的处理记录。</p>
 <p>根据MIME Type去判断是否是avi视频，下边列出部分MIME Type</p>
 <p><img src="C:%5CUsers%5CWwhds%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240219164705050.png" alt="image-20240219164705050"></p>
 <p>avi视频的MIME Type是video/x-msvideo</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 记录待处理任务</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> mediaFiles 文件信息</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addWitingTask</span><span class="params">(MediaFiles mediaFiles)</span> {</span><br><span class="line">    <span class="comment">//获取文件名</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">filename</span> <span class="operator">=</span> mediaFiles.getFilename();</span><br><span class="line">    <span class="comment">//获取拓展名</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">extension</span> <span class="operator">=</span> filename.substring(filename.lastIndexOf(<span class="string">"."</span>));</span><br><span class="line">    <span class="comment">//获取mimeType类型</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">mimeType</span> <span class="operator">=</span> getMimeType(extension);</span><br><span class="line">    <span class="keyword">if</span>(mimeType.equals(<span class="string">"video/x-msvideo"</span>)){         <span class="comment">//如果是avi文件，记录待处理任务</span></span><br><span class="line">        <span class="type">MediaProcess</span> <span class="variable">mediaProcess</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MediaProcess</span>();</span><br><span class="line">        BeanUtils.copyProperties(mediaFiles, mediaProcess);</span><br><span class="line">        <span class="comment">//状态</span></span><br><span class="line">        mediaProcess.setStatus(<span class="string">""</span>);</span><br><span class="line">        mediaProcess.setCreateDate(LocalDateTime.now());</span><br><span class="line">        mediaProcess.setFailCount(<span class="number">0</span>);</span><br><span class="line">        <span class="comment">//处理完成后再设置url</span></span><br><span class="line">        mediaProcess.setUrl(<span class="literal">null</span>);</span><br><span class="line">        mediaProcessMapper.insert(mediaProcess);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
-<h2 id="查询待处理任务-2"><a class="markdownIt-Anchor" href="#查询待处理任务-2"></a> 查询待处理任务</h2>
+<h2 id="查询待处理任务">查询待处理任务</h2>
 <p>如何保证查询到的待处理视频记录不重复？</p>
 <p>编写根据分片参数获取待处理任务的DAO方法，定义DAO接口如下</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Select("select * from media_process m " +</span></span><br><span class="line"><span class="meta">            "where (m.status = 1 or m.status = 3) " +</span></span><br><span class="line"><span class="meta">            "and m.fail_count &lt; 3 " +</span></span><br><span class="line"><span class="meta">            "and m.id % #{sharedTotal} = #{shardIndex} limit #{failCount}")</span></span><br><span class="line">    List&lt;MediaProcess&gt; <span class="title function_">selectProcessByShardIndex</span><span class="params">(<span class="type">int</span> sharedTotal, <span class="type">int</span> shardIndex,<span class="type">int</span> failCount)</span>;</span><br></pre></td></tr></table></figure>
-<h1 id="开始执行任务"><a class="markdownIt-Anchor" href="#开始执行任务"></a> 开始执行任务</h1>
-<h2 id="1分布式锁"><a class="markdownIt-Anchor" href="#1分布式锁"></a> 1.分布式锁</h2>
+<h1>开始执行任务</h1>
+<h2 id="1-分布式锁">1.分布式锁</h2>
 <p>为了避免多线程去争抢同一个任务可以使用synchronized同步锁去解决，如下代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">synchronized</span>(锁对象){</span><br><span class="line">   执行任务...</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 <p>synchronized只能保证同一个虚拟机中多个线程去争抢锁。</p>
@@ -516,14 +516,14 @@ mjx-container[display="true"] + br {
 <li>使用<code>zookeeper</code>实现</li>
 </ol>
 <p>zookeeper是一个分布式协调服务，主要解决分布式程序之间的同步的问题。zookeeper的结构类似的文件目录，多线程向zookeeper创建一个子目录(节点)只会有一个创建成功，利用此特点可以实现分布式锁，谁创建该结点成功谁就获得锁。</p>
-<h2 id="2开启任务"><a class="markdownIt-Anchor" href="#2开启任务"></a> 2.开启任务</h2>
+<h2 id="2-开启任务">2.开启任务</h2>
 <p>什么是<code>乐观锁</code>、<code>悲观锁</code>？</p>
 <p><code>synchronized</code>是一种<code>悲观锁</code>，在执行被synchronized包裹的代码时需要首先获取锁，没有拿到锁则无法执行，是总悲观的认为别的线程会去抢，所以叫悲观锁。</p>
 <p><code>乐观锁</code>的思想是它不认为会有线程去争抢，尽管去执行，如果没有<strong>执行成功就再去重试</strong>。</p>
-<h1 id="更新任务状态"><a class="markdownIt-Anchor" href="#更新任务状态"></a> 更新任务状态</h1>
+<h1>更新任务状态</h1>
 <p>任务处理完成需要更新任务处理结果，任务执行成功更新视频的URL、及任务处理结果，将待处理任务记录删除，同时向历史任务表添加记录。</p>
 <p>在MediaFileProcessService接口添加方法</p>
-<h1 id="视频处理"><a class="markdownIt-Anchor" href="#视频处理"></a> 视频处理</h1>
+<h1>视频处理</h1>
 <p>视频采用并发处理，每个视频使用一个线程去处理，每次处理的视频数量不要超过cpu核心数。</p>
 <p>所有视频处理完成结束本次执行，为防止代码异常出现无限期等待则添加超时设置，到达超时时间还没有处理完成仍结束任务。</p>
 <p>获取电脑核心数量：</p>
@@ -539,28 +539,28 @@ mjx-container[display="true"] + br {
 <p>只有mp4Name对应的路径是正确的</p>
 <p>保存后更新media_file中的文件路径和url</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//更新media_file中的url地址和文件路径</span></span><br><span class="line"><span class="type">MediaFiles</span> <span class="variable">mediaFiles</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MediaFiles</span>();</span><br><span class="line">mediaFiles.setId(fileId);</span><br><span class="line">mediaFiles.setUrl(url);</span><br><span class="line">mediaFiles.setFilePath(mp4Name);</span><br><span class="line">mediaFileService.updateById(mediaFiles);</span><br></pre></td></tr></table></figure>
-<h2 id="视频处理其他问题待完善"><a class="markdownIt-Anchor" href="#视频处理其他问题待完善"></a> 视频处理其他问题(待完善)</h2>
-<h3 id="1任务补偿机制"><a class="markdownIt-Anchor" href="#1任务补偿机制"></a> 1.任务补偿机制</h3>
+<h2 id="视频处理其他问题-待完善">视频处理其他问题(待完善)</h2>
+<h3 id="1-任务补偿机制">1.任务补偿机制</h3>
 <p>如果有线程抢占了某个视频的处理任务，如果线程处理过程中挂掉了，该视频的状态将会一直是处理中，其它线程将无法处理，这个问题需要用补偿机制。</p>
 <p>单独启动一个任务找到待处理任务表中超过执行期限但仍在处理中的任务，将任务的状态改为执行失败。</p>
 <p>任务执行期限是处理一个视频的最大时间，比如定为30分钟，通过任务的启动时间去判断任务是否超过执行期限。</p>
 <p>大家思考这个sql该如何实现？</p>
 <p>大家尝试自己实现此任务补偿机制。</p>
-<h3 id="2达到最大失败次数"><a class="markdownIt-Anchor" href="#2达到最大失败次数"></a> 2.达到最大失败次数</h3>
+<h3 id="2-达到最大失败次数">2.达到最大失败次数</h3>
 <p>当任务达到最大失败次数时一般就说明程序处理此视频存在问题，这种情况就需要人工处理，在页面上会提示失败的信息，人工可手动执行该视频进行处理，或通过其它转码工具进行视频转码，转码后直接上传mp4视频。</p>
-<h3 id="3分块文件清理问题"><a class="markdownIt-Anchor" href="#3分块文件清理问题"></a> 3.分块文件清理问题</h3>
+<h3 id="3-分块文件清理问题">3.分块文件清理问题</h3>
 <p>上传一个文件进行分块上传，上传一半不传了，之前上传到minio的分块文件要清理吗？怎么做的？</p>
 <p>1、在数据库中有一张文件表记录minio中存储的文件信息。</p>
 <p>2、文件开始上传时会写入文件表，状态为上传中，上传完成会更新状态为上传完成。</p>
 <p>3、当一个文件传了一半不再上传了说明该文件没有上传完成，会有定时任务去查询文件表中的记录，如果文件未上传完成则删除minio中没有上传成功的文件目录。</p>
-<h1 id="绑定媒资"><a class="markdownIt-Anchor" href="#绑定媒资"></a> 绑定媒资</h1>
+<h1>绑定媒资</h1>
 <p>基础增删改查内容，详细内容查看内容模块代码</p>
-<h1 id="实战"><a class="markdownIt-Anchor" href="#实战"></a> 实战</h1>
+<h1>实战</h1>
 <p>根据接口定义实现解除绑定功能。</p>
 <p>前端文件course-add-step2-outline.vue中作如下修改:</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">async</span> <span class="title function_">handleDeleteMedia</span>(<span class="params">node: ICourseOutlineTreeNode</span>) {</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(node)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(node.<span class="property">id</span>)</span><br><span class="line">    <span class="keyword">try</span> {</span><br><span class="line">      <span class="keyword">if</span> (</span><br><span class="line">        node.<span class="property">teachplanMedia</span> === <span class="literal">undefined</span> ||</span><br><span class="line">        node.<span class="property">teachplanMedia</span>.<span class="property">id</span> === <span class="literal">undefined</span></span><br><span class="line">      ) {</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">      }</span><br><span class="line">      <span class="keyword">await</span> <span class="variable language_">this</span>.<span class="title function_">showDeleteConfirm</span>()</span><br><span class="line">      <span class="keyword">await</span> <span class="title function_">mediaUnAssociation</span>(</span><br><span class="line">        node.<span class="property">id</span>,</span><br><span class="line">        node.<span class="property">teachplanMedia</span>.<span class="property">mediaId</span>,</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">courseBaseId</span></span><br><span class="line">      )</span><br><span class="line">      <span class="variable language_">this</span>.<span class="title function_">getList</span>()</span><br><span class="line">    } <span class="keyword">catch</span> (error) {}</span><br><span class="line">  }</span><br></pre></td></tr></table></figure>
 <p>后端基础增删查改即可</p>
-<h1 id="课程发布"><a class="markdownIt-Anchor" href="#课程发布"></a> 课程发布</h1>
+<h1>课程发布</h1>
 <p>作为课程制作方即教学机构，在课程发布前通过课程预览功能可以看到课程发布后的效果，哪里的课程信息存在问题方便查看，及时修改。</p>
 <p>下图是课程预览的效果图，也是课程正式发布后的课程详情界面：</p>
 <p><img src="C:%5CUsers%5CWwhds%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240220200205363.png" alt="image-20240220200205363"></p>
@@ -569,7 +569,7 @@ mjx-container[display="true"] + br {
 <p>1、课程预览</p>
 <p>2、课程审核</p>
 <p>3、课程发布</p>
-<h2 id="模板引擎"><a class="markdownIt-Anchor" href="#模板引擎"></a> 模板引擎</h2>
+<h2 id="模板引擎">模板引擎</h2>
 <p>根据前边的数据模型分析，课程预览就是把课程的相关信息进行整合，在课程预览界面进行展示，课程预览界面与课程发布的课程详情界面一致。</p>
 <p>项目采用模板引擎技术实现课程预览界面。什么是模板引擎？</p>
 <p>早期我们采用的jsp技术就是一种模板引擎技术，如下图：</p>
@@ -612,11 +612,11 @@ mjx-container[display="true"] + br {
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Java/" rel="tag"># Java</a>
-              <a href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"># 学习</a>
-              <a href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag"># 后端</a>
-              <a href="/tags/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/" rel="tag"># 黑马程序员</a>
-              <a href="/tags/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BF/" rel="tag"># 学成在线</a>
+              <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+              <a href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"><i class="fa fa-tag"></i> 学习</a>
+              <a href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 后端</a>
+              <a href="/tags/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/" rel="tag"><i class="fa fa-tag"></i> 黑马程序员</a>
+              <a href="/tags/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BF/" rel="tag"><i class="fa fa-tag"></i> 学成在线</a>
           </div>
 
         
@@ -691,7 +691,7 @@ mjx-container[display="true"] + br {
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFday07"><span class="nav-text"> 学成在线Day07</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF%E6%96%B9%E6%A1%88"><span class="nav-text"> 技术方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%9C%E4%B8%9A%E5%88%86%E7%89%87%E6%96%B9%E6%A1%88"><span class="nav-text"> 作业分片方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%9D%E8%AF%81%E4%BB%BB%E5%8A%A1%E4%B8%8D%E9%87%8D%E5%A4%8D%E6%89%A7%E8%A1%8C"><span class="nav-text"> 保证任务不重复执行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E8%B0%83%E5%BA%A6%E8%BF%87%E6%9C%9F%E7%AD%96%E7%95%A5"><span class="nav-text"> 1.调度过期策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E9%98%BB%E5%A1%9E%E5%A4%84%E7%90%86%E7%AD%96%E7%95%A5"><span class="nav-text"> 2.阻塞处理策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E5%8F%AA%E5%81%9A%E8%BF%99%E4%BA%9B%E9%85%8D%E7%BD%AE%E5%8F%AF%E4%BB%A5%E4%BF%9D%E8%AF%81%E4%BB%BB%E5%8A%A1%E4%B8%8D%E4%BC%9A%E9%87%8D%E5%A4%8D%E6%89%A7%E8%A1%8C%E5%90%97"><span class="nav-text"> 3.只做这些配置可以保证任务不会重复执行吗？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86%E6%96%B9%E6%A1%88"><span class="nav-text"> 视频处理方案</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E5%BE%85%E5%A4%84%E7%90%86%E4%BB%BB%E5%8A%A1"><span class="nav-text"> 查询待处理任务</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90"><span class="nav-text"> 需求分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%BE%85%E5%A4%84%E7%90%86%E4%BB%BB%E5%8A%A1"><span class="nav-text"> 添加待处理任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E5%BE%85%E5%A4%84%E7%90%86%E4%BB%BB%E5%8A%A1-2"><span class="nav-text"> 查询待处理任务</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E6%89%A7%E8%A1%8C%E4%BB%BB%E5%8A%A1"><span class="nav-text"> 开始执行任务</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81"><span class="nav-text"> 1.分布式锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E5%BC%80%E5%90%AF%E4%BB%BB%E5%8A%A1"><span class="nav-text"> 2.开启任务</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81"><span class="nav-text"> 更新任务状态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86"><span class="nav-text"> 视频处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86%E5%85%B6%E4%BB%96%E9%97%AE%E9%A2%98%E5%BE%85%E5%AE%8C%E5%96%84"><span class="nav-text"> 视频处理其他问题(待完善)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E4%BB%BB%E5%8A%A1%E8%A1%A5%E5%81%BF%E6%9C%BA%E5%88%B6"><span class="nav-text"> 1.任务补偿机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E8%BE%BE%E5%88%B0%E6%9C%80%E5%A4%A7%E5%A4%B1%E8%B4%A5%E6%AC%A1%E6%95%B0"><span class="nav-text"> 2.达到最大失败次数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E5%88%86%E5%9D%97%E6%96%87%E4%BB%B6%E6%B8%85%E7%90%86%E9%97%AE%E9%A2%98"><span class="nav-text"> 3.分块文件清理问题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%91%E5%AE%9A%E5%AA%92%E8%B5%84"><span class="nav-text"> 绑定媒资</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E6%88%98"><span class="nav-text"> 实战</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%BE%E7%A8%8B%E5%8F%91%E5%B8%83"><span class="nav-text"> 课程发布</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E"><span class="nav-text"> 模板引擎</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">学成在线Day07</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">技术方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%9C%E4%B8%9A%E5%88%86%E7%89%87%E6%96%B9%E6%A1%88"><span class="nav-text">作业分片方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%9D%E8%AF%81%E4%BB%BB%E5%8A%A1%E4%B8%8D%E9%87%8D%E5%A4%8D%E6%89%A7%E8%A1%8C"><span class="nav-text">保证任务不重复执行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%B0%83%E5%BA%A6%E8%BF%87%E6%9C%9F%E7%AD%96%E7%95%A5"><span class="nav-text">1.调度过期策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%98%BB%E5%A1%9E%E5%A4%84%E7%90%86%E7%AD%96%E7%95%A5"><span class="nav-text">2.阻塞处理策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%8F%AA%E5%81%9A%E8%BF%99%E4%BA%9B%E9%85%8D%E7%BD%AE%E5%8F%AF%E4%BB%A5%E4%BF%9D%E8%AF%81%E4%BB%BB%E5%8A%A1%E4%B8%8D%E4%BC%9A%E9%87%8D%E5%A4%8D%E6%89%A7%E8%A1%8C%E5%90%97%EF%BC%9F"><span class="nav-text">3.只做这些配置可以保证任务不会重复执行吗？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86%E6%96%B9%E6%A1%88"><span class="nav-text">视频处理方案</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">查询待处理任务</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90"><span class="nav-text">需求分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%BE%85%E5%A4%84%E7%90%86%E4%BB%BB%E5%8A%A1"><span class="nav-text">添加待处理任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E5%BE%85%E5%A4%84%E7%90%86%E4%BB%BB%E5%8A%A1"><span class="nav-text">查询待处理任务</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">开始执行任务</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81"><span class="nav-text">1.分布式锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%BC%80%E5%90%AF%E4%BB%BB%E5%8A%A1"><span class="nav-text">2.开启任务</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">更新任务状态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">视频处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86%E5%85%B6%E4%BB%96%E9%97%AE%E9%A2%98-%E5%BE%85%E5%AE%8C%E5%96%84"><span class="nav-text">视频处理其他问题(待完善)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BB%BB%E5%8A%A1%E8%A1%A5%E5%81%BF%E6%9C%BA%E5%88%B6"><span class="nav-text">1.任务补偿机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%BE%BE%E5%88%B0%E6%9C%80%E5%A4%A7%E5%A4%B1%E8%B4%A5%E6%AC%A1%E6%95%B0"><span class="nav-text">2.达到最大失败次数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%88%86%E5%9D%97%E6%96%87%E4%BB%B6%E6%B8%85%E7%90%86%E9%97%AE%E9%A2%98"><span class="nav-text">3.分块文件清理问题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">绑定媒资</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">实战</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">课程发布</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E"><span class="nav-text">模板引擎</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
