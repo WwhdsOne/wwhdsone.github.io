@@ -460,7 +460,7 @@ mjx-container[display="true"] + br {
 <p>首先分析接口：</p>
 <p>请求地址：/media/upload/coursefile</p>
 <p>请求内容：<strong>Content-Type:</strong> multipart/form-data;</p>
-<p>form-data; name=“filedata”; filename=“具体的文件名称”</p>
+<p>form-data; name="filedata"; filename="具体的文件名称"</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiOperation("上传图片")</span></span><br><span class="line"><span class="meta">@PostMapping(value = "/upload/coursefile",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)</span></span><br><span class="line"><span class="keyword">public</span> UploadFileResultDTO <span class="title function_">upload</span><span class="params">(<span class="meta">@RequestPart("file")</span> MultipartFile file)</span> {</span><br><span class="line">    <span class="comment">//调用service上传文件</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 <p><code>consumes</code> 请求提交内容类型，<code>MediaType</code>方式，如 <code>application/json</code>、<code>application/x-www-urlencode</code>、<code>multipart/form-data</code>等</p>
 <p><code>@RequestPart</code>用于将<code>multipart/form-data</code>类型数据映射到控制器处理方法的参数中。除了<code>@RequestPart</code>注解外，<code>@RequestParam</code>同样可以用于此类操作。</p>
@@ -612,20 +612,20 @@ mjx-container[display="true"] + br {
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -678,12 +678,12 @@ mjx-container[display="true"] + br {
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">248k</span>
+    <span title="站点总字数">270k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:30</span>
+    <span title="站点阅读时长">8:12</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
@@ -796,6 +796,9 @@ if (document.querySelectorAll('pre.mermaid').length) {
   
 
   
+      
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+
 
   
 

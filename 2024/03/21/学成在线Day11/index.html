@@ -438,7 +438,7 @@ mjx-container[display="true"] + br {
 <h2 id="资源服务授权流程"><a class="markdownIt-Anchor" href="#资源服务授权流程"></a> 资源服务授权流程</h2>
 <p>本项目在资源服务内部进行授权，基于资源的授权模式，因为接口在资源服务，通过在接口处添加授权注解实现授权。</p>
 <p>在资源服务集成Spring Security</p>
-<p>在需要授权的接口处使用@PreAuthorize(“hasAuthority(‘权限标识符’)”)进行控制</p>
+<p>在需要授权的接口处使用@PreAuthorize("hasAuthority('权限标识符')")进行控制</p>
 <p>下边代码指定/course/list接口需要拥有xc_teachmanager_course_list 权限。</p>
 <p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240304164611743.png" alt="image-20240304164611743"></p>
 <p>设置了@PreAuthorize表示执行此方法需要授权，如果当前用户请求接口没有权限则抛出异常</p>
@@ -857,7 +857,7 @@ private Date createTime;</p>
 <p>本项目选择JSAPI支付接口。</p>
 <p>接口文档：<a target="_blank" rel="noopener" href="https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter3_1_1.shtml">https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter3_1_1.shtml</a></p>
 <p>如何开通JSAPI支付接口?</p>
-<p>以企业身份注册微信公众号<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/">https://mp.weixin.qq.com/</a></p>
+<p>以企业身份注册微信公众号https://mp.weixin.qq.com/</p>
 <p>![img](file:///C:/Users/Wwhds/AppData/Local/Temp/msohtmlclip1/01/clip_image016.gif)</p>
 <p>登录公众号，点击左侧菜单“微信支付”开通微信支付，如下：</p>
 <p>需要提供营业执照、身份证等信息。</p>
@@ -922,7 +922,7 @@ private Date createTime;</p>
 <p><strong>请求地址</strong>：</p>
 <p>开发中使用沙箱地址：<a target="_blank" rel="noopener" href="https://openapi.alipaydev.com/gateway.do">https://openapi.alipaydev.com/gateway.do</a></p>
 <p>请求参数：</p>
-<p>详细查阅<a target="_blank" rel="noopener" href="https://opendocs.alipay.com/open/203/107090">https://opendocs.alipay.com/open/203/107090</a></p>
+<p>详细查阅https://opendocs.alipay.com/open/203/107090</p>
 <p>一部分由sdk设置，一部分需要编写程序时指定。</p>
 <ol start="3">
 <li>
@@ -937,7 +937,7 @@ private Date createTime;</p>
 <h4 id="编写下单代码"><a class="markdownIt-Anchor" href="#编写下单代码"></a> 编写下单代码</h4>
 <p><strong>maven依赖:</strong></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 支付宝SDK --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alipay.sdk<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>alipay-sdk-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.34.0.ALL<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 支付宝SDK依赖的日志 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-logging<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-logging<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>下载示例代码<a target="_blank" rel="noopener" href="https://opendocs.alipay.com/open/203/105910">https://opendocs.alipay.com/open/203/105910</a></p>
+<p>下载示例代码https://opendocs.alipay.com/open/203/105910</p>
 <p>拷贝示例代码，修改、测试。</p>
 <p>编写测试Controller:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xuecheng.orders.api;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alipay.api.AlipayApiException;</span><br><span class="line"><span class="keyword">import</span> com.alipay.api.AlipayClient;</span><br><span class="line"><span class="keyword">import</span> com.alipay.api.DefaultAlipayClient;</span><br><span class="line"><span class="keyword">import</span> com.alipay.api.request.AlipayTradeWapPayRequest;</span><br><span class="line"><span class="keyword">import</span> com.xuecheng.orders.config.AlipayConfig;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Value;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Controller;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PayTestController</span> {</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value("${pay.alipay.APP_ID}")</span></span><br><span class="line">    String APP_ID;</span><br><span class="line">    <span class="meta">@Value("${pay.alipay.APP_PRIVATE_KEY}")</span></span><br><span class="line">    String APP_PRIVATE_KEY;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value("${pay.alipay.ALIPAY_PUBLIC_KEY}")</span></span><br><span class="line">    String ALIPAY_PUBLIC_KEY;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping("/alipaytest")</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest httpRequest,</span></span><br><span class="line"><span class="params">                       HttpServletResponse httpResponse)</span> <span class="keyword">throws</span> ServletException, IOException, AlipayApiException {</span><br><span class="line">        <span class="type">AlipayClient</span> <span class="variable">alipayClient</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DefaultAlipayClient</span>(AlipayConfig.URL, APP_ID, APP_PRIVATE_KEY, AlipayConfig.FORMAT, AlipayConfig.CHARSET, ALIPAY_PUBLIC_KEY,AlipayConfig.SIGNTYPE);</span><br><span class="line">        <span class="comment">//获得初始化的AlipayClient</span></span><br><span class="line">        <span class="type">AlipayTradeWapPayRequest</span> <span class="variable">alipayRequest</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">AlipayTradeWapPayRequest</span>();<span class="comment">//创建API对应的request</span></span><br><span class="line">        <span class="comment">//        alipayRequest.setReturnUrl("http://domain.com/CallBack/return_url.jsp");</span></span><br><span class="line">        <span class="comment">//        alipayRequest.setNotifyUrl("http://domain.com/CallBack/notify_url.jsp");//在公共参数中设置回跳和通知地址</span></span><br><span class="line">        alipayRequest.setBizContent(<span class="string">"{"</span> +</span><br><span class="line">                                    <span class="string">"    \"out_trade_no\":\"202210100010101002\","</span> +</span><br><span class="line">                                    <span class="string">"    \"total_amount\":0.1,"</span> +</span><br><span class="line">                                    <span class="string">"    \"subject\":\"Iphone6 16G\","</span> +</span><br><span class="line">                                    <span class="string">"    \"product_code\":\"QUICK_WAP_WAY\""</span> +</span><br><span class="line">                                    <span class="string">"  }"</span>);<span class="comment">//填充业务参数</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">form</span> <span class="operator">=</span> alipayClient.pageExecute(alipayRequest).getBody(); <span class="comment">//调用SDK生成表单</span></span><br><span class="line">        httpResponse.setContentType(<span class="string">"text/html;charset="</span> + AlipayConfig.CHARSET);</span><br><span class="line">        httpResponse.getWriter().write(form);<span class="comment">//直接将完整的表单html输出到页面</span></span><br><span class="line">        httpResponse.getWriter().flush();</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
@@ -959,7 +959,7 @@ private Date createTime;</p>
 <li>
 <p>运行main方法输入二维码图片的base64串，如下：</p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADIAQAAAACFI5MzAAABX0lEQVR42u2YS46EMAxEzYpjcFNIbppjZBWPqxJDC2k2o5HsRSNEQx4L40/ZadHfDvmSP5Iudmxdzr2JHNqPgoUjBznMxKo6jCug3WMxByl4arJrAdTa7SMykS4XoT3mI7gORjsVQbR9oez6yoNQMqvkqH6+6yeQzMM4M/Hc37oTSfpSlMuK2AQGGiOX+zqa2K+cIO2kBG799nU0cXfWJTNPJsYTN9mScdCdFvAhSQgquCANQbDMMwmpM+A0eUb7XFZHE8Z2BpmyZ/kIjUlBsGyOhC+heTvDLnkIjIWi2BVfgbeSkAKT2zWDzKbhVkeTOS7p0y6GrCkgA7lrF36lO93qaLIkmYJHv350s2jiU8BGeysbryYhPj1BmLnReabOeLJ2OQWjOn2JtqZJyJzWdfUKmXvERIT7QrspzMctF0HVDpqMapYshNFewrxRBUcWcldJ89HYp6dw8v2/6n/JD+4QqzIB2cR3AAAAAElFTkSuQmCC</span><br></pre></td></tr></table></figure>
-<p>将base64串复制到浏览器地址后回车将展示一个二维码，用户用手机扫此二维码将请求至<a target="_blank" rel="noopener" href="http://www.itcast.cn/%E3%80%82">http://www.itcast.cn/。</a></p>
+<p>将base64串复制到浏览器地址后回车将展示一个二维码，用户用手机扫此二维码将请求至http://www.itcast.cn/。</p>
 </li>
 </ol>
 <h4 id="接口测试-2"><a class="markdownIt-Anchor" href="#接口测试-2"></a> 接口测试</h4>
@@ -1012,7 +1012,7 @@ private Date createTime;</p>
 <h4 id="编写测试代码"><a class="markdownIt-Anchor" href="#编写测试代码"></a> 编写测试代码</h4>
 <ol>
 <li>
-<p>在下单请求时设置通知地址request.setNotifyUrl(“商户自己的notify_url地址”);</p>
+<p>在下单请求时设置通知地址request.setNotifyUrl("商户自己的notify_url地址");</p>
 </li>
 <li>
 <p>编写接收通知接口，接收参数并验签</p>
@@ -1143,20 +1143,20 @@ private Date createTime;</p>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1209,12 +1209,12 @@ private Date createTime;</p>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">248k</span>
+    <span title="站点总字数">270k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:30</span>
+    <span title="站点阅读时长">8:12</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
@@ -1327,6 +1327,9 @@ if (document.querySelectorAll('pre.mermaid').length) {
   
 
   
+      
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+
 
   
 

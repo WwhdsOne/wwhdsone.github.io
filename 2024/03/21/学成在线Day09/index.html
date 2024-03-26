@@ -442,7 +442,7 @@ mjx-container[display="true"] + br {
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@PostMapping(value = "/media/upload/coursefile",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)</span></span><br></pre></td></tr></table></figure>
 <p>意外BUG</p>
 <p>前端工程启动不了发现是修改feign相关配置时删除了原有的配置，下次应该仔细点</p>
-<p>MD其实并没有错，由于测试类和实际类名字相同，我启动了半天<code>测试类</code>…</p>
+<p>MD其实并没有错，由于测试类和实际类名字相同，我启动了半天<code>测试类</code>...</p>
 <h1 id="此处插入重点nginx内容"><a class="markdownIt-Anchor" href="#此处插入重点nginx内容"></a> 此处插入重点NGINX内容</h1>
 <p>我修改配置后使用：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx.exe -s reload</span><br></pre></td></tr></table></figure>
@@ -603,7 +603,7 @@ mjx-container[display="true"] + br {
 <p>什么是系统的资源？</p>
 <p>比如：查询一个用户的信息，用户信息就是系统的资源，要访问资源需要通过URL，所以我们在controller中定义的每个http的接口就是访问资源的接口。</p>
 <p>下边在controller中配置/r/r1需要p1权限，/r/r2需要p2权限。</p>
-<p>hasAuthority(‘p1’)表示拥有p1权限方可访问。</p>
+<p>hasAuthority('p1')表示拥有p1权限方可访问。</p>
 <p>代码如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LoginController</span> {</span><br><span class="line">    <span class="meta">@RequestMapping("/r/r1")</span></span><br><span class="line">    <span class="meta">@PreAuthorize("hasAuthority('p1')")</span><span class="comment">//拥有p1权限方可访问</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">r1</span><span class="params">()</span>{</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"访问r1资源"</span>;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping("/r/r2")</span></span><br><span class="line">    <span class="meta">@PreAuthorize("hasAuthority('p2')")</span><span class="comment">//拥有p2权限方可访问</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">r2</span><span class="params">()</span>{</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"访问r2资源"</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>当访问以/r/开头的url时会判断用户是否认证，如果没有认证则跳转到登录页面，如果已经认证则判断用户是否具有该URL的访问权限，如果具有该URL的访问权限则继续，否则拒绝访问。</p>
@@ -740,15 +740,15 @@ mjx-container[display="true"] + br {
 <p>•     response_type：授权码模式固定为code。</p>
 <p>•     scope：客户端权限。</p>
 <p>•     redirect_uri：跳转uri，当授权码申请成功后会跳转到此地址，并在后边带上code参数（授权码）。</p>
-<p>输入账号zhangsan、密码123登录成功，输入localhost:63070/auth/oauth/authorizeclient_id=XcWebApp&amp;response_type=code&amp;scope=all&amp;redirect_uri=<a target="_blank" rel="noopener" href="http://www.51xuecheng.cn">http://www.51xuecheng.cn</a></p>
+<p>输入账号zhangsan、密码123登录成功，输入localhost:63070/auth/oauth/authorizeclient_id=XcWebApp&amp;response_type=code&amp;scope=all&amp;redirect_uri=http://www.51xuecheng.cn</p>
 <p>注意登录后才能进入这个页面</p>
 <p>显示授权页面</p>
 <p><img src="C:%5CUsers%5CWwhds%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240301135523863.png" alt="image-20240301135523863"></p>
 <p>授权“XcWebApp”访问自己的受保护资源?</p>
 <p>选择同意。</p>
-<p>2、请求成功，重定向至<a target="_blank" rel="noopener" href="http://www.51xuecheng.cn/?code=%E6%8E%88%E6%9D%83%E7%A0%81%EF%BC%8C%E6%AF%94%E5%A6%82%EF%BC%9Ahttp://www.51xuecheng.cn/?code=Wqjb5H">http://www.51xuecheng.cn/?code=授权码，比如：http://www.51xuecheng.cn/?code=Wqjb5H</a></p>
+<p>2、请求成功，重定向至http://www.51xuecheng.cn/?code=授权码，比如：<a target="_blank" rel="noopener" href="http://www.51xuecheng.cn/?code=Wqjb5H">http://www.51xuecheng.cn/?code=Wqjb5H</a></p>
 <p>3、使用httpclient工具post申请令牌</p>
-<p>/oauth/token?client_id=XcWebApp&amp;client_secret=XcWebApp&amp;grant_type=authorization_code&amp;code=授权码&amp;redirect_uri=<a target="_blank" rel="noopener" href="http://www.51xuecheng.cn/">http://www.51xuecheng.cn/</a></p>
+<p>/oauth/token?client_id=XcWebApp&amp;client_secret=XcWebApp&amp;grant_type=authorization_code&amp;code=授权码&amp;redirect_uri=http://www.51xuecheng.cn/</p>
 <p>参数列表如下</p>
 <p>•     client_id：客户端准入标识。</p>
 <p>•     client_secret：客户端秘钥。</p>
@@ -914,20 +914,20 @@ mjx-container[display="true"] + br {
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -980,12 +980,12 @@ mjx-container[display="true"] + br {
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">248k</span>
+    <span title="站点总字数">270k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:30</span>
+    <span title="站点阅读时长">8:12</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
@@ -1098,6 +1098,9 @@ if (document.querySelectorAll('pre.mermaid').length) {
   
 
   
+      
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+
 
   
 
