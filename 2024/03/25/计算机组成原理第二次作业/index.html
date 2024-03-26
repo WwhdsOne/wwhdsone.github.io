@@ -19,7 +19,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"wwhdsone.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"wwhdsone.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="计组作业第二次">
@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240319083047726.png">
 <meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240319090631229.png">
 <meta property="article:published_time" content="2024-03-25T14:52:16.000Z">
-<meta property="article:modified_time" content="2024-03-26T00:43:07.435Z">
+<meta property="article:modified_time" content="2024-03-26T02:46:43.224Z">
 <meta property="article:author" content="Wwhds">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="计算机组成原理">
@@ -55,7 +55,20 @@
     lang   : 'zh-CN'
   };
 </script>
-
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
+#needsharebutton-postbottom {
+  cursor: pointer;
+  height: 26px;
+  margin-top: 10px;
+  position: relative;
+}
+#needsharebutton-postbottom .btn {
+  border: 1px solid $btn-default-border-color;
+  border-radius: 3px;
+  display: initial;
+  padding: 1px 4px;
+}
+</style>
   <title>计算机组成原理第二次作业 | WBlog</title>
   
 
@@ -349,7 +362,7 @@ mjx-container[display="true"] + br {
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-03-26 08:43:07" itemprop="dateModified" datetime="2024-03-26T08:43:07+08:00">2024-03-26</time>
+                <time title="修改时间：2024-03-26 10:46:43" itemprop="dateModified" datetime="2024-03-26T10:46:43+08:00">2024-03-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -394,8 +407,7 @@ mjx-container[display="true"] + br {
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="计算机组成原理第二次作业"><a class="markdownIt-Anchor" href="#计算机组成原理第二次作业"></a> 计算机组成原理第二次作业</h1>
-<h1 id="21-解释下列名词"><a class="markdownIt-Anchor" href="#21-解释下列名词"></a> 2.1 解释下列名词</h1>
+        <h1 id="21-解释下列名词"><a class="markdownIt-Anchor" href="#21-解释下列名词"></a> 2.1 解释下列名词</h1>
 <h2 id="真值"><a class="markdownIt-Anchor" href="#真值"></a> 真值</h2>
 <p>二进制数与十进制数一样有正负之分。书写时可以用“+”和“_”来表示数据的符号，这种数据书写格式也称为真值。</p>
 <h2 id="机器码"><a class="markdownIt-Anchor" href="#机器码"></a> 机器码</h2>
@@ -1122,7 +1134,13 @@ mjx-container[display="true"] + br {
 
     
     
-    
+    <div class="post-widgets">
+      <div id="needsharebutton-postbottom">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
         
 
 <div>
@@ -1217,7 +1235,7 @@ mjx-container[display="true"] + br {
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BD%9C%E4%B8%9A"><span class="nav-text"> 计算机组成原理第二次作业</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#21-%E8%A7%A3%E9%87%8A%E4%B8%8B%E5%88%97%E5%90%8D%E8%AF%8D"><span class="nav-text"> 2.1 解释下列名词</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9C%9F%E5%80%BC"><span class="nav-text"> 真值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%BA%E5%99%A8%E7%A0%81"><span class="nav-text"> 机器码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81"><span class="nav-text"> 补码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E7%82%B9%E6%95%B0"><span class="nav-text"> 定点数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0"><span class="nav-text"> 浮点数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BA%A2%E5%87%BA"><span class="nav-text"> 溢出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0%E8%A7%84%E6%A0%BC%E5%8C%96"><span class="nav-text"> 浮点数规格化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1"><span class="nav-text"> 模</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bcd%E7%A0%81binary-code-decimal"><span class="nav-text"> BCD码(Binary Code Decimal)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%BA%E5%86%85%E7%A0%81"><span class="nav-text"> 机内码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E5%BD%A2%E7%A0%81"><span class="nav-text"> 字形码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E5%BA%93"><span class="nav-text"> 字库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A0%81%E8%B7%9D"><span class="nav-text"> 码距</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%A1%E9%AA%8C%E7%A0%81"><span class="nav-text"> 校验码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%B7%E6%98%8E%E6%A0%A1%E9%AA%8C%E7%A0%81"><span class="nav-text"> 海明校验码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#crc%E7%A0%81"><span class="nav-text"> CRC码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#22-%E9%80%89%E6%8B%A9%E9%A2%98"><span class="nav-text"> 2.2 选择题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#23-%E5%9B%9E%E7%AD%94%E4%B8%8B%E5%88%97%E9%97%AE%E9%A2%98"><span class="nav-text"> 2.3 回答下列问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#24-%E5%B7%B2%E7%9F%A5%E6%95%B0%E7%9A%84%E8%A1%A5%E7%A0%81%E8%A1%A8%E7%A4%BA%E5%BD%A2%E5%BC%8F%E6%B1%82%E6%95%B0%E7%9A%84%E7%9C%9F%E5%80%BC"><span class="nav-text"> 2.4 已知数的补码表示形式,求数的真值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#25-%E5%88%86%E6%9E%90%E4%B8%8B%E5%88%97%E5%87%A0%E7%A7%8D%E6%83%85%E5%86%B5%E4%B8%8B%E6%89%80%E8%83%BD%E8%A1%A8%E7%A4%BA%E7%9A%84%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4%E5%88%86%E5%88%AB%E6%98%AF%E5%A4%9A%E5%B0%91"><span class="nav-text"> 2.5 分析下列几种情况下所能表示的数据范围分别是多少</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#26%E7%94%A8ieee754-32%E4%BD%8D%E5%8D%95%E7%B2%BE%E5%BA%A6%E6%B5%AE%E7%82%B9%E6%95%B0%E6%A0%87%E5%87%86%E8%A1%A8%E7%A4%BA%E4%B8%8B%E5%88%97%E5%8D%81%E8%BF%9B%E5%88%B6%E6%95%B0"><span class="nav-text"> 2.6用IEEE754 32位单精度浮点数标准表示下列十进制数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B1%82%E4%B8%8E%E5%8D%95%E7%B2%BE%E5%BA%A6%E6%B5%AE%E7%82%B9%E6%95%B043940000h%E5%AF%B9%E5%BA%94%E7%9A%84%E5%8D%81%E8%BF%9B%E5%88%B6%E6%95%B0"><span class="nav-text"> 求与单精度浮点数43940000H对应的十进制数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#28%E8%A7%A3%E9%87%8A%E4%B8%8B%E5%88%97%E5%90%8D%E8%AF%8D"><span class="nav-text"> 2.8解释下列名词</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E5%BD%A2%E8%A1%A5%E7%A0%81"><span class="nav-text"> 变形补码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BA%A2%E5%87%BA-2"><span class="nav-text"> 溢出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%98%B5%E5%88%97%E4%B9%98%E6%B3%95%E5%99%A8"><span class="nav-text"> 阵列乘法器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%81%A2%E5%A4%8D%E4%BD%99%E6%95%B0%E9%99%A4%E6%B3%95"><span class="nav-text"> 恢复余数除法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E6%81%A2%E5%A4%8D%E4%BD%99%E6%95%B0%E9%99%A4%E6%B3%95"><span class="nav-text"> 不恢复余数除法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B6%E8%A1%8C%E8%BF%9B%E4%BD%8D"><span class="nav-text"> 并行进位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%88%E8%A1%8C%E8%BF%9B%E4%BD%8D"><span class="nav-text"> 先行进位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%9C%AF%E7%A7%BB%E4%BD%8D"><span class="nav-text"> 算术移位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E7%A7%BB%E4%BD%8D"><span class="nav-text"> 逻辑移位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E9%98%B6"><span class="nav-text"> 对阶</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%84%E6%A0%BC%E5%8C%96"><span class="nav-text"> 规格化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#29%E9%80%89%E6%8B%A9%E9%A2%98"><span class="nav-text"> 2.9选择题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#210-%E5%9B%9E%E7%AD%94%E4%B8%8B%E5%88%97%E9%97%AE%E9%A2%98"><span class="nav-text"> 2.10 回答下列问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#211-%E5%B7%B2%E7%9F%A5x%E5%92%8Cy%E7%94%A8%E5%8F%98%E5%BD%A2%E8%A1%A5%E7%A0%81%E8%AE%A1%E7%AE%97xy%E5%B9%B6%E5%88%A4%E6%96%AD%E7%BB%93%E6%9E%9C%E6%98%AF%E5%90%A6%E6%BA%A2%E5%87%BA"><span class="nav-text"> 2.11 已知x和y,用变形补码计算x+y,并判断结果是否溢出</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#212-%E5%B7%B2%E7%9F%A5x%E5%92%8Cy%E7%94%A8%E5%8F%98%E5%BD%A2%E8%A1%A5%E7%A0%81%E8%AE%A1%E7%AE%97x-y%E5%B9%B6%E5%88%A4%E6%96%AD%E7%BB%93%E6%9E%9C%E6%98%AF%E5%90%A6%E6%BA%A2%E5%87%BA"><span class="nav-text"> 2.12 已知x和y,用变形补码计算x-y,并判断结果是否溢出</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#213-%E7%94%A8%E5%8E%9F%E7%A0%81%E4%B8%80%E4%BD%8D%E4%B9%98%E6%B3%95%E8%AE%A1%E7%AE%97x-y"><span class="nav-text"> 2.13 用原码一位乘法计算x * y &#x3D; ?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#214-%E7%94%A8%E8%A1%A5%E7%A0%81%E4%B8%80%E4%BD%8D%E4%B9%98%E6%B3%95%E8%AE%A1%E7%AE%97-x-y"><span class="nav-text"> 2.14 用补码一位乘法计算 x * y &#x3D; ?</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#21-%E8%A7%A3%E9%87%8A%E4%B8%8B%E5%88%97%E5%90%8D%E8%AF%8D"><span class="nav-text"> 2.1 解释下列名词</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9C%9F%E5%80%BC"><span class="nav-text"> 真值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%BA%E5%99%A8%E7%A0%81"><span class="nav-text"> 机器码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81"><span class="nav-text"> 补码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E7%82%B9%E6%95%B0"><span class="nav-text"> 定点数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0"><span class="nav-text"> 浮点数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BA%A2%E5%87%BA"><span class="nav-text"> 溢出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0%E8%A7%84%E6%A0%BC%E5%8C%96"><span class="nav-text"> 浮点数规格化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1"><span class="nav-text"> 模</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bcd%E7%A0%81binary-code-decimal"><span class="nav-text"> BCD码(Binary Code Decimal)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%BA%E5%86%85%E7%A0%81"><span class="nav-text"> 机内码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E5%BD%A2%E7%A0%81"><span class="nav-text"> 字形码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E5%BA%93"><span class="nav-text"> 字库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A0%81%E8%B7%9D"><span class="nav-text"> 码距</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%A1%E9%AA%8C%E7%A0%81"><span class="nav-text"> 校验码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%B7%E6%98%8E%E6%A0%A1%E9%AA%8C%E7%A0%81"><span class="nav-text"> 海明校验码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#crc%E7%A0%81"><span class="nav-text"> CRC码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#22-%E9%80%89%E6%8B%A9%E9%A2%98"><span class="nav-text"> 2.2 选择题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#23-%E5%9B%9E%E7%AD%94%E4%B8%8B%E5%88%97%E9%97%AE%E9%A2%98"><span class="nav-text"> 2.3 回答下列问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#24-%E5%B7%B2%E7%9F%A5%E6%95%B0%E7%9A%84%E8%A1%A5%E7%A0%81%E8%A1%A8%E7%A4%BA%E5%BD%A2%E5%BC%8F%E6%B1%82%E6%95%B0%E7%9A%84%E7%9C%9F%E5%80%BC"><span class="nav-text"> 2.4 已知数的补码表示形式,求数的真值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#25-%E5%88%86%E6%9E%90%E4%B8%8B%E5%88%97%E5%87%A0%E7%A7%8D%E6%83%85%E5%86%B5%E4%B8%8B%E6%89%80%E8%83%BD%E8%A1%A8%E7%A4%BA%E7%9A%84%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4%E5%88%86%E5%88%AB%E6%98%AF%E5%A4%9A%E5%B0%91"><span class="nav-text"> 2.5 分析下列几种情况下所能表示的数据范围分别是多少</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#26%E7%94%A8ieee754-32%E4%BD%8D%E5%8D%95%E7%B2%BE%E5%BA%A6%E6%B5%AE%E7%82%B9%E6%95%B0%E6%A0%87%E5%87%86%E8%A1%A8%E7%A4%BA%E4%B8%8B%E5%88%97%E5%8D%81%E8%BF%9B%E5%88%B6%E6%95%B0"><span class="nav-text"> 2.6用IEEE754 32位单精度浮点数标准表示下列十进制数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B1%82%E4%B8%8E%E5%8D%95%E7%B2%BE%E5%BA%A6%E6%B5%AE%E7%82%B9%E6%95%B043940000h%E5%AF%B9%E5%BA%94%E7%9A%84%E5%8D%81%E8%BF%9B%E5%88%B6%E6%95%B0"><span class="nav-text"> 求与单精度浮点数43940000H对应的十进制数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#28%E8%A7%A3%E9%87%8A%E4%B8%8B%E5%88%97%E5%90%8D%E8%AF%8D"><span class="nav-text"> 2.8解释下列名词</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E5%BD%A2%E8%A1%A5%E7%A0%81"><span class="nav-text"> 变形补码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BA%A2%E5%87%BA-2"><span class="nav-text"> 溢出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%98%B5%E5%88%97%E4%B9%98%E6%B3%95%E5%99%A8"><span class="nav-text"> 阵列乘法器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%81%A2%E5%A4%8D%E4%BD%99%E6%95%B0%E9%99%A4%E6%B3%95"><span class="nav-text"> 恢复余数除法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E6%81%A2%E5%A4%8D%E4%BD%99%E6%95%B0%E9%99%A4%E6%B3%95"><span class="nav-text"> 不恢复余数除法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B6%E8%A1%8C%E8%BF%9B%E4%BD%8D"><span class="nav-text"> 并行进位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%88%E8%A1%8C%E8%BF%9B%E4%BD%8D"><span class="nav-text"> 先行进位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%9C%AF%E7%A7%BB%E4%BD%8D"><span class="nav-text"> 算术移位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E7%A7%BB%E4%BD%8D"><span class="nav-text"> 逻辑移位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E9%98%B6"><span class="nav-text"> 对阶</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%84%E6%A0%BC%E5%8C%96"><span class="nav-text"> 规格化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#29%E9%80%89%E6%8B%A9%E9%A2%98"><span class="nav-text"> 2.9选择题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#210-%E5%9B%9E%E7%AD%94%E4%B8%8B%E5%88%97%E9%97%AE%E9%A2%98"><span class="nav-text"> 2.10 回答下列问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#211-%E5%B7%B2%E7%9F%A5x%E5%92%8Cy%E7%94%A8%E5%8F%98%E5%BD%A2%E8%A1%A5%E7%A0%81%E8%AE%A1%E7%AE%97xy%E5%B9%B6%E5%88%A4%E6%96%AD%E7%BB%93%E6%9E%9C%E6%98%AF%E5%90%A6%E6%BA%A2%E5%87%BA"><span class="nav-text"> 2.11 已知x和y,用变形补码计算x+y,并判断结果是否溢出</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#212-%E5%B7%B2%E7%9F%A5x%E5%92%8Cy%E7%94%A8%E5%8F%98%E5%BD%A2%E8%A1%A5%E7%A0%81%E8%AE%A1%E7%AE%97x-y%E5%B9%B6%E5%88%A4%E6%96%AD%E7%BB%93%E6%9E%9C%E6%98%AF%E5%90%A6%E6%BA%A2%E5%87%BA"><span class="nav-text"> 2.12 已知x和y,用变形补码计算x-y,并判断结果是否溢出</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#213-%E7%94%A8%E5%8E%9F%E7%A0%81%E4%B8%80%E4%BD%8D%E4%B9%98%E6%B3%95%E8%AE%A1%E7%AE%97x-y"><span class="nav-text"> 2.13 用原码一位乘法计算x * y &#x3D; ?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#214-%E7%94%A8%E8%A1%A5%E7%A0%81%E4%B8%80%E4%BD%8D%E4%B9%98%E6%B3%95%E8%AE%A1%E7%AE%97-x-y"><span class="nav-text"> 2.14 用补码一位乘法计算 x * y &#x3D; ?</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -1422,7 +1440,36 @@ if (document.querySelectorAll('pre.mermaid').length) {
 
 
   
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 
+<script>
+var options = {
+  bottom: '64px',
+  right: '32px',
+  left: 'unset',
+  time: '1s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#fff',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '模式切换',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
+  <script>
+      pbOptions = {};
+        pbOptions.iconStyle = "box";
+        pbOptions.boxForm = "horizontal";
+        pbOptions.position = "bottomCenter";
+        pbOptions.networks = "Wechat,QQZone,Weibo,Douban,Twitter,Facebook";
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+  </script>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
