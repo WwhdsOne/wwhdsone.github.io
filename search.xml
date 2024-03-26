@@ -3856,7 +3856,7 @@ private Date createTime;</p>
 <p>Apache JMeter 是 Apache 组织基于 Java 开发的压力测试工具，用于对软件做压力测试。</p>
 <p>下载Jmeter</p>
 <p><a href="https://jmeter.apache.org/download_jmeter.cgi">https://jmeter.apache.org/download_jmeter.cgi</a></p>
-<p><img src="C:/Users/Wwhds/AppData/Roaming/Typora/typora-user-images/image-20240314092408135.png" alt="image-20240314092408135"></p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240314092408135.png" alt="image-20240314092408135"></p>
 <p>下载，解压，进入bin目录修改<code>jmeter.properties</code>，设置中文和字体</p>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">language=zh_CN</span><br><span class="line">jmeter.hidpi.mode=true</span><br><span class="line">jmeter.hidpi.scale.factor=1.8</span><br><span class="line">jsyntaxtextarea.font.family= Hack</span><br><span class="line">jsyntaxtextarea.font.size=25</span><br><span class="line">jmeter.toolbar.icons.size=32x32</span><br><span class="line">jmeter.tree.icons.size=24x24</span><br></pre></td></tr></table></figure>
 <p>双击运行bin目录下的<code>jmeter.bat</code>文件。</p>
