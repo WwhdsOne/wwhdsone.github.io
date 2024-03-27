@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240307183647563.png">
 <meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240309162829957.png">
 <meta property="article:published_time" content="2024-03-21T02:10:02.000Z">
-<meta property="article:modified_time" content="2024-03-21T02:10:18.987Z">
+<meta property="article:modified_time" content="2024-03-27T07:25:12.765Z">
 <meta property="article:author" content="Wwhds">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="学习">
@@ -357,10 +357,16 @@ mjx-container[display="true"] + br {
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2024-03-21 10:10:02 / 修改时间：10:10:18" itemprop="dateCreated datePublished" datetime="2024-03-21T10:10:02+08:00">2024-03-21</time>
+              <time title="创建时间：2024-03-21 10:10:02" itemprop="dateCreated datePublished" datetime="2024-03-21T10:10:02+08:00">2024-03-21</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-03-27 15:25:12" itemprop="dateModified" datetime="2024-03-27T15:25:12+08:00">2024-03-27</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -404,8 +410,7 @@ mjx-container[display="true"] + br {
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="学成在线day12"><a class="markdownIt-Anchor" href="#学成在线day12"></a> 学成在线Day12</h1>
-<h2 id="生成支付二维码"><a class="markdownIt-Anchor" href="#生成支付二维码"></a> 生成支付二维码</h2>
+        <h2 id="生成支付二维码"><a class="markdownIt-Anchor" href="#生成支付二维码"></a> 生成支付二维码</h2>
 <h3 id="需求分析"><a class="markdownIt-Anchor" href="#需求分析"></a> 需求分析</h3>
 <h4 id="执行流程"><a class="markdownIt-Anchor" href="#执行流程"></a> 执行流程</h4>
 <p>再次打开课程支付引导界面，点击“支付宝支付”按钮系统该如何处理？</p>
@@ -882,7 +887,7 @@ mjx-container[display="true"] + br {
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFday12"><span class="nav-text"> 学成在线Day12</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E6%94%AF%E4%BB%98%E4%BA%8C%E7%BB%B4%E7%A0%81"><span class="nav-text"> 生成支付二维码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90"><span class="nav-text"> 需求分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B"><span class="nav-text"> 执行流程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 数据模型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91"><span class="nav-text"> 接口开发</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98%E5%95%86%E5%93%81%E8%AE%A2%E5%8D%95"><span class="nav-text"> 保存商品订单</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%94%AF%E4%BB%98%E4%BA%A4%E6%98%93%E8%AE%B0%E5%BD%95"><span class="nav-text"> 创建支付交易记录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E6%94%AF%E4%BB%98%E4%BA%8C%E7%BB%B4%E7%A0%81-2"><span class="nav-text"> 生成支付二维码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E4%BA%8C%E7%BB%B4%E7%A0%81%E6%8E%A5%E5%8F%A3%E5%AE%8C%E5%96%84"><span class="nav-text"> 生成二维码接口完善</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%AB%E7%A0%81%E4%B8%8B%E5%8D%95%E6%8E%A5%E5%8F%A3%E5%AE%8C%E5%96%84"><span class="nav-text"> 扫码下单接口完善</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%AF%E4%BB%98%E6%B5%8B%E8%AF%95"><span class="nav-text"> 支付测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E6%94%AF%E4%BB%98%E7%BB%93%E6%9E%9C"><span class="nav-text"> 查询支付结果</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89"><span class="nav-text"> 接口定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0"><span class="nav-text"> 接口实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#service%E6%80%BB%E4%BD%93%E6%8E%A5%E5%8F%A3"><span class="nav-text"> service总体接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E6%94%AF%E4%BB%98%E7%BB%93%E6%9E%9C-2"><span class="nav-text"> 查询支付结果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98%E6%94%AF%E4%BB%98%E7%BB%93%E6%9E%9C"><span class="nav-text"> 保存支付结果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95"><span class="nav-text"> 接口测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E9%97%AE%E9%A2%98"><span class="nav-text"> 接口问题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E6%94%B6%E6%94%AF%E4%BB%98%E9%80%9A%E7%9F%A5"><span class="nav-text"> 接收支付通知</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89-2"><span class="nav-text"> 接口定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95-2"><span class="nav-text"> 接口测试</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%94%AF%E4%BB%98%E9%80%9A%E7%9F%A5"><span class="nav-text"> 支付通知</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90-2"><span class="nav-text"> 需求分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF%E6%96%B9%E6%A1%88"><span class="nav-text"> 技术方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%91%E9%80%81%E6%94%AF%E4%BB%98%E7%BB%93%E6%9E%9C"><span class="nav-text"> 发送支付结果</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A2%E5%8D%95%E9%9B%86%E6%88%90%E6%9C%8D%E5%8A%A1mq"><span class="nav-text"> 订单集成服务MQ</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%91%E9%80%81%E6%94%AF%E4%BB%98%E7%BB%93%E6%9E%9C-2"><span class="nav-text"> 发送支付结果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E6%94%B6%E6%94%AF%E4%BB%98%E7%BB%93%E6%9E%9C"><span class="nav-text"> 接收支付结果</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E4%B8%AD%E5%BF%83%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90mq"><span class="nav-text"> 学习中心服务集成MQ</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E6%94%B6%E6%94%AF%E4%BB%98%E7%BB%93%E6%9E%9C-2"><span class="nav-text"> 接收支付结果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E7%9F%A5%E6%94%AF%E4%BB%98%E7%BB%93%E6%9E%9C%E6%B5%8B%E8%AF%95"><span class="nav-text"> 通知支付结果测试</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E6%94%AF%E4%BB%98%E4%BA%8C%E7%BB%B4%E7%A0%81"><span class="nav-text"> 生成支付二维码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90"><span class="nav-text"> 需求分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B"><span class="nav-text"> 执行流程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 数据模型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91"><span class="nav-text"> 接口开发</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98%E5%95%86%E5%93%81%E8%AE%A2%E5%8D%95"><span class="nav-text"> 保存商品订单</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%94%AF%E4%BB%98%E4%BA%A4%E6%98%93%E8%AE%B0%E5%BD%95"><span class="nav-text"> 创建支付交易记录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E6%94%AF%E4%BB%98%E4%BA%8C%E7%BB%B4%E7%A0%81-2"><span class="nav-text"> 生成支付二维码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E4%BA%8C%E7%BB%B4%E7%A0%81%E6%8E%A5%E5%8F%A3%E5%AE%8C%E5%96%84"><span class="nav-text"> 生成二维码接口完善</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%AB%E7%A0%81%E4%B8%8B%E5%8D%95%E6%8E%A5%E5%8F%A3%E5%AE%8C%E5%96%84"><span class="nav-text"> 扫码下单接口完善</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%AF%E4%BB%98%E6%B5%8B%E8%AF%95"><span class="nav-text"> 支付测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E6%94%AF%E4%BB%98%E7%BB%93%E6%9E%9C"><span class="nav-text"> 查询支付结果</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89"><span class="nav-text"> 接口定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0"><span class="nav-text"> 接口实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#service%E6%80%BB%E4%BD%93%E6%8E%A5%E5%8F%A3"><span class="nav-text"> service总体接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E6%94%AF%E4%BB%98%E7%BB%93%E6%9E%9C-2"><span class="nav-text"> 查询支付结果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98%E6%94%AF%E4%BB%98%E7%BB%93%E6%9E%9C"><span class="nav-text"> 保存支付结果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95"><span class="nav-text"> 接口测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E9%97%AE%E9%A2%98"><span class="nav-text"> 接口问题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E6%94%B6%E6%94%AF%E4%BB%98%E9%80%9A%E7%9F%A5"><span class="nav-text"> 接收支付通知</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89-2"><span class="nav-text"> 接口定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95-2"><span class="nav-text"> 接口测试</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%94%AF%E4%BB%98%E9%80%9A%E7%9F%A5"><span class="nav-text"> 支付通知</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90-2"><span class="nav-text"> 需求分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF%E6%96%B9%E6%A1%88"><span class="nav-text"> 技术方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%91%E9%80%81%E6%94%AF%E4%BB%98%E7%BB%93%E6%9E%9C"><span class="nav-text"> 发送支付结果</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A2%E5%8D%95%E9%9B%86%E6%88%90%E6%9C%8D%E5%8A%A1mq"><span class="nav-text"> 订单集成服务MQ</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%91%E9%80%81%E6%94%AF%E4%BB%98%E7%BB%93%E6%9E%9C-2"><span class="nav-text"> 发送支付结果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E6%94%B6%E6%94%AF%E4%BB%98%E7%BB%93%E6%9E%9C"><span class="nav-text"> 接收支付结果</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E4%B8%AD%E5%BF%83%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90mq"><span class="nav-text"> 学习中心服务集成MQ</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E6%94%B6%E6%94%AF%E4%BB%98%E7%BB%93%E6%9E%9C-2"><span class="nav-text"> 接收支付结果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E7%9F%A5%E6%94%AF%E4%BB%98%E7%BB%93%E6%9E%9C%E6%B5%8B%E8%AF%95"><span class="nav-text"> 通知支付结果测试</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -1087,7 +1092,16 @@ if (document.querySelectorAll('pre.mermaid').length) {
 
 
   
-<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
+  <script>
+      pbOptions = {};
+        pbOptions.iconStyle = "box";
+        pbOptions.boxForm = "horizontal";
+        pbOptions.position = "bottomCenter";
+        pbOptions.networks = "Wechat,QQZone,Weibo,Douban,Twitter,Facebook";
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+  </script><script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 
 <script>
 var options = {
@@ -1108,15 +1122,6 @@ window.darkmode = darkmode;
 darkmode.showWidget();
 </script>
 
-  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
-  <script>
-      pbOptions = {};
-        pbOptions.iconStyle = "box";
-        pbOptions.boxForm = "horizontal";
-        pbOptions.position = "bottomCenter";
-        pbOptions.networks = "Wechat,QQZone,Weibo,Douban,Twitter,Facebook";
-      new needShareButton('#needsharebutton-postbottom', pbOptions);
-  </script>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>

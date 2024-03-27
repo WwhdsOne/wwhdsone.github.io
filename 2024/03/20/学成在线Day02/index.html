@@ -33,13 +33,13 @@
 <meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240211163338945.png">
 <meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240211163614502.png">
 <meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240211163817932.png">
-<meta property="og:image" content="c:%5CUsers%5CWwhds%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240211164035140.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240211164035140.png">
 <meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318123843870.png">
 <meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240318124740478.png">
-<meta property="og:image" content="c:%5CUsers%5CWwhds%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240211185359606.png">
-<meta property="og:image" content="c:%5CUsers%5CWwhds%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240211193838531.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240211185359606.png">
+<meta property="og:image" content="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240211193838531.png">
 <meta property="article:published_time" content="2024-03-20T12:17:06.000Z">
-<meta property="article:modified_time" content="2024-03-20T12:28:14.320Z">
+<meta property="article:modified_time" content="2024-03-27T06:59:24.816Z">
 <meta property="article:author" content="Wwhds">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="学习">
@@ -360,10 +360,16 @@ mjx-container[display="true"] + br {
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2024-03-20 20:17:06 / 修改时间：20:28:14" itemprop="dateCreated datePublished" datetime="2024-03-20T20:17:06+08:00">2024-03-20</time>
+              <time title="创建时间：2024-03-20 20:17:06" itemprop="dateCreated datePublished" datetime="2024-03-20T20:17:06+08:00">2024-03-20</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-03-27 14:59:24" itemprop="dateModified" datetime="2024-03-27T14:59:24+08:00">2024-03-27</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -407,8 +413,7 @@ mjx-container[display="true"] + br {
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="学成在线day02"><a class="markdownIt-Anchor" href="#学成在线day02"></a> 学成在线Day02</h1>
-<h1 id="开发持久层"><a class="markdownIt-Anchor" href="#开发持久层"></a> 开发持久层</h1>
+        <h1 id="开发持久层"><a class="markdownIt-Anchor" href="#开发持久层"></a> 开发持久层</h1>
 <p>在真实开发中，切记从底层向上层开发。例如项目应该先写持久层(mapper)再写业务层(service)</p>
 <h1 id="分页查询测试代码"><a class="markdownIt-Anchor" href="#分页查询测试代码"></a> 分页查询测试代码</h1>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">testCourseBaseMapper</span><span class="params">()</span>{</span><br><span class="line">    <span class="type">CourseBase</span> <span class="variable">courseBase</span> <span class="operator">=</span> courseBaseMapper.selectById(<span class="number">18</span>);</span><br><span class="line">    System.out.println(courseBase);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//拼装分页查询条件</span></span><br><span class="line">    <span class="type">QueryCourseParamsDto</span> <span class="variable">queryCourseParamsDto</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">QueryCourseParamsDto</span>();</span><br><span class="line">    queryCourseParamsDto.setCourseName(<span class="string">"java"</span>);<span class="comment">//课程名称为查询条件</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//封装查询条件</span></span><br><span class="line">    LambdaQueryWrapper&lt;CourseBase&gt; courseBaseLambdaQueryWrapper = <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;&gt;();</span><br><span class="line">    <span class="comment">//根据课程名称模糊查询,sql为course_base.name like '%?%'</span></span><br><span class="line">    courseBaseLambdaQueryWrapper.like(StringUtils.isNotEmpty(queryCourseParamsDto.getCourseName()),</span><br><span class="line">                                      CourseBase::getName,</span><br><span class="line">                                      queryCourseParamsDto.getCourseName());</span><br><span class="line">    <span class="comment">//根据课程状态查询,sql为course_base.audit_status = ?</span></span><br><span class="line">    courseBaseLambdaQueryWrapper.like(StringUtils.isNotEmpty(queryCourseParamsDto.getAuditStatus()),</span><br><span class="line">                                      CourseBase::getAuditStatus,</span><br><span class="line">                                      queryCourseParamsDto.getAuditStatus());</span><br><span class="line"></span><br><span class="line">    <span class="comment">//创建分页查询类</span></span><br><span class="line">    <span class="type">PageParams</span> <span class="variable">pageParams</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">PageParams</span>(<span class="number">1L</span>,<span class="number">2L</span>);</span><br><span class="line">    <span class="comment">//创建分页对象,参数为当前页码,每页记录数</span></span><br><span class="line">    Page&lt;CourseBase&gt; page = <span class="keyword">new</span> <span class="title class_">Page</span>&lt;&gt;(pageParams.getPageNo(), pageParams.getPageSize());</span><br><span class="line">    <span class="comment">//获取分页查询结果</span></span><br><span class="line">    Page&lt;CourseBase&gt; courseBasePage = courseBaseMapper.selectPage(page, courseBaseLambdaQueryWrapper);</span><br><span class="line">    <span class="comment">//获取数据列表</span></span><br><span class="line">    List&lt;CourseBase&gt; records = courseBasePage.getRecords();</span><br><span class="line">    <span class="comment">//获取记录总数</span></span><br><span class="line">    <span class="type">Long</span> <span class="variable">total</span> <span class="operator">=</span> courseBasePage.getTotal();</span><br><span class="line"></span><br><span class="line">    PageResult&lt;CourseBase&gt; result = <span class="keyword">new</span> <span class="title class_">PageResult</span>&lt;&gt;(records,total,pageParams.getPageNo(), pageParams.getPageSize());</span><br><span class="line"></span><br><span class="line">    System.out.println(result);</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
@@ -423,7 +428,7 @@ mjx-container[display="true"] + br {
 <p>在项目根目录下建立文件夹统一存放请求测试</p>
 <p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240211163614502.png" alt="image-20240211163614502"></p>
 <p>为了方便将来和网关集成测试，这里我们把测试主机地址在配置文件http-client.env.json 中配置<img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240211163817932.png" alt="image-20240211163817932"></p>
-<p>注意要调用http-client.env.json文件内容需要将使用以下环境运行调整至dev<img src="C:%5CUsers%5CWwhds%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240211164035140.png" alt="image-20240211164035140"></p>
+<p>注意要调用http-client.env.json文件内容需要将使用以下环境运行调整至dev<img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240211164035140.png" alt="image-20240211164035140"></p>
 <h1 id="跨域三种解决方案"><a class="markdownIt-Anchor" href="#跨域三种解决方案"></a> 跨域三种解决方案</h1>
 <p>在浏览器通过http://localhost:8601/地址访问前端工程。</p>
 <p>chrome浏览器报错如下：</p>
@@ -491,7 +496,7 @@ mjx-container[display="true"] + br {
 <p>启动前端工程，用前端访问后端接口，观察前端界面的数据是否正确。</p>
 <h1 id="课程分类查询"><a class="markdownIt-Anchor" href="#课程分类查询"></a> 课程分类查询</h1>
 <p>分类表中的数据为树形结构：</p>
-<p><img src="C:%5CUsers%5CWwhds%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240211185359606.png" alt="image-20240211185359606"></p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240211185359606.png" alt="image-20240211185359606"></p>
 <h3 id="树形数据库查询"><a class="markdownIt-Anchor" href="#树形数据库查询"></a> 树形数据库查询</h3>
 <h4 id="树层级确定"><a class="markdownIt-Anchor" href="#树层级确定"></a> 树层级确定</h4>
 <p>课程分类表是一个树型结构，其中parentid字段为父结点ID，它是树型结构的标志字段。</p>
@@ -531,7 +536,7 @@ mjx-container[display="true"] + br {
 <p>下边是一个递归的简单例子：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">with RECURSIVE t1 AS   (    </span><br><span class="line">	SELECT 1 as n    </span><br><span class="line">	UNION ALL    </span><br><span class="line">	SELECT n + 1 FROM t1 WHERE n &lt; 5   </span><br><span class="line">)   </span><br><span class="line">SELECT * FROM t1;</span><br></pre></td></tr></table></figure>
 <p>输出：</p>
-<p><img src="C:%5CUsers%5CWwhds%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240211193838531.png" alt="image-20240211193838531"></p>
+<p><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240211193838531.png" alt="image-20240211193838531"></p>
 <p>课程分类表层级固定查询sql:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select *</span><br><span class="line">from course_category one</span><br><span class="line">         inner join course_category two on one.id = two.parentid</span><br><span class="line">where one.parentid = 1</span><br><span class="line">  and one.is_show = 1</span><br><span class="line">  and two.is_show = 1</span><br><span class="line">order by one.orderby, two.orderby;</span><br></pre></td></tr></table></figure>
 <p>课程分类表层级不固定查询sql:</p>
@@ -667,7 +672,7 @@ mjx-container[display="true"] + br {
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BFday02"><span class="nav-text"> 学成在线Day02</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E6%8C%81%E4%B9%85%E5%B1%82"><span class="nav-text"> 开发持久层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81"><span class="nav-text"> 分页查询测试代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8http-client%E6%8F%92%E4%BB%B6%E7%94%9F%E6%88%90http%E8%AF%B7%E6%B1%82"><span class="nav-text"> 利用Http Client插件生成http请求</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B7%A8%E5%9F%9F%E4%B8%89%E7%A7%8D%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-text"> 跨域三种解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%A7%8D-json"><span class="nav-text"> 第一种 JSON</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D-%E6%B7%BB%E5%8A%A0%E5%93%8D%E5%BA%94%E5%A4%B4"><span class="nav-text"> 第二种 添加响应头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%A7%8D-%E9%80%9A%E8%BF%87nginx%E4%BB%A3%E7%90%86%E8%B7%A8%E5%9F%9F"><span class="nav-text"> 第三种 通过nginx代理跨域</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E5%90%8E%E7%AB%AF%E8%81%94%E8%B0%83"><span class="nav-text"> 前后端联调</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%BE%E7%A8%8B%E5%88%86%E7%B1%BB%E6%9F%A5%E8%AF%A2"><span class="nav-text"> 课程分类查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%91%E5%BD%A2%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2"><span class="nav-text"> 树形数据库查询</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%91%E5%B1%82%E7%BA%A7%E7%A1%AE%E5%AE%9A"><span class="nav-text"> 树层级确定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%91%E5%B1%82%E7%BA%A7%E4%B8%8D%E7%A1%AE%E5%AE%9A"><span class="nav-text"> 树层级不确定</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#service%E5%B1%82%E5%A4%84%E7%90%86"><span class="nav-text"> service层处理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B0%E5%A2%9E%E8%AF%BE%E7%A8%8B"><span class="nav-text"> 新增课程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86"><span class="nav-text"> 异常处理</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E6%8C%81%E4%B9%85%E5%B1%82"><span class="nav-text"> 开发持久层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81"><span class="nav-text"> 分页查询测试代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8http-client%E6%8F%92%E4%BB%B6%E7%94%9F%E6%88%90http%E8%AF%B7%E6%B1%82"><span class="nav-text"> 利用Http Client插件生成http请求</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B7%A8%E5%9F%9F%E4%B8%89%E7%A7%8D%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-text"> 跨域三种解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%A7%8D-json"><span class="nav-text"> 第一种 JSON</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D-%E6%B7%BB%E5%8A%A0%E5%93%8D%E5%BA%94%E5%A4%B4"><span class="nav-text"> 第二种 添加响应头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%A7%8D-%E9%80%9A%E8%BF%87nginx%E4%BB%A3%E7%90%86%E8%B7%A8%E5%9F%9F"><span class="nav-text"> 第三种 通过nginx代理跨域</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E5%90%8E%E7%AB%AF%E8%81%94%E8%B0%83"><span class="nav-text"> 前后端联调</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%BE%E7%A8%8B%E5%88%86%E7%B1%BB%E6%9F%A5%E8%AF%A2"><span class="nav-text"> 课程分类查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%91%E5%BD%A2%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2"><span class="nav-text"> 树形数据库查询</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%91%E5%B1%82%E7%BA%A7%E7%A1%AE%E5%AE%9A"><span class="nav-text"> 树层级确定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%91%E5%B1%82%E7%BA%A7%E4%B8%8D%E7%A1%AE%E5%AE%9A"><span class="nav-text"> 树层级不确定</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#service%E5%B1%82%E5%A4%84%E7%90%86"><span class="nav-text"> service层处理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B0%E5%A2%9E%E8%AF%BE%E7%A8%8B"><span class="nav-text"> 新增课程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86"><span class="nav-text"> 异常处理</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -872,7 +877,16 @@ if (document.querySelectorAll('pre.mermaid').length) {
 
 
   
-<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
+  <script>
+      pbOptions = {};
+        pbOptions.iconStyle = "box";
+        pbOptions.boxForm = "horizontal";
+        pbOptions.position = "bottomCenter";
+        pbOptions.networks = "Wechat,QQZone,Weibo,Douban,Twitter,Facebook";
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+  </script><script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 
 <script>
 var options = {
@@ -893,15 +907,6 @@ window.darkmode = darkmode;
 darkmode.showWidget();
 </script>
 
-  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
-  <script>
-      pbOptions = {};
-        pbOptions.iconStyle = "box";
-        pbOptions.boxForm = "horizontal";
-        pbOptions.position = "bottomCenter";
-        pbOptions.networks = "Wechat,QQZone,Weibo,Douban,Twitter,Facebook";
-      new needShareButton('#needsharebutton-postbottom', pbOptions);
-  </script>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
