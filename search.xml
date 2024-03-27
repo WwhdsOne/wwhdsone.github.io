@@ -296,63 +296,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JAVA后端学习计划</title>
-    <url>/2024/03/19/JAVA%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</url>
-    <content><![CDATA[<h1 id="java后端内容学习"><a class="markdownIt-Anchor" href="#java后端内容学习"></a> JAVA后端内容学习</h1>
-<table>
-<thead>
-<tr>
-<th style="text-align:center"><strong>Java基础<br>（已完成）</strong></th>
-<th><a href="https://www.bilibili.com/video/BV17F411T7Ao/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207173142846.png" alt="image-20240207173142846"></a><a href="https://www.bilibili.com/video/BV1yW4y1Y7Ms/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207173232867.png" alt="image-20240207173232867"></a></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><strong>JavaWeb<br>（已完成）</strong></td>
-<td><a href="https://www.bilibili.com/video/BV1m84y1w7Tb/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207131825110.png" alt="image-20240207131825110"></a></td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>单体项目苍穹外卖<br>（已完成）</strong></td>
-<td><a href="https://www.bilibili.com/video/BV1TP411v7v6/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207131900926.png" alt="image-20240207131900926"></a></td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>Git<br>（已完成）</strong></td>
-<td><a href="https://www.bilibili.com/video/BV1MU4y1Y7h5/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207173404539.png" alt="image-20240207173404539"></a></td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>SpringCloud<br>(进度：第七章)</strong></td>
-<td><a href="https://www.bilibili.com/video/BV1LQ4y127n4/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207173523057.png" alt="image-20240207173523057"></a></td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>学成在线<br>(已完成)</strong></td>
-<td><a href="https://www.bilibili.com/video/BV1j8411N7Bm/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207173746548.png" alt="image-20240207173746548"></a></td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>Mysql<br>(未学习)</strong></td>
-<td><a href="https://www.bilibili.com/video/BV1Kr4y1i7ru/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207180731511.png" alt="image-20240207180731511"></a></td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>Redis<br>(未学习)</strong></td>
-<td><a href="https://www.bilibili.com/video/BV1cr4y1671t/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207180911403.png" alt="image-20240207180911403"></a></td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>Java设计模式<br>(未学习)</strong></td>
-<td><a href="https://www.bilibili.com/video/BV1Np4y1z7BU/?share_source=copy_web&amp;vd_source=96f983f689673aeb998155061f545543"><img src="https://wwhds-markdown-image.oss-cn-beijing.aliyuncs.com/image-20240207181106619.png" alt="image-20240207181106619"></a></td>
-</tr>
-</tbody>
-</table>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>计划</tag>
-        <tag>目标</tag>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown语法快速入门</title>
     <url>/2024/03/18/Markdown%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<h1 id="1-markdown标题语法"><a class="markdownIt-Anchor" href="#1-markdown标题语法"></a> 1 Markdown标题语法</h1>
@@ -766,8 +709,8 @@ Future task2               :         des4, after des3, 5d</pre>
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>学习</tag>
         <tag>后端</tag>
+        <tag>学习</tag>
         <tag>黑马程序员</tag>
         <tag>学成在线</tag>
       </tags>
@@ -929,8 +872,8 @@ Future task2               :         des4, after des3, 5d</pre>
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>学习</tag>
         <tag>后端</tag>
+        <tag>学习</tag>
         <tag>黑马程序员</tag>
         <tag>学成在线</tag>
       </tags>
@@ -983,8 +926,8 @@ Future task2               :         des4, after des3, 5d</pre>
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>学习</tag>
         <tag>后端</tag>
+        <tag>学习</tag>
         <tag>黑马程序员</tag>
         <tag>学成在线</tag>
       </tags>
@@ -1031,8 +974,8 @@ Future task2               :         des4, after des3, 5d</pre>
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>学习</tag>
         <tag>后端</tag>
+        <tag>学习</tag>
         <tag>黑马程序员</tag>
         <tag>学成在线</tag>
       </tags>
@@ -1148,8 +1091,8 @@ Future task2               :         des4, after des3, 5d</pre>
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>学习</tag>
         <tag>后端</tag>
+        <tag>学习</tag>
         <tag>黑马程序员</tag>
         <tag>学成在线</tag>
       </tags>
@@ -1362,8 +1305,8 @@ SHARDING_BROADCAST(分片广播)：广播触发对应集群中所有机器执行
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>学习</tag>
         <tag>后端</tag>
+        <tag>学习</tag>
         <tag>黑马程序员</tag>
         <tag>学成在线</tag>
       </tags>
@@ -1570,8 +1513,8 @@ SHARDING_BROADCAST(分片广播)：广播触发对应集群中所有机器执行
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>学习</tag>
         <tag>后端</tag>
+        <tag>学习</tag>
         <tag>黑马程序员</tag>
         <tag>学成在线</tag>
       </tags>
@@ -1755,8 +1698,8 @@ SHARDING_BROADCAST(分片广播)：广播触发对应集群中所有机器执行
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>学习</tag>
         <tag>后端</tag>
+        <tag>学习</tag>
         <tag>黑马程序员</tag>
         <tag>学成在线</tag>
       </tags>
@@ -2149,8 +2092,8 @@ SHARDING_BROADCAST(分片广播)：广播触发对应集群中所有机器执行
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>学习</tag>
         <tag>后端</tag>
+        <tag>学习</tag>
         <tag>黑马程序员</tag>
         <tag>学成在线</tag>
       </tags>
@@ -2439,8 +2382,8 @@ SHARDING_BROADCAST(分片广播)：广播触发对应集群中所有机器执行
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>学习</tag>
         <tag>后端</tag>
+        <tag>学习</tag>
         <tag>黑马程序员</tag>
         <tag>学成在线</tag>
       </tags>
@@ -3057,8 +3000,8 @@ private Date createTime;</p>
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>学习</tag>
         <tag>后端</tag>
+        <tag>学习</tag>
         <tag>黑马程序员</tag>
         <tag>学成在线</tag>
       </tags>
@@ -3438,8 +3381,8 @@ private Date createTime;</p>
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>学习</tag>
         <tag>后端</tag>
+        <tag>学习</tag>
         <tag>黑马程序员</tag>
         <tag>学成在线</tag>
       </tags>
@@ -3766,8 +3709,8 @@ private Date createTime;</p>
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>学习</tag>
         <tag>后端</tag>
+        <tag>学习</tag>
         <tag>黑马程序员</tag>
         <tag>学成在线</tag>
       </tags>
@@ -4154,10 +4097,175 @@ private Date createTime;</p>
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>学习</tag>
         <tag>后端</tag>
+        <tag>学习</tag>
         <tag>黑马程序员</tag>
         <tag>学成在线</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>汇编语言第一次作业</title>
+    <url>/2024/03/27/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A/</url>
+    <content><![CDATA[<ol>
+<li>
+<p>(a) 100101 (b) 11011101 (c) 531 (d) 110111.111</p>
+<p>(e) 010011 (f) 1e.8</p>
+</li>
+<li>
+<p>(a) 00110011 (b) 0000000000011111</p>
+</li>
+<li>
+<p>(a) 1 11111111110 0011100000000000000000000000000000000000000000000000</p>
+<p>(b) 0 10000100 10110000000000000000000</p>
+</li>
+<li>
+<p>(a) (641)<sub>10</sub> = 0 0011 0101 1001    (-259)<sub>10</sub> =  1 0111 0100 0001</p>
+<p>(b) (121)<sub>10</sub> =      0001 0010 0001</p>
+<p>​     (-178)<sub>10</sub> =  1 1000 0010 0010</p>
+<p>​      结果:        1 1001 0100 0011</p>
+</li>
+<li>
+<p>(a) 1234H</p>
+<p>在内存中的存储方式为：34 12</p>
+<p>(b) A122H</p>
+<p>在内存中的存储方式为：22 A1</p>
+</li>
+<li>
+<p>(a) 约为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1.8</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>308</mn></msup></mrow><annotation encoding="application/x-tex">1.8 \times 10^{308}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord">.</span><span class="mord">8</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span><span class="mord mtight">0</span><span class="mord mtight">8</span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>(b) 为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mo>−</mo><mn>1074</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^{-1074}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span><span class="mord mtight">0</span><span class="mord mtight">7</span><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span></span>​</p>
+<p>(c) 为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mo>−</mo><mn>1074</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^{-1074}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span><span class="mord mtight">0</span><span class="mord mtight">7</span><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>(d) 为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mn>971</mn></msup></mrow><annotation encoding="application/x-tex">2^{971}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">9</span><span class="mord mtight">7</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>(e) 为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mn>64</mn></msup></mrow><annotation encoding="application/x-tex">2^{64}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">6</span><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span></span></p>
+</li>
+<li>
+<p align="center">Table 1: 8-bit二进制码</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">8-bit 带符号原码</th>
+<th style="text-align:center">反码</th>
+<th style="text-align:center">补码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">数值最大的正数</td>
+<td style="text-align:center">127</td>
+<td style="text-align:center">127</td>
+<td style="text-align:center">127</td>
+</tr>
+<tr>
+<td style="text-align:center">数值最大的负数</td>
+<td style="text-align:center">-127</td>
+<td style="text-align:center">-127</td>
+<td style="text-align:center">-128</td>
+</tr>
+<tr>
+<td style="text-align:center">可表示多少不同的数值</td>
+<td style="text-align:center">256</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">256</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>(a) 分页系统的内存花费主要来自于存储页表的需要。在分页系统中，每个虚拟页都有一个对应的页表条目，用于存储该虚拟页在物理内存中的位置。因此，页表的大小取决于虚拟内存的大小和页的大小。</p>
+<p>在80386中，页的大小是4KB（4096字节），所以2GB的虚拟内存有<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mn>31</mn></msup><mo>÷</mo><msup><mn>2</mn><mn>12</mn></msup><mo>=</mo><msup><mn>2</mn><mn>19</mn></msup></mrow><annotation encoding="application/x-tex">2^{31} \div 2^{12}=2^{19}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span></span>。每个页表条目需要4字节，所以总的内存花费是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mn>19</mn></msup><mo>×</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">2^{19} \times 4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">9</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span>​字节 = 2MB。</p>
+<p>(b) 可以使用转译后援缓冲（Translation Lookaside Buffer，TLB）。TLB是一个硬件设备，它缓存了最近使用的页表项，当进行地址转换时，首先在TLB中查找，如果找到了就直接使用，如果没有找到，才去访问页表。这样可以大大减少页表访问的次数，从而减少时间花费。</p>
+</li>
+<li>
+<p align="center">Table 2:寻址模式</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">实模式</th>
+<th style="text-align:center">保护模式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">段的大小</td>
+<td style="text-align:center">段的大小是固定的，为64KB。这是因为偏移地址是16位的<br>所以最大的偏移量是2^16-1，即65535字节，也就是64KB</td>
+<td style="text-align:center">段的大小是可变的，最大可以达到4GB<br>这是因为在保护模式下，段的大小是由段描述符中的限长字段来定义的，这个字段是20位的，所以理论上最大的段大小是2^20个页，每页4KB，所以最大的段大小是4GB。</td>
+</tr>
+<tr>
+<td style="text-align:center">段起始地址</td>
+<td style="text-align:center">在80386的实模式下，段的起始地址是由段寄存器的值乘以16得到的。这是因为在实模式下，内存是分段的，每个段的大小是64KB，段之间的间隔是16字节。</td>
+<td style="text-align:center">段的起始地址是由段描述符中的基地址字段确定的。基地址是一个32位的值，它与段内的偏移量相加，得到了在物理内存中的实际地址。</td>
+</tr>
+<tr>
+<td style="text-align:center">段寄存器内容</td>
+<td style="text-align:center">在80386的实模式下，段寄存器（CS、DS、SS、ES、FS、GS）的内容是用来生成物理地址的一部分。每个段寄存器都是16位的，它们的值被用作段基地址的高16位。</td>
+<td style="text-align:center">在80386的保护模式下，段寄存器（CS、DS、SS、ES、FS、GS）的内容不再直接表示段的基地址，而是表示段描述符在全局描述符表（GDT）或局部描述符表（LDT）中的索引。这个索引被称为选择子（Selector）。</td>
+</tr>
+</tbody>
+</table>
+<ol start="10">
+<li>
+<p>(a) DS=2000H, EAX=00003000H 物理地址 = 2000H * 10H + 3000H = 20000H + 3000H = 23000H</p>
+<p>(b) DS=1A00H, ECX=00002000H 物理地址 = 1A00H * 10H + 2000H = 1A000H + 2000H = 1C000H</p>
+<p>(c) DS=C000H, ESI=0000A000H 物理地址 = C000H * 10H + A000H = C0000H + A000H = CA000H</p>
+<p>(d) SS=8000H, ESP=00009000H 物理地址 = 8000H * 10H + 9000H = 80000H + 9000H = 89000H</p>
+<p>(e) DS=1239H, EDX=0000A900H 物理地址 = 1239H * 10H + A900H = 12390H + A900H = 1D290H</p>
+</li>
+<li>
+<p>DS=0105H，转换为二进制是0000 0001 0000 0101。</p>
+<ul>
+<li>RPL是01，所以请求的特权级是1。</li>
+<li>TI是0，所以使用的是GDT。</li>
+<li>索引是000 0001 0000，转换为十进制是16。</li>
+</ul>
+<p>所以，DS=0105H将选择GDT中的第16个描述符，请求的特权级是1。</p>
+</li>
+<li>
+<p>(a)</p>
+<p>i. 0x110090<br>
+ii. 0x1000</p>
+<p>iii. 0x112000</p>
+<p>(b) 物理地址:00002004H 字节:00 00 20 03</p>
+<p>(c) 物理地址:00003004H 字节:00 00 10 03</p>
+</li>
+<li>
+<p>i. MOV AX, BX (a) 寄存器寻址 (b) 数据是BX寄存器的值，即00000004H (c) 数据从BX寄存器移动到AX寄存器</p>
+<p>ii. MOV AL,3AH (a) 立即数寻址 (b) 数据是3AH (c) 数据从立即数3AH移动到AL寄存器</p>
+<p>iii. MOV AX,[1012H] (a) 直接寻址 (b) 数据是内存地址1012H的内容 (c) 数据从内存地址1012H移动到AX寄存器</p>
+<p>iv. MOV CL,[BX] (a) 寄存器间接寻址 (b) 数据是内存地址00000004H的内容 (c) 数据从内存地址00000004H移动到CL寄存器</p>
+<p>v. MOV BP,[BX+SI] (a) 基址加偏移量（变址寻址） (b) 数据是内存地址00000004H + 00000002H = 00000006H的内容(c) 数据从内存地址00000006H移动到BP寄存器</p>
+<p>vi. MOV CL,[BX+4] (a) 基址相对加偏移量 (b) 数据是内存地址00000004H + 4 = 00000008H的内容 (c) 数据从内存地址00000008H移动到CL寄存器</p>
+<p>vii. MOV ARRAY[BX+SI],DX (a) 基址相对加偏移量寻址方式 (b) 被传输的数据是DX寄存器的内容 (c) 数据移动的起始位置是DX寄存器，终止位置是内存的ARRAY[BX+SI]。</p>
+</li>
+<li>
+<p>(a) 3A8CH</p>
+<p>(b) 3A52H</p>
+<p>(c) 0055H</p>
+<p>(d) C574H</p>
+<p>(e) 3A18H</p>
+</li>
+<li>
+<pre class="highlight"><code class="asm">; (a) 将寄存器中最后的四位置为1
+OR AX, 0FH
+
+; (b) 再将寄存器最高的三位置为0
+AND AX, 1FFFH
+
+; (c) 将寄存器的第7，8，和9位求反
+XOR AX, 0380H
+</code></pre>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>校内课程</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>汇编语言</tag>
+        <tag>作业</tag>
       </tags>
   </entry>
   <entry>
@@ -4457,8 +4565,8 @@ MIPS_2 \approx 302
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>计算机组成原理</tag>
         <tag>作业</tag>
+        <tag>计算机组成原理</tag>
       </tags>
   </entry>
   <entry>
@@ -5192,8 +5300,8 @@ MIPS_2 \approx 302
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>计算机组成原理</tag>
         <tag>作业</tag>
+        <tag>计算机组成原理</tag>
       </tags>
   </entry>
 </search>
